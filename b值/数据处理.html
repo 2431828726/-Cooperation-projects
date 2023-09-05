@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>数据处理</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+      justify-content: center; 
+      align-items: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      justify-content: center; 
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      justify-content: center; 
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    select, input[type="file"], button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box; /*输入框和筛选框内框保持一致 */
+}
+
+
+    button {
+      background-color: #007BFF;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+
+    .unselected {
+      color: red;
+    }
+
+    #downloadLink {
+      display: block;
+      margin-top: 20px;
+      text-align: center;
+      text-decoration: none;
+      background-color: #007BFF;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    #downloadLink:hover {
+      background-color: #0056b3;
+    }
+
+    .result-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.result-header p {
+  font-size: 24px;
+  margin-right: 4px;
+}
+h2 {
+  font-size: 10px; /* 右边标题的字体大小 */
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>数据处理</h1>
+
+
+ <!-- 添加一个下拉选项框，用于选择数据地点 -->
+<label for="dataLocation">地震数据来源：</label>
+<select id="dataLocation" onchange="updateDataSelectOptions()">
+  <option value="国内">国内数据</option>
+  <option value="国外">国外数据</option>
+</select>
+
+
+    <!-- 添加一个下拉选项框，用于选择数据类型 -->
+    <label for="dataSelect">目标地震震级标度：</label>
+    <select id="dataSelect">
+      <option value="MW">MW</option>
+      <option value="ML">ML</option>
+      <option value="MS">MS</option>
+      <option value="Mb">Mb</option>
+    </select>
+
+    <input type="file" id="fileInput" accept=".xls" />
+
+    <!-- 添加“确定处理”按钮 -->
+    <button id="processButton">确定处理</button>
+    <br>
+<a href="b时间扫描.html"><button type="button">返回</button></a>
+
+    <div id="output" style="display: none;">
+      <div class="result-header">
+        <p>数据处理结果：</p>
+        <h2>（红色字体为处理过的数据）</h2>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>时间</th>
+            <th>经度</th>
+            <th>纬度</th>
+            <th>震级</th>
+            <th>类型</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+      <div id="moreDataMessage"></div>
+    
+      <!-- 添加下载按钮 -->
+      <a id="downloadLink" style="display: none;" download="processed_data.xls">下载处理后的数据</a>
+    </div>
+    
+  </div>
+
+  <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+  <script>
+    document.getElementById('processButton').addEventListener('click', processData);
+
+    let selectedDataType = 'ML';
+    let dataCount = 20;
+    let remainingDataCount = 0;
+    let processedData = []; // 存储处理后的数据
+
+    // 更新数据类型选项
+    function updateDataSelectOptions() {
+      const dataLocationSelect = document.getElementById('dataLocation');
+      const dataSelect = document.getElementById('dataSelect');
+      
+      // 获取数据类型选项
+      const dataSelectOptions = dataSelect.getElementsByTagName('option');
+      
+      if (dataLocationSelect.value === '国外') {
+        // 当用户选择"国外"时，禁用除了"MW"以外的其他选项
+        for (let i = 0; i < dataSelectOptions.length; i++) {
+          if (dataSelectOptions[i].value !== 'MW') {
+            dataSelectOptions[i].disabled = true;
+          }
+        }
+      } else {
+        // 当用户选择"国内"时，启用所有选项
+        for (let i = 0; i < dataSelectOptions.length; i++) {
+          dataSelectOptions[i].disabled = false;
+        }
+      }
+    }
+
+    function processData() {
+      const fileInput = document.getElementById('fileInput');
+      if (!fileInput.files.length) {
+        return;
+      }
+
+      const file = fileInput.files[0];
+      const reader = new FileReader();
+
+      reader.onload = function (e) {
+        const data = new Uint8Array(e.target.result);
+        const workbook = XLSX.read(data, { type: 'array' });
+
+        const sheetName = workbook.SheetNames[0];
+        const sheet = workbook.Sheets[sheetName];
+        const range = XLSX.utils.decode_range(sheet['!ref']);
+
+        processedData = []; // 清空已处理的数据
+
+        for (let row = range.s.r; row <= range.e.r; row++) {
+          const rowAddress = XLSX.utils.encode_row(row);
+          const date = sheet[`A${rowAddress}`]?.v;
+          const value1 = sheet[`B${rowAddress}`]?.v;
+          const value2 = sheet[`C${rowAddress}`]?.v;
+          let value3 = sheet[`D${rowAddress}`]?.v;
+          const type = sheet[`E${rowAddress}`]?.v;
+
+          // 将value3转换为数值类型
+          value3 = parseFloat(value3);
+
+          // 根据用户选择的数据地点调用不同的处理函数
+          const dataLocation = document.getElementById('dataLocation').value;
+          if (dataLocation === '国内') {
+            processDomesticData(selectedDataType, date, value1, value2, value3, type);
+          } else if (dataLocation === '国外') {
+            processInternationalData(selectedDataType, date, value1, value2, value3, type);
+          }
+        }
+
+        sortProcessedData();
+        displayProcessedData();
+      };
+
+      reader.readAsArrayBuffer(file);
+    }
+     // 国内数据处理逻辑，参考李莹甄2014年发表文章不同标度震级互相转换
+     function processDomesticData(selectedType, date, value1, value2, value3, type) {
+  // 根据用户选择的数据类型进行国内数据处理逻辑，MS到ML采用1990国家地震局震害防御司．地震工作手册，Mb到ML参考2022年高雅婧青藏高原东南部地震易值时空演化及其对区域应力场特征的启示，MW到ML，MB到ML参考李莹甄2014年发表文章不同标度震级互相转换，
+  if (selectedType === 'ML') {
+    if (type !== 'ML') {
+      if (value3 > 4.5) {
+        if (type === 'MW') {
+          value3 = value3 + 0.22;
+        } else if (type === 'Mb') {
+          value3 = 1.7*value3 - 1.6;
+        } else if (type === 'MB') {
+          value3 = 1.11*value3 - 0.27;
+        } else if (type === 'MS') {
+          value3 =0.88*value3+0.96;
+        }
+      }
+    }
+  }
+  //ML,MS,MB,Mb到MW参考李莹甄2014年发表文章不同标度震级互相转换
+   else if (selectedType === 'MW') {
+    if (type !== 'MW') {
+      if (value3 > 4.5) {
+        if (type === 'Mb') {
+          value3 = 1.67*value3-3.33;
+        } else if (type === 'MB') {
+          value3 = 1.11*value3-0.49;
+        } else if (type === 'ML') {
+          value3 = value3 - 0.22;
+        } else if (type === 'MS') {
+          value3 = 1.02*value3-0.25;
+        }
+      }
+    }
+    //ML转为MS采用汪素云等．2009年基于中国地震台网观测报告的ML与Ms经验关系，MB到MS采用2010刘瑞丰，等．中国地震台网震级的对比，Mb到MS高雅婧青藏高原东南部地震易值时空演化，MW参考李莹甄2014年发表文章不同标度震级互相转换
+  } else if (selectedType === 'MS') {
+    if (type !== 'MS') {
+      if (value3 > 4.5) {
+        if (type === 'MW') {
+          value3 = (value3 + 0.25) / 1.02 ;
+        } else if (type === 'MB') {
+          value3 =1.3*value3-2;
+        } else if (type === 'Mb') {
+          value3 =  (value3/0.56)-4.5;
+        } else if (type === 'ML') {
+          value3 = 0.98*value3+0.03;
+        }
+      }
+    }
+    //参考2022年高雅婧青藏高原东南部地震易值时空演化及其对区域应力场特征的启示（由于只提供MSMWML到Mb，MB到Mb采用2010年刘瑞丰，等．中国地震台网震级的对比）
+  } else if (selectedType === 'Mb') {
+    if (type !== 'Mb') {
+      if (value3 > 4.5) {
+        if (type === 'MW') {
+          value3 = 0.73*value3+1.37;
+        } else if (type === 'MB') {
+          value3 = 0.71+0.82*value3 ;
+        } else if (type === 'ML') {
+          value3 = 0.71*value3-0.009*value3*value3+1.86;
+        } else if (type === 'MS') {
+          value3 = 0.56*value3+1.37;
+        }
+      }
+    }
+  }
+
+  processedData.push({ date, value1, value2, value3, type });
+}
+
+  // 国外数据处理逻辑
+  //仅仅设置ML,MS,MB,MB转为MW类，MS到MW，Mb到MW参考EM Scordilis - Journal of seismology, 2006，Empirical global relations converting MS and mb to moment magnitude，，，，，MB到MW参考任克新等．IASPEI新标准渡震级分析研究口，2009，，，
+    function processInternationalData(selectedType, date, value1, value2, value3, type) {
+      // 根据用户选择的数据类型进行国外数据处理逻辑
+      // 修改了处理逻辑，国外处理逻辑可以根据需要进行修改
+      if (selectedType === 'MW') {
+  if (type !== 'MW') {
+    if (value3 >= 3 && value3 <= 6.1) {
+      value3 = 0.67 * value3 + 2.07;
+    } else if (value3 > 6.1) {
+      value3 = 0.99 * value3 + 0.88;
+    }
+  }
+} else if (selectedType === 'ML') {
+//EM Scordilis在2006文章交代这个并没有区域性并不能MW与ML的唯一全局关系
+} else if (selectedType === 'Mb') {
+  if (value3 >= 3.5) {
+    value3 = 0.85 * value3 + 1.03;
+  }
+} else if (selectedType === 'MB') {
+  // 暂且认为不变
+}
+
+
+      processedData.push({ date, value1, value2, value3, type });
+    }
+
+    function sortProcessedData() {
+      // 根据数据类型将数据排序，优先显示用户未选择的类型
+      processedData.sort((a, b) => {
+        if (a.type === selectedDataType && b.type !== selectedDataType) {
+          return 1;
+        } else if (a.type !== selectedDataType && b.type === selectedDataType) {
+          return -1;
+        } else {
+          return 0;
+        }
+      });
+    }
+
+    function displayProcessedData() {
+  const tableBody = document.getElementById('tableBody');
+  tableBody.innerHTML = '';
+
+  let displayedRows = 0;
+
+  for (let i = 0; i < processedData.length; i++) {
+    const { date, value1, value2, value3, type } = processedData[i];
+    const formattedValue3 = parseFloat(value3.toFixed(1)); // 将formattedValue3声明为变量
+
+    if (displayedRows < dataCount) {
+      const rowHTML = `
+        <tr class="${type !== selectedDataType ? 'unselected' : ''}">
+          <td>${date}</td>
+          <td>${value1}</td>
+          <td>${value2}</td>
+          <td>${formattedValue3}</td> <!-- 使用舍入后的值 -->
+          <td>${type}</td>
+        </tr>
+      `;
+      tableBody.innerHTML += rowHTML;
+    } else {
+      remainingDataCount++;
+    }
+
+    displayedRows++;
+  }
+
+  // 显示处理后的数据
+  document.getElementById('output').style.display = 'block';
+
+  // 显示剩余数据的消息
+  const moreDataMessage = document.getElementById('moreDataMessage');
+  if (remainingDataCount > 0) {
+    moreDataMessage.innerHTML = `还有 ${remainingDataCount} 条数据未显示。`;
+  } else {
+    moreDataMessage.innerHTML = '';
+  }
+
+  // 显示下载链接
+  const downloadLink = document.getElementById('downloadLink');
+  downloadLink.style.display = 'block';
+  downloadLink.href = generateDownloadLink(processedData);
+}
+
+    function generateDownloadLink(data) {
+      // 将数据转换为XLS文件
+      const ws = XLSX.utils.json_to_sheet(data);
+      const wb = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(wb, ws, 'Processed Data');
+      const xlsBuffer = XLSX.write(wb, { bookType: 'xls', type: 'array' });
+
+      // 创建Blob对象并生成下载链接
+      const blob = new Blob([xlsBuffer], { type: 'application/vnd.ms-excel' });
+      const url = URL.createObjectURL(blob);
+      return url;
+    }
+  </script>
+</body>
+</html>

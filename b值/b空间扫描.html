@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>显示数据点在底图上</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #header-bottom {
+      background-color: rgb(79, 174, 218);
+      height: 50px;
+      width: 99.3%;
+      border: 2px solid #f6a5a5;
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      font-size: 24px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #header-bottom a {
+      text-decoration: none;
+      color: rgb(14, 10, 10);
+      font-family: "Times New Roman", serif;
+      position: absolute;
+      right: 10px;
+    }
+
+    #header-bottom .scrolling-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    #header-bottom .scrolling-text {
+      white-space: nowrap;
+      animation: scrollText linear infinite;
+      animation-duration: 5s;
+      animation-timing-function: linear;
+      position: absolute;
+      top: 0;
+      right: 30%;
+    }
+
+    @keyframes scrollText {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    #item2 {
+      height: 400px;
+      position: absolute;
+      width: 447px;
+      background-color: rgb(229, 233, 235);
+      left: 12%;
+      top: 15%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+    }
+
+    #form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+    }
+
+
+    .data-point {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background-color: black;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    #dataPointCount {
+      margin-top: 10px;
+    }
+
+    #item5 {
+      height: 400px;
+      width: 703px;
+      background-color: rgb(229, 233, 235);
+      top:15%;
+      position: absolute;
+      left: 40.5%;
+      border-left: 3px solid #88c8ee;
+    }
+
+
+
+    #item7 {
+      height: 400px;
+      width: 1122px;
+      position: absolute;
+      top: 75%;
+      left: 12%;
+      background-color: rgb(229, 233, 235);
+      border-left: 3px solid #88c8ee;
+    }
+    #visualizeDataButton {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000; /* 确保按钮在地图之上 */
+  width: 90px;
+  height: 25px;
+}
+
+.import-prompt {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 10000;
+}
+#modifyRegionButton {
+  position: absolute;
+  width: 90px;
+  height: 25px;
+  top: 40px;
+  left: 10px;
+  z-index: 1000; /* 确保按钮在地图之上 */
+}
+#regionForm {
+  display: none;
+  width: 300px; /* 固定宽度 */
+  height: auto; /* 自动高度，根据内容调整 */
+  margin-top: 10px;
+  margin-left: 150px;
+  padding: 10px;
+  border: 1px solid #0e0909;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  position: absolute;
+  top: 40px; /* 调整位置，以适应按钮下方 */
+  left: 50px;
+  z-index: 1000;
+  text-align: center; /* 将内容居中对齐 */
+}
+
+/* 其他样式不变 */
+    #item8 {
+      height: 56px;
+      position: absolute;
+      width: 415px;
+      background-color: rgb(103, 195, 241);
+      left: 12%;
+      top: 5;
+      border-bottom: 2px solid #f6a5a5;
+      border-right: 2px solid #f6a5a5;
+    }
+
+
+    #item11 {
+      height: 54px;
+      position: absolute;
+      width: 704px;
+      background-color: rgb(103, 195, 241);
+      left: 40.5%;
+      top: 5;
+      border-bottom: 2px solid #f6a5a5;
+      border-top: 2px solid #f6a5a5;
+    }
+
+    #item12 {
+      height: 44px;
+      position: absolute;
+      width: 1122px;
+      background-color: rgb(103, 195, 241);
+      left: 12%;
+      top: 68.6%;
+      border-bottom: 2px solid #f6a5a5;
+      border-top: 2px solid #f6a5a5;
+      border-left: 3px solid #88c8ee;
+    }
+
+    .title1 {
+      letter-spacing: 5px;
+      margin-top: 0px;
+      font-size: 25px;
+      color: #1a1515;
+      text-align: center;
+    }
+
+    #chartContainer {
+      width: 100%;
+      height: 100%;
+    }
+
+
+
+  </style>
+</head>
+<body>
+  <div id="header-bottom">
+    <span class="scrolling-container">
+      <span class="scrolling-text">
+        <span class="bell">&#128227;</span> 欢迎使用b值计算功能，现在是北京时间<span id="current-time"></span>
+      </span>
+    </span>
+    <a href="test.html">返回</a>
+  </div>
+  <div id="item3"></div>
+  <div id="item2">
+    <form id="form">
+      <label for="dataFile">选择要导入的文件：</label>
+      <input type="file" id="dataFile" accept=".xls" />
+    </form>
+    <div id="importSuccess" style="display: none; color: green;">成功导入文件！</div>
+  </div>
+  <div id="item5">
+    <canvas id="chartContainer"></canvas>
+  </div>
+  <div id="item6"></div>
+  <div id="item7">
+    <div id="map" style="width: 100%; height: 400px;"></div>
+    <button id="visualizeDataButton">数据可视化</button>
+    <button id="modifyRegionButton">修改区域</button>
+    <div id="regionForm" style="display: none;">
+      <label for="minLat">最小纬度：</label>
+      <input type="text" id="minLat" /><br />
+      <label for="maxLat">最大纬度：</label>
+      <input type="text" id="maxLat" /><br />
+      <label for="minLng">最小经度：</label>
+      <input type="text" id="minLng" /><br />
+      <label for="maxLng">最大经度：</label>
+      <input type="text" id="maxLng" /><br />
+
+      <label for="gridSize">网格大小/度：</label>
+  <input type="number" id="gridSize" step="0.01" min="0.01" max="1" /><br />
+
+  <label for="searchRadius">搜索半径：</label>
+  <input type="number" id="searchRadius" step="1" min="1" value="200"><br />
+  <label for="minDataPoints">圆内最小地震点数量：</label>
+  <input type="number" id="minDataPoints" step="1" min="1" value="1000"><br />
+  <label for="mcInput">最小完整震级 Mc：</label>
+  <input type="number" id="mcInput" step="0.1" min="0" value="10"><br />
+
+      <button id="applyChangesButton">确定更改</button>
+    </div>
+    <div id="importPrompt" class="import-prompt">请先导入文件</div>
+  </div>
+  
+  
+    <div class="content-item" id="item8">
+      <h2 class="title1">数据导入</h2>
+    </div>
+ 
+    <div class="content-item" id="item11">
+      <h2 class="title1">震级—频度分布</h2>
+    </div>
+    <div class="content-item" id="item12">
+      <h2 class="title1">b值空间变化情况</h2>
+    </div>
+  </div>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css" rel="stylesheet" />
+  <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.9.1/math.min.js"></script>
+
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+<!-- 使用 @turf/turf v6.3.0 版本 -->
+<script src="https://cdn.jsdelivr.net/npm/@turf/turf@6.3.0"></script>
+  <script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiMjQzMTgyODcyNiIsImEiOiJjbGZ4aTF4bzcwYTRsM2hwYTZkN284bjR2In0.-e980fB7ZW1E07eJxTu1GA';
+var map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/mapbox/streets-v11',
+  center: [116.4074, 39.9042],
+  zoom: 3
+});
+map.addControl(new mapboxgl.NavigationControl());
+
+
+// 定义计算曲率的函数
+function calculateCurvature(xData, yData, index) {
+  var x = xData[index];
+  var y = yData[index];
+
+  var x1 = xData[index - 1];
+  var y1 = yData[index - 1];
+
+  var x2 = xData[index + 1];
+  var y2 = yData[index + 1];
+
+  var dx = x2 - x1;
+  var dy = y2 - y1;
+
+  var curvature = Math.abs((2 * (x - x1) * dy - 2 * (y - y1) * dx) / Math.pow(dx * dx + dy * dy, 1.5));
+
+  return curvature;
+}
+
+let scatterChart; // 定义 scatterChart 对象
+// 添加文件选择事件监听
+document.getElementById('dataFile').addEventListener('change', handleFileSelect);
+
+function handleFileSelect(event) {
+  const file = event.target.files[0];
+
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      const fileData = new Uint8Array(e.target.result);
+      const workbook = XLSX.read(fileData, { type: 'array' });
+      const sheet = workbook.Sheets[workbook.SheetNames[0]];
+
+      const cellRange = XLSX.utils.decode_range(sheet['!ref']);
+      const magnitudes = [];
+
+      // 遍历Excel表格的数据
+      for (let row = cellRange.s.r + 1; row <= cellRange.e.r; row++) {
+        const cell = XLSX.utils.encode_cell({ r: row, c: 3 }); // 第四列（从0开始计数）
+        const cellValue = sheet[cell].v; // 假设是数值类型的数据
+
+        // 处理数据（统计大于等于cellValue的数据点数量）
+        if (cellValue !== null) {
+          magnitudes.push(cellValue);
+        }
+      }
+
+      // 显示成功导入消息
+      document.getElementById('importSuccess').style.display = 'block';
+
+      // 统计大于等于cellValue的震级数据个数
+      const sortedMagnitudes = magnitudes.sort((a, b) => a - b);
+      const uniqueMagnitudes = Array.from(new Set(sortedMagnitudes));
+      const magnitudeCounts = {};
+
+      for (let i = 0; i < uniqueMagnitudes.length; i++) {
+        const magnitude = uniqueMagnitudes[i];
+        const count = sortedMagnitudes.filter(val => val >= magnitude).length;
+        magnitudeCounts[magnitude] = count;
+      }
+
+      // 转换为散点图所需格式，并将y的值取对数
+      const data = Object.keys(magnitudeCounts).map(key => ({ x: parseFloat(key), y: Math.log(magnitudeCounts[key]) }));
+
+      // 使用Chart.js绘制散点图
+      const ctx = document.getElementById('chartContainer').getContext('2d');
+      scatterChart = new Chart(ctx, {
+        type: 'scatter',
+        data: {
+          datasets: [{
+            label: '震级频次图',
+            data: data,
+            backgroundColor: 'rgba(79, 174, 218, 0.7)',
+            borderColor: 'rgba(79, 174, 218, 1)',
+            borderWidth: 1,
+            pointRadius: 5
+          }]
+        },
+        options: {
+          scales: {
+            x: {
+              type: 'linear', // X轴是线性的（震级）
+              title: {
+                display: true,
+                text: '震级'
+              }
+            },
+            y: {
+              type: 'linear', // Y轴是线性的（取对数后的值）
+              title: {
+                display: true,
+                text: '地震频次lnN'
+              }
+            }
+          }
+        }
+      });
+
+// 计算曲率和找到最大曲率对应的点
+const curvatures = [];
+
+for (let i = 1; i < data.length - 1; i++) {
+  const curvature = calculateCurvature(data.map(point => point.x), data.map(point => point.y), i);
+  curvatures.push({ index: i, x: data[i].x, y: data[i].y, curvature: curvature });
+}
+
+// 找到最大曲率对应的点
+const maxCurvaturePoint = curvatures.reduce((maxPoint, currentPoint) => {
+  return currentPoint.curvature > maxPoint.curvature ? currentPoint : maxPoint;
+}, { index: 0, x: 0, y: 0, curvature: Number.MIN_VALUE });
+
+// 打印最大曲率点
+console.log('Max Curvature Point:', maxCurvaturePoint);
+
+// 计算直线和垂直线的端点坐标
+const lineX1 = data[maxCurvaturePoint.index - 1].x;
+const lineY1 = data[maxCurvaturePoint.index - 1].y;
+const lineX2 = data[maxCurvaturePoint.index + 1].x;
+const lineY2 = data[maxCurvaturePoint.index + 1].y;
+
+const minX = Math.min(lineX1, lineX2);
+const maxX = Math.max(lineX1, lineX2);
+const minY = lineY1 + (lineY2 - lineY1) * (minX - lineX1) / (lineX2 - lineX1);
+const maxY = lineY1 + (lineY2 - lineY1) * (maxX - lineX1) / (lineX2 - lineX1);
+
+const xIntercept = minX + (maxX - minX) * (0 - minY) / (maxY - minY);
+const yIntercept = minY + (maxY - minY) * (0 - minX) / (maxX - minX);
+
+const verticalLineX = lineX1;
+const upperVerticalLineY = lineY1 - 2;
+const lowerVerticalLineY = lineY1 + 2;
+
+// 绘制直线和垂直线段
+scatterChart.data.datasets.push(
+  {
+    label: '最大曲率直线',
+    data: [{ x: xIntercept, y: 0 }, { x: 0, y: yIntercept }],
+    type: 'line',
+    borderColor: 'red',
+    borderWidth: 2,
+    fill: false,
+  },
+
+);
+
+// 更新散点图并重新绘制
+scatterChart.update();
+};
+reader.readAsArrayBuffer(file);
+}
+}
+
+
+    let dataPoints = []; // 存储添加到地图上的数据点
+          // 在函数外部定义全局变量
+let dataPointsWithMagnitude = [];
+// 初始化存储节点信息的数组
+let nodeInfoArray = [];
+  // 新添加的点击事件监听
+  document.getElementById('visualizeDataButton').addEventListener('click', visualizeData);
+  function visualizeData() {
+// 检查是否已导入文件
+if (!document.getElementById('dataFile').files[0]) {
+    // 显示提示信息
+    const importPrompt = document.getElementById('importPrompt');
+    importPrompt.style.display = 'block';
+
+    // 两秒后隐藏提示信息
+    setTimeout(() => {
+      importPrompt.style.display = 'none';
+    }, 1000);
+
+    return;
+  }
+  // 隐藏提示信息（如果之前显示过）
+  document.getElementById('importPrompt').style.display = 'none';
+
+  // 清除之前添加的数据点
+  clearDataPoints();
+
+  const file = document.getElementById('dataFile').files[0];
+
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      const fileData = new Uint8Array(e.target.result);
+      const workbook = XLSX.read(fileData, { type: 'array' });
+      const sheet = workbook.Sheets[workbook.SheetNames[0]];
+      const cellRange = XLSX.utils.decode_range(sheet['!ref']);
+      const data = [];
+      let dataPointsWithMagnitude = []; // 存储经纬度和震级信息的数组
+// 修改遍历Excel表格的数据部分，获取经纬度和震级信息
+for (let row = cellRange.s.r + 1; row <= cellRange.e.r; row++) {
+  const latCell = XLSX.utils.encode_cell({ r: row, c: 2 }); // 第二列代表纬度
+  const lonCell = XLSX.utils.encode_cell({ r: row, c: 1 }); // 第三列代表经度
+  const magCell = XLSX.utils.encode_cell({ r: row, c: 3 }); // 第四列代表震级
+  const lat = sheet[latCell].v;
+  const lon = sheet[lonCell].v;
+  const magnitude = parseFloat(sheet[magCell].v); // 将震级信息解析为浮点数
+  data.push({
+    type: 'Feature',
+    properties: {
+      magnitude: magnitude
+    },
+    geometry: {
+      type: 'Point',
+      coordinates: [lon, lat]
+    }
+  });
+  dataPointsWithMagnitude.push({
+    latitude: lat,
+    longitude: lon,
+    magnitude: magnitude
+  });
+}
+// 打印每个数据点的经纬度和震级信息
+dataPointsWithMagnitude.forEach(dataPoint => {
+  console.log(`经度: ${dataPoint.longitude}, 纬度: ${dataPoint.latitude}, 震级: ${dataPoint.magnitude}`);
+});
+      // 创建散点图层
+      map.addSource('data-source', {
+        type: 'geojson',
+        data: {
+          type: 'FeatureCollection',
+          features: data
+        }
+      });
+
+      map.addLayer({
+        id: 'data-layer',
+        type: 'circle',
+        source: 'data-source',
+        paint: {
+          'circle-color': 'black', // 点的颜色
+          'circle-radius': 2, // 点的半径
+          'circle-opacity': 0.7 // 点的透明度
+        }
+      });
+
+  // 计算最大和最小经纬度
+  const coordinates = data.map(feature => feature.geometry.coordinates);
+      const maxLngLat = coordinates.reduce((acc, cur) => [Math.max(acc[0], cur[0]), Math.max(acc[1], cur[1])], [-Infinity, -Infinity]);
+      const minLngLat = coordinates.reduce((acc, cur) => [Math.min(acc[0], cur[0]), Math.min(acc[1], cur[1])], [Infinity, Infinity]);
+
+      // 创建矩形框显示数据点的区域
+      const rectangleCoordinates = [
+        [minLngLat[0], minLngLat[1]],
+        [maxLngLat[0], minLngLat[1]],
+        [maxLngLat[0], maxLngLat[1]],
+        [minLngLat[0], maxLngLat[1]],
+        [minLngLat[0], minLngLat[1]]
+      ];
+      map.addLayer({
+        id: 'rectangle-layer',
+        type: 'line',
+        source: {
+          type: 'geojson',
+          data: {
+            type: 'Feature',
+            geometry: {
+              type: 'Polygon',
+              coordinates: [rectangleCoordinates]
+            }
+          }
+        },
+        layout: {},
+        paint: {
+          'line-color': 'red',
+          'line-width': 2
+        }
+      });
+      // 获取按钮和表单元素
+const modifyRegionButton = document.getElementById('modifyRegionButton');
+const regionForm = document.getElementById('regionForm');
+const applyChangesButton = document.getElementById('applyChangesButton');
+const minLatInput = document.getElementById('minLat');
+const maxLatInput = document.getElementById('maxLat');
+const minLngInput = document.getElementById('minLng');
+const maxLngInput = document.getElementById('maxLng');
+const gridSizeInput = document.getElementById('gridSize'); // 新增输入框
+let gridNodeCoordinates = [];
+// 点击"修改区域"按钮时显示表单
+modifyRegionButton.addEventListener('click', () => {
+  regionForm.style.display = 'block';
+  // 将当前的最大和最小经纬度填充到表单输入框中
+  minLatInput.value = minLngLat[1];
+  maxLatInput.value = maxLngLat[1];
+  minLngInput.value = minLngLat[0];
+  maxLngInput.value = maxLngLat[0];
+});
+
+// 清除之前添加的网格
+function clearGrids() {
+  const mapLayers = map.getStyle().layers;
+
+  for (let i = mapLayers.length - 1; i >= 0; i--) {
+    const layer = mapLayers[i];
+    if (layer.id.includes('grid-layer-')) {
+      map.removeLayer(layer.id);
+      map.removeSource(layer.source);
+    }
+  }
+}
+// 点击"应用更改"按钮时更新区域和网格
+applyChangesButton.addEventListener('click', () => {
+  // 获取用户输入的经纬度值和网格大小
+  const newMinLat = parseFloat(minLatInput.value);
+  const newMaxLat = parseFloat(maxLatInput.value);
+  const newMinLng = parseFloat(minLngInput.value);
+  const newMaxLng = parseFloat(maxLngInput.value);
+  const gridSize = parseFloat(gridSizeInput.value);
+  // 更新最大和最小经纬度
+  maxLngLat[0] = newMaxLng;
+  maxLngLat[1] = newMaxLat;
+  minLngLat[0] = newMinLng;
+  minLngLat[1] = newMinLat;
+
+  // 更新矩形框的坐标
+  const newRectangleCoordinates = [
+    [minLngLat[0], minLngLat[1]],
+    [maxLngLat[0], minLngLat[1]],
+    [maxLngLat[0], maxLngLat[1]],
+    [minLngLat[0], maxLngLat[1]],
+    [minLngLat[0], minLngLat[1]]
+  ];
+  // 更新矩形框的坐标
+  map.getSource('rectangle-layer').setData({
+    type: 'Feature',
+    geometry: {
+      type: 'Polygon',
+      coordinates: [newRectangleCoordinates]
+    }
+  });
+  // 清除之前添加的网格
+  clearGrids();
+  // 计算网格数量
+  const numColumns = Math.floor((newMaxLng - newMinLng) / gridSize);
+  const numRows = Math.floor((newMaxLat - newMinLat) / gridSize);
+  // 添加网格
+  for (let i = 0; i < numRows; i++) {
+    for (let j = 0; j < numColumns; j++) {
+      const gridMinLng = newMinLng + j * gridSize;
+      const gridMaxLng = gridMinLng + gridSize;
+      const gridMinLat = newMinLat + i * gridSize;
+      const gridMaxLat = gridMinLat + gridSize;
+      // Check if the remaining region is large enough for a grid
+      if (gridMaxLng <= newMaxLng && gridMaxLat <= newMaxLat) {
+        const gridCoordinates = [
+          [gridMinLng, gridMinLat],
+          [gridMaxLng, gridMinLat],
+          [gridMaxLng, gridMaxLat],
+          [gridMinLng, gridMaxLat],
+          [gridMinLng, gridMinLat]
+        ];
+// 存储网格节点坐标（排除右上角和左下角的节点）
+// 添加网格节点坐标（排除重复的节点以及最左侧和最上侧的节点）
+function isDuplicate(coord) {
+  return gridNodeCoordinates.some(existingCoord =>
+    existingCoord[0] === coord[0] && existingCoord[1] === coord[1]
+  );
+}
+
+if (!isDuplicate([gridMinLng, gridMinLat]) &&
+    gridMinLng > newMinLng && gridMinLat > newMinLat) {
+  gridNodeCoordinates.push([gridMinLng, gridMinLat]);
+}
+if (!isDuplicate([gridMaxLng, gridMaxLat]) &&
+    gridMaxLng < newMaxLng && gridMaxLat < newMaxLat) {
+  gridNodeCoordinates.push([gridMaxLng, gridMaxLat]);
+}
+        map.addLayer({
+          id: `grid-layer-${i}-${j}`,
+          type: 'line',
+          source: {
+            type: 'geojson',
+            data: {
+              type: 'Feature',
+              geometry: {
+                type: 'Polygon',
+                coordinates: [gridCoordinates]
+              }
+            }
+          },
+          layout: {},
+          paint: {
+            'line-color': 'blue',
+            'line-width': 1
+          }
+        });
+      }
+    }
+  }
+  console.log('网格节点坐标：', gridNodeCoordinates);
+  // 计算网格总数
+const totalGrids = numRows * numColumns;
+
+console.log('网格总数：', totalGrids);
+
+// 计算两个经纬度点之间的距离（使用 @turf/turf 插件）
+function calculateDistance(lat1, lon1, lat2, lon2) {
+  const point1 = turf.point([lon1, lat1]);
+  const point2 = turf.point([lon2, lat2]);
+  const options = { units: 'kilometers' };
+  const distance = turf.distance(point1, point2, options);
+  return distance;
+}
+// 计算节点的 b 值并打印
+// 清空之前的节点信息数组
+nodeInfoArray = [];
+
+// 计算节点的 b 值并存储到数组
+gridNodeCoordinates.forEach(nodeCoord => {
+  const centerX = nodeCoord[0];
+  const centerY = nodeCoord[1];
+  
+  const radiusInput = parseFloat(document.getElementById('searchRadius').value);
+  const minDataPointsInput = parseInt(document.getElementById('minDataPoints').value);
+  const mcInput = parseFloat(document.getElementById('mcInput').value);
+
+  const dataPointsInCircle = dataPointsWithMagnitude.filter(dataPoint => {
+    const distance = calculateDistance(centerY, centerX, dataPoint.latitude, dataPoint.longitude);
+    return distance <= radiusInput;
+  });
+  const nodeInfo = {
+    coordinates: nodeCoord,
+    bValue: 0 // default value if dataPointCount is not sufficient
+  };
+  if (dataPointsInCircle.length >= minDataPointsInput) {
+    const sumMagnitude = dataPointsInCircle.reduce((sum, dataPoint) => sum + dataPoint.magnitude, 0);
+    const avgMagnitude = sumMagnitude / dataPointsInCircle.length;
+    const bValue = Math.log(10) / (avgMagnitude - mcInput);
+    nodeInfo.bValue = bValue.toFixed(4);
+  }
+  nodeInfoArray.push(nodeInfo);
+});
+// 打印节点信息数组
+console.log("Node Information Array:", nodeInfoArray);
+  // 隐藏表单
+  regionForm.style.display = 'none';
+});
+
+    };
+    reader.readAsArrayBuffer(file);
+  }
+}
+
+
+
+
+  // 清除之前添加的数据点
+  function clearDataPoints() {
+    if (dataPoints.length > 0) {
+      dataPoints.forEach(dataPoint => dataPoint.remove());
+      dataPoints = [];
+    }
+  }
+  </script>
+</body>
+</html>
