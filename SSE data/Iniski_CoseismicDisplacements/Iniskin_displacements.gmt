@@ -1,0 +1,62 @@
+#!/bin/tcsh -f
+#
+set PS_OUT = Iniskin_displacements.ps
+gmtset PAPER_MEDIA letter
+gmtset DEGREE_FORMAT 3
+gmtset BASEMAP_TYPE PLAIN
+gmtset TICK_LENGTH 0.05
+gmtset ANOT_FONT_SIZE 8 
+gmtset ANOT_FONT Times-Roman
+gmtset ANOT_OFFSET 0.02
+gmtset LABEL_FONT Times-Roman 
+gmtset LABEL_FONT_SIZE 8 
+gmtset FRAME_PEN 1
+gmtset FRAME_WIDTH 0.05
+gmtset DOTS_PR_INCH 300
+gmtset MEASURE_UNIT inch
+
+#######  For 3d TOPO use these lines
+#grdgradient kenaibig.grd -A315 -Gintensbig.grd -Nt0.60 -P -V
+#
+set topogrd = /Users/jeff/bin/GMT/topo/Alaska_main.grd
+set intensgrd = /Users/jeff/bin/GMT/topo/Alaska_main.intens.315.grd
+set colortab = /Users/jeff/bin/GMT/colortabs/GMT_gray.cpt
+#set colortab = /Users/jeff/bin/GMT/colortabs/world_bright.cpt
+
+psbasemap  -R-157/-145/57/62.5 -Ba1f0.5/a1f0.5WSNE -JL-151/55/50/60/6.5i -X1i -Y1i -K -P -V  > $PS_OUT
+grdimage  -R -J -B $topogrd -C$colortab -I$intensgrd  -K -O -P -V >> $PS_OUT
+pscoast    -R -Df -B -JL -W1 -S200/255/255 -A5 -Lf-154.75/54.25/55/200k+lkm+jt -O -K -P -V  >> $PS_OUT
+
+#pscoast    -R -Df -B -JL -W1 -Glightgreen -A5 -O -K -P -V  >> $PS_OUT
+
+
+# Ruptures
+
+#psxy -R -JL  /Users/jeff/bin/GMT/linefiles/AKruptures/1938davies.lin -W3p,orange,. -: -H4 -O -K -M  -V -P >> $PS_OUT
+#psxy -R -JL  /Users/jeff/bin/GMT/linefiles/AKruptures/1946davies.lin -W5,orange -: -H4 -O -K -M  -V -P >> $PS_OUT
+#psxy -R -JL -m  /Users/jeff/bin/GMT/linefiles/AKruptures/1946lopez_okal_small.lin -W5,orange -O -K -M  -V -P >> $PS_OUT
+#psxy -R -JL -m  /Users/jeff/bin/GMT/linefiles/AKruptures/1946lopez_okal_large.lin -W5,orange -O -K -M  -V -P >> $PS_OUT
+#psxy -R -JL  /Users/jeff/bin/GMT/linefiles/AKruptures/1957davies.lin -W5,orange -: -H4 -O -K -M  -V -P >> $PS_OUT
+
+
+psxy -R -JL /Users/jeff/bin/GMT/linefiles/alaska_qff.gmtlin -W2 -P  -O -K -M  -V >> $PS_OUT
+
+
+# Iniskin
+grep Iniskin globalcmt.txt |  awk -F: '{print $2}' \
+   | psmeca -R -JL -Gred -Sd0.25/0 -C -O -K >> $PS_OUT
+END
+
+
+set vecwidth = 0.04/0.06/0.06
+set vecscale = 1.250/0.95
+awk '{print $2, $3, 0, $7, 0, $10, 0, $1}' Earthquakes/Iniskin/Iniskin-stabil.cm.gps3d \
+   | psvelo -R -J -Gred -A${vecwidth} -Sr${vecscale}/0 -W1 -P -O -K -L -V >> $PS_OUT
+awk '{print $2, $3, $5, $6, $8, $9, 0, $1}' Earthquakes/Iniskin/Iniskin-stabil.cm.gps3d \
+   | psvelo -R -J -Gblack -A${vecwidth} -Sr${vecscale}/0 -W1 -P -K -O -L -V >> $PS_OUT
+
+psvelo -R -J -Gblack -A${vecwidth} -Sr${vecscale}/12 -W1 -P -O -L -V <<END >> $PS_OUT
+-149.5 57.5 1.0 0.0 0.2 0.2 0.0 1cm
+END
+
+ps2raster -Tg -A $PS_OUT
