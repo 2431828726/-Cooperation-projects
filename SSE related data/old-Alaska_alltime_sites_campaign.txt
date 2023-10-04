@@ -1,0 +1,461 @@
+	stationname  |  starttime  |  endtime  |  estimate seasonal terms (1=yes,0=no)  |  eventual time of an offset
+
+
+0999 - 2002-10-22 0
+1000 - - 0
+152T - - 0
+2201 - - 0 2002.8411
+2210 - - 0
+2400 - - 0
+2437 - - 0
+2447 - - 0
+2484 - - 0
+2629 - - 0
+2915 - - 0
+2999 - 2002-10-22 0
+2BAD - - 0
+3443 - - 0 2002.8411
+3444 - - 0 2002.8411
+3651 - - 0
+4050 - 2002-10-22 0
+4240 - - 0
+444C - - 0
+489F - - 0
+4A1A - - 0
+508F - - 0
+7297 - 2002-10-22 0
+833E - - 0
+833G - - 0
+833H - - 0
+8756 - - 0
+875B - - 0
+875L - - 0
+875G - - 0
+875H - - 0
+886J - - 0
+923B - - 0
+A1 - 2005-07-01 0
+A11 - - 0 2006.078
+A18 - - 0
+A2 - - 0
+A4 - - 0
+A5 - - 0 1995.0,2006.078
+A6 - - 0
+A7 - 2002-10-22 0 
+A9 - 2005-07-01 0
+ABBT_ABBO - - 0
+ACHU - - 0
+ADZE - - 0
+AFGR - - 0
+AHKI - - 0 1999.933
+AID1 - - 0
+AKHB - 2011-01-01 0 1998.0
+AKNA - - 0
+AKNB - - 0
+AKPS - - 0 1998.0
+AKU - - 0
+ALAS - - 0 2002.8411
+ALIF - - 0
+ALSE - - 0 2008.668
+AMBE - - 0 2002.8411
+ANCR - - 0
+ANCX - - 0 2002.8411
+ANDY - - 0
+ANIT - - 0
+ANNX - - 0
+AT18 - - 0
+ATKA - - 0
+ATLI - - 0
+ATT - 2002-10-22 0
+AUGB - - 0 2006.078
+AUGK - - 0 2006.078
+AUGM - - 0 2006.078
+AUGS - - 0 2006.078
+AUGW - - 0 2006.078
+B86 - - 0
+BAGO - - 0
+BCT5 - - 0
+BEAR - - 0 2002.8411
+BED1 - - 0
+BERG - - 0
+BETF - - 0
+BETT - - 0
+BETC - - 0
+BEUT - - 0
+BKDM - - 0
+%BKEB - - 0 2003.879
+BKEB - 2002-10-22 0
+BLCL - - 0
+BLF2 - - 0
+BLGA - - 0
+BLKP - - 0
+BLO1 - - 0 2008.57
+BLUE - - 0
+BODE - - 0 2002.8411
+BR2 - - 0
+BR39 - - 0
+BR6 - - 0
+BRAD - - 0 2002.8411
+BRCT - - 0
+BRGT - - 0
+BROD - 2011-01-01 0 1998.0
+BRWN - 2002-10-22 0
+BSB4 - 2002-10-22 0
+BUGS - - 0
+C123 - 2002-10-22 0
+C85G - - 0 2002.8411
+CARL - 2002-10-22 0
+CABN - - 0
+CANN - - 0
+CAPE - - 0
+CENO - - 0
+CGLO - - 0 2002.8411
+CGNU - - 0
+CHIN - - 0
+CHIR - - 0
+CHN1_CHNB - - 0
+CHNG - - 0 2002.8411
+CHRN - - 0
+CINC - - 0
+CKLN - - 0 2002.8411
+CLAM - - 0
+CLUB - - 0
+CMBR - - 0
+CNNK - - 0 2003.879
+CODO - - 0 2002.8411
+COGH - - 0
+COMB - - 0
+CPLK - - 0 2002.8411
+CPR - - 0 2002.8411
+CRNB - - 0
+CROS_K76 - - 0 2002.8411
+CROW - - 0
+CRSC - - 0 2002.8411
+D79 - - 0
+DACE - - 0
+DAHL - - 0 2002.8411
+DAKA - - 0 1999.933
+DAM - - 0
+DCH1 - - 0
+DEAS - - 0
+DEC2 - - 0
+DELT - - 0
+DEPT - - 0
+DEST - - 0
+DEZA - - 0
+DFLY - 2002-10-22 0
+DH97 - 2002-10-22 0
+DHFA - - 0
+DIAN - - 0 2002.8411
+DILL - - 0
+DIXI - - 0 2002.8411
+DMP2 - - 0
+DNLY - 2002-10-22 0
+DON - - 0 2002.8411
+DRYB - - 0
+DT16 - - 0
+DT19 - - 0
+DUKY - - 0
+EA22 - - 0
+EAGL - - 0
+EAMA - - 0 2002.8411
+EBAY - - 0 2002.8411
+EDDI - - 0
+EGG - - 0 2002.8411
+EGL2 - - 0 2002.8411
+EKG3 - - 0 2002.8411
+EKLU - - 0 2002.8411
+ELIA - - 0
+ELIB - - 0
+ELIC - - 0
+ELCR - - 0
+ELD - - 0
+ELSE - - 0
+ENDI - - 0
+ENUN - - 0 2002.8411
+ESKI - - 0
+EST1 - - 0
+ETID - - 1
+EX - - 0
+EYAK - - 0
+FARO - - 0
+FAUS - - 0
+FAWN - - 0
+FCRK - 2002-10-22 0
+FLAT - - 0
+FLCN - - 0
+FLOW - - 0
+FNGB - - 0
+FNGR - - 0
+FROK - - 0
+FS32 - - 0
+FSHK - - 0
+FSHL - - 0 2002.8411
+FSRH - - 0
+FTGL - - 0 2008.57
+FTOP - - 0
+FTRS - - 0
+FTVM - - 0
+FXCR - - 0
+GAIN - - 0 2002.8411
+GAMB - - 0
+GATE - - 0
+GDPR - - 0
+GEO1 - - 0 2003.879
+GIAN - - 0 2002.8411
+GILB - - 0
+GKNC - - 0
+GLDN - - 0
+GOOS - - 0
+GOVP - - 0
+GRAV - - 0 2002.8411
+GRIS - - 0
+GRIZ - 2002-10-22 0
+GRMS - - 0
+GRN2 - - 0 2002.8411
+GSPA - - 0
+GULL - - 0
+GUNN - - 0
+H81 - - 0
+HAM - - 0 2002.8411
+HANN - - 0 2002.8411
+HAR3 - - 0 2002.8411
+HEID - - 0
+HIDD - - 0
+HILS - - 0 2002.8411
+HIWA - 2002-10-22 0
+HNSA - - 0
+HNSD - - 0
+HNTN - - 0
+HOMA - - 0 2002.8411
+HPBA - - 0
+HSB - - 0
+HUB1 - - 0
+HURR - 2002-10-22 0
+I177 - - 0 2002.8411
+ICE4 - - 0
+ILIU - - 0
+INCK - - 0 2002.8411
+INDI - - 0
+ISLE - - 0 2002.8411
+ISLK - - 0
+ISLZ - - 0 2002.8411
+J122 - - 0
+JANE - - 0 2002.8411
+JIMM - - 0
+JNUT - - 0 2002.8411
+KALS - - 0
+KAOS - - 0
+KATY - - 0
+KICH - - 0
+KICM - - 0 2012.0
+KIRH - - 0 2012.0
+KIRT - - 0
+KNBG - - 0
+KNUT - - 0
+KOD2 - - 0
+KTNR - - 0
+L2C6 - 2002-10-22 0
+LARI - - 0
+LAST - - 0
+LAV1 - - 0
+LIBF - 2002-10-22 0
+LITU - - 0
+LOG - 2002-10-22 0
+LORA - - 0
+LSD1 - - 0
+LSDP - - 0
+LSG1 - - 0
+LSTR - - 0
+LUKY - - 0
+LVA2 - 2010-01-01 0 1998.0
+M110 - 2002-10-22 0
+M155 - - 0
+M78 - 2011-01-01 0
+MAC - - 0
+MARG - - 0
+MART - - 0
+MCGA - - 0
+MCGB - - 0
+MDFT - - 0
+MDPK - - 0
+MDR1 - - 0
+MELS - - 0
+MEN - 2002-10-22 0
+MENA - 2011-01-01 0
+MENG - - 0
+MID - - 0
+MIDK - - 0
+MINE - - 0
+MINT - - 0
+MIST - - 0
+MLSP - - 0
+MMOR - - 0
+MMKT - - 0
+MOS2 - - 0 2002.8411
+MOSR - - 0
+MOTD 2002-12-01 - 0
+MOTG - - 0 2002.8411
+MPEN - - 0 2002.8411
+MQTO - - 0
+MSB2 - - 0
+MSUN - - 0
+MURD - - 0
+N82 - - 0
+NARM - - 0
+NATI - - 0
+NCAP - - 0
+NCRS - - 0
+NENA - 2002-10-22 0
+NIK - - 0
+NIK2 - - 0 2002.8411
+NINI - - 0 2002.8411
+NOME - - 0
+NORM - - 0
+NOVA - - 0
+NOVR - - 0
+NQ1 - - 0
+NQ4 - - 0
+NRDG - - 0
+NSLM - - 0
+NWOD - - 0 2002.8411
+NWP - - 0
+OMEA - - 0
+OMEB - - 0
+OVAL - - 0
+P118 - - 0
+PANA - 2002-10-22 0
+PANK - - 0
+PASA - - 0
+PAXS - 2002-10-22 0
+PEDR - - 0
+PEEP - - 0
+PETE - - 0
+PF30 - 2002-10-22 0
+PISA - 2002-10-22 0
+POOR - - 0 2002.8411
+POPL - - 0 2002.8411
+POPZ - - 0 2002.8411
+PPLN - 2002-10-22 0
+PRG6 - - 0
+PRSP - - 0
+PRTG - - 0 2002.8411
+PRV1 - - 0
+PRVD - - 0
+PSGA - - 0
+PTVL - - 0 2002.8411
+PUPA - - 0
+PURI - - 0 2002.8411
+QICT - - 0
+QRRY - - 0 2002.8411
+QRTT - 2002-10-22 0
+R109 - 2002-10-22 0
+R122 - 2002-10-22 0
+R205 - - 0
+RAG - - 0
+RALF - - 0
+REED - - 0 2002.8411
+REEF - - 0
+REF2 - - 0
+REFL - - 0
+RGGI - - 0 2002.8411
+RIOU - - 0 2002.8411
+ROC - - 0 2002.8411
+ROE2 - - 0
+ROWD - - 0
+RUB2 - - 0
+S1 - - 0 2002.8411
+S103 - - 0 2002.8411
+S79R - - 0 2002.8411
+SACC - - 0
+SARA - - 0
+SATT - - 0
+SBS2 - - 0
+SCAP - - 0
+SDP1 - - 0
+SDPT - - 0
+SHIP - - 0 2008.57
+SIDE - - 0
+SITA - - 0
+SITK - - 0
+SITU - - 0
+SKI - - 0
+SKLK - - 0
+SLCH - 2002-10-22 0
+SLIM - 2002-10-22 0
+SIME_SMNF - - 0
+SMTH - - 0
+SNDP - - 0
+SOUR - 2002-10-22 0
+SPIL - 2002-10-22 0
+SPSW - - 0
+SSWB - 2002-10-22 0
+STCK - - 0
+STRI - 2002-10-22 0
+STRT - - 0
+SUR6 - - 0
+SVAC - - 0
+SWB4 - 2002-10-22 0
+SXQC - - 0 2002.8411
+SXQD - - 0 2002.8411
+T187 - - 0
+T18N - - 0
+T19 - - 0 2002.8411
+T20N - - 0 2002.8411
+TALK - 2002-10-22 0
+TATS - - 0
+TAZL - 2002-10-22 0
+TELE - - 0
+TENA - - 0
+THIN - - 0 2002.8411
+THM1 - - 0 2002.8411
+THMP - - 0 2002.8411
+TKHR - - 0
+TLGT - - 0
+TOMH - - 0
+TRLK - - 0 2002.8411
+TRM2 - - 0
+TRTH - - 0
+TURN - - 0 2002.8411
+TWLV - 2002-10-22 0
+U76 - - 0
+UAMF - - 0 2002.8411
+UDIG - - 0
+UNAL - - 0
+UNAM - - 0
+UNF - - 0
+UNKA - - 0
+UNKB - - 0
+UNK1 - - 0
+V77 - - 0
+VDUS - - 0
+VDZW - - 0
+VRN4 - - 0
+VRN9 - - 0
+VYAK - - 0
+W81 - - 0
+W86 - - 0
+WABM - - 0
+WALT - - 0 2003.879
+WDR2 - 2002-10-22 0
+WHAL - - 0
+WHB0 - - 0
+WHL - - 0
+WICK - 2002-10-22 0
+WILL - 2002-10-22 0
+WLKR - - 0 2002.8411
+WNDA - - 0
+WOND - 2002-10-22 0
+WVN3 - - 0
+X122 - 2002-10-22 0
+X7 - - 0
+Y565 - - 0 2002.8411
+YAKK - - 0
+YAKN - - 0
+YAKR - - 0
+YKTT - - 0 2002.8411
+YRKT - - 0
+YUKO - - 0 2002.8411
+Z22A - 2002-10-22 0
+Z82 - - 0
+ZETP - - 0

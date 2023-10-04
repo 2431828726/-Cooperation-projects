@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<station name="AAAA"><!--Automatically created on 31-Oct-2008 14:56:39-->
+   <periodics/>
+   <displacements/>
+   <logarithmic-relaxation/>
+   <exponential-relaxation/>
+   <hyperbolic-tangent/>
+</station>

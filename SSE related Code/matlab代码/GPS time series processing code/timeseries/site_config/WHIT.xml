@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<station name="WHIT"><!--Automatically created on 08-Nov-2009 21:33:17-->
+   <periodics>
+-	<estimate time="1"/>
+        <estimate time="2"/>
+        <estimate time="13.25"/>
+   </periodics>
+
+   <displacements>
+	<estimate time="2002.825" amplitude="1"/>
+   </displacements>
+   <logarithmic-relaxation>
+        <estimate time="1995" amplitude="1" ttau="100"/>
+        <estimate time="1996.2" amplitude="1" ttau="100"/>
+   </logarithmic-relaxation>
+
+   <exponential-relaxation>
+	<estimate time="1995" amplitude="1" ttau="100"/>
+        <estimate time="1996.2" amplitude="1" ttau="100"/>
+   </exponential-relaxation>
+   <hyperbolic-tangent>
+<!--	<estimate time=".825" amplitude="1" ttau="0.01"/>-->
+   </hyperbolic-tangent>
+</station>

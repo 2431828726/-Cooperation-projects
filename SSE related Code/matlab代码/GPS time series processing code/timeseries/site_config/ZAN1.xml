@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<station name="ZAN1"><!-- TEST -->
+   <periodics>
+      <frequency value="23.300000"/>
+      <cycles value="23.300000"/>
+   </periodics>
+   <displacements>
+      <time value="900.000000"/>
+   </displacements>
+   <logarithmic-relaxation>
+      <time ttau="20" value="100"/>
+   </logarithmic-relaxation>
+   <exponential-relaxation>
+      <time ttau="4.000000" value="2.000000"/>
+   </exponential-relaxation>
+   <hyperbolic-tangent>
+      <time ttau="20" value="200"/>
+      <time ttau="20" value="300"/>
+      <time ttau="20" value="400"/>
+   </hyperbolic-tangent>
+</station>

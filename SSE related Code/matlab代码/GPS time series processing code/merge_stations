@@ -1,0 +1,4 @@
+#!/bin/tcsh -f
+#
+cat campaign_paper.txt continuous_paper.txt > TimeSeriesInversion_stations.txt
+awk '{print $3, $2}' TimeSeriesInversion_stations.txt > TimeSeriesInv_sites

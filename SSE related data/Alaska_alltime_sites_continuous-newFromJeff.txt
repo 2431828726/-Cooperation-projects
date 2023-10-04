@@ -1,0 +1,477 @@
+#stationname  |  starttime  |  endtime  |  estimate seasonal terms (1=yes,0=no)  |  eventual time of an offset
+#
+#
+299C_AC61 2012-01-01 - 1
+AASI - - 1
+AB01 - - 1 2013.665,2014.479
+AB02 - - 1 2010.545,2015.569
+AB04 - - 1 
+AB06 - - 1 2009.643,2016.067
+AB07 - 2011-09-01 1
+AB08 - - 1 2009.493
+AB09 - - 1
+AB11 - - 1 2011.02,2016.067
+AB12 - - 1 2016.067
+AB13 - - 1 2012.109
+AB14 - - 1 
+AB15 - - 1
+AB17 - - 1
+AB18 - - 1 2009.710
+AB21 - - 1 2010.25,2010.593,2014.479
+AB22 - - 1 2016.067
+AB25 - - 1
+AB27 - - 1
+AB28 - - 1 2013.65
+AB33 - - 1 2011.87
+AB35 - - 1
+AB36 2012-01-01 - 0  
+AB39 - - 1
+AB41 2012-01-01 - 1
+AB42 - - 1 2010.435
+AB43 - - 1
+AB44 - - 1
+AB45 - - 1
+AB46 - - 1      
+AB48 - 2012-10-27 1
+AB49 - 2012-10-27 1
+AB50 - 2012-10-27 1
+AB51 - 2012-10-27 1
+#AB53 - 2012-10-27 1  not enough data before Haida Gwaii
+AC02 - - 1
+AC03 2012-01-01 - 1 2016.067
+AC06 2012-01-01 - 1 2016.067
+AC07 - - 1
+AC08 - - 1
+AC09 - - 1 2011.654,2012.72,2014.704
+AC10 - - 1 2009.645
+AC11 2013-01-01 - 1
+AC12 2011-05-01 - 1
+AC13 - - 1
+AC14 - - 1
+AC15 2012-01-01 - 1 2016.067
+AC16 - - 1 2016.067
+AC17 - - 1 2009.25,2016.067
+AC18 - - 1 2012.032,2016.067
+AC19 - - 1
+AC20 2013-01-01 - 1 2016.067
+AC21 - - 1
+AC23 2012-01-01 - 1 2016.067
+AC24 - - 1
+AC25 - - 1
+AC26 - - 1
+AC27 - - 1 2013.65
+AC28 - - 1
+AC29 - - 1
+AC30 - - 0
+AC31 - - 1
+AC32 - - 1 2009.717
+AC33 - - 1
+AC34 - - 1
+AC35 2012-01-01 - 1 2016.067
+AC36 2013-01-01 - 1 2016.067
+AC37 - - 1  2016.067
+AC38 - - 1 2016.067
+AC39 - - 1 2016.067
+AC40 - - 1
+AC41  2011-09-01 - 1
+AC42 - - 1 2009.61
+AC43 - - 1 2016.067
+AC44 2013-01-01 - 1
+AC45 - - 1
+AC46 2013-01-01 - 1
+AC47 2012-01-01 - 1
+AC48 - - 1 2012.55
+AC50 - - 1  
+AC51 2013-01-01 - 1
+AC52 2010-04-01 - 1
+AC53 2013-05-01 - 1
+#AC55 - - 1 unstable site
+AC57 - - 1
+AC58 - - 1
+AC59 - - 1
+AC60 - - 1 2009.45,2013.115,2014.479
+#AC66 - - 1  earthquake and slow event, antenna change at 2010.347
+AC67 - - 1
+#AC76 1 # AFTERMATH of earthquake on November 3, 2002 
+#AC78 1 # AFTERMATH of earthquake on November 3, 2002 
+AC79 - - 0
+AC80 - - 1
+ACCU - - 0 2002.8411
+ACCA - - 1
+AIS1 - - 1
+AIS2 - - 0
+AIS5 2008-08-14 2012-10-27 1
+#AIS6 - 2012-10-27 1   # bad site, extremely noisy
+#AKGG 2006-01-01 - 1
+#AKLV 2006-01-01 - 1
+#AKMO 2006-01-01 - 1
+#AKRB 2006-01-01 - 1
+ALGO - - 1
+ALRT - - 1
+ALSC - 2011-08-24 1 2008.664,2011.121
+AMC2 - - 1 2007.75
+#AMCT - - 1  not enough data
+ANC1 2003-10-01 2009-01-01 1 2004.916,2007.2,2007.9
+ANC2 - - 1
+ARVC - - 1
+ASKY - - 1
+ATQK - - 1 2012.78
+#ATTC 1 # aftermath of earthquake on November 3, 2002
+#ATWC - - 1 slow event
+#ATW2 2001-07-01 2008-01-01 1 2002.8411
+AUGL - 2005-10-01 1
+AV01 2006-05-01 - 1 2016.067
+AV02 2006-05-01 - 1 2016.067
+AV03 - - 1
+AV04 2006-05-01 - 0  2016.067
+AV05 - 2005-10-01 1
+AV06 - - 1
+AV07 - - 1
+AV08 - - 1
+AV09 - - 1
+AV10 - - 1
+AV11 - - 1
+AV12 - - 1
+AV13 - - 1
+AV14 - - 1
+AV15 - - 1
+AV16 - - 1 2016.067
+AV17 - - 1 2016.067
+AV18 - - 1 2016.067
+AV19 - 2013-01-07 1 2016.067
+AV20 - - 1 2016.067
+AV24 - - 1 2009.613
+AV25 - - 1 2009.610
+AV26 - - 1 2009.613
+AV27 - 2012-11-09 0 2009.608
+AV29 - 2013-01-09 0 2009.608
+AV34 - - 1 2009.605
+AV35 - 2012-11-15 0 2009.50
+AV36 - - 1 2009.662
+AV37 - 2013-02-08 1 2009.5
+AV38 - - 1 2009.608
+AV39 - - 1 2009.608
+AV40 - 2013-01-22 1 2009.604
+BASC - - 1
+BAKE - - 1
+BARO - - 1
+BAY1 - - 1
+BAY2 - - 1
+BAY5 - - 1
+BAY6 2007-11-19 - 1
+#BCES - - 1
+#BCMR - - 1
+#BCNS - - 1
+#BCSF - - 1
+#BCSL - - 1
+#BCSM - - 1
+#BCVC - - 1
+#BCWA - - 1
+BCCG - - 1 2009.93
+BCDI - 2012-10-27 1
+BCDL - 2012-10-27 1
+BCFJ - 2012-10-27 1
+BCFN - - 1 2012.827
+BCIN - - 1
+BCPG - - 1
+BCPH - 2012-10-27 1 2007.79
+BCPR - 2012-10-27 1
+BCRK - - 1
+BCSS - 2012-10-27 1 2011.24
+BCTE 2014-06-01 - 1
+BEA2 2007-01-01 - 1
+BET1 - - 1
+BETF - - 0
+BGCC - - 1
+BILI - - 1
+BILB - 2015-04-01 1
+BIS1 - - 1
+BIS5 - 2012-10-27 1
+BIS6 - 2012-10-27 1
+#BITS 1 # aftermath of earthquake on November 3, 2002
+BKI  - - 1 1997.928,2003.93
+BLAS - - 1
+#BLMG - - 1  very noisy site
+BMCP - 2012-01-06 1
+BREW - - 1 
+BRMU - - 1 
+BRNG - - 1 
+BRW1 - - 1
+CBB0 - - 0 
+CBBC - - 1 
+CCPT - - 1 
+#CDBF - - 1 noisy, sparse
+CDB7 2003-05-06 - 1 2007.468,2009.212
+CDB8 - - 1
+CENA - 2002-11-01 1
+CGNU_CGNN - - 1
+CHI1 - - 1
+CHI2 - - 0
+CHI3 - - 1
+CHI4 - - 1
+CHI5 - - 1
+CHI6 - - 0
+CHUC - - 1
+CHUR - - 1
+CLGO - 2002-11-01 1
+CMJV 2002-11-05 - 1
+CORC - - 1
+DAEJ - 2011-03-10 1
+DANE - - 1
+DEHO - - 1
+DGJG - - 1
+#DH32 1 # aftermath of earthquake on November 3, 2002
+DKSG - - 1
+DMNH - - 1
+#DLTJ 1 # aftermath of earthquake on November 3, 2002
+#DNLC 1 # aftermath of earthquake on November 3, 2002
+#DRMC 1 # aftermath of earthquake on November 3, 2002
+DSL1 - - 1
+DUBO - - 1 1999.76,2009.656
+DUTC - - 1
+DVC1 - - 1
+EDMC - - 1
+EDOC - - 1
+EIL1 - 2002-10-20 1
+#EIL2 1 # earthquake on November 3, 2002
+ELD_ELDC - - 1 2013.016
+EURC - - 1
+EURK - - 1
+EUR2 - - 1
+EYAK_EYAC - - 1 2002.8411,2008.6  
+FAI1 - 2013-01-01 1 2008.35
+#FAI2 - - 0 noisy, sparse
+#FAIF - - 0 noisy, sparse
+FAIR - 2002-11-01 1
+FAIV - - 1 
+FLIN - 2010-06-01 1 
+#FRIG 1 # aftermath of earthquake on November 3, 2002
+FSIC - - 1 
+FSMC - - 1 
+GILC - - 1 
+GJOC - - 1 
+GMMA - - 1
+GNAA - 2002-11-01 1
+#GOLD - - 1  # California
+#GOL2 - - 1  # California
+GRNR - 2002-10-15 1
+GRNX 2010-01-01 - 1
+GROK - - 1
+#GRWD - - 1   # not enough data
+GUS1 2004-04-03 - 1 
+GUS2 - - 1 2002.62
+GUS5 - 2013-01-04 1
+GUS6 - 2013-01-04 1
+#HAAR - - 1 not enough data
+HAL0 - - 0
+HALC - - 1
+HDPW - - 1 2016.067
+HEL2 - - 1
+#HIWC 1 # aftermath of earthquake on November 3, 2002
+HJOR - - 1
+HMBG - - 1
+HOLM - - 1
+HRDG - - 1
+#HURC 1 # aftermath of earthquake on November 3, 2002
+#IARC - - 1 2002.8411  too many antenna changes
+ILUL - - 1
+INVK 2004-01-01 2012-12-05 0
+IQA0 - - 0
+IQAC - - 1
+IQAL - - 1
+IRKT - - 1
+ISOR - - 1
+#JANL 1 # aftermath of earthquake on November 3, 2002
+JGBL - - 1
+JNU1 - 2012-10-27 1 2007.383
+#JPLM - - 1  # California
+JWLF - - 1
+KAGA - - 1
+KAGZ - - 1
+KAPI - - 1
+#KBG  - - 1 not supposed to have this station
+KBUG - - 1
+KDK1 - - 1 1999.1,1999.933,2001.03
+KDK2 2004-04-03 - 1
+KELY - - 1
+KEN1 1998-01-01 - 1 2002.8411
+KEN2 2004-04-03 - 1
+#KEN5 - - 1   # bad site, extremely noisy
+#KEN6 - - 1   # bad site, extremely noisy
+KLRS - - 1
+KLSQ - - 1
+KMJP - - 1
+KMOR - - 1
+KMS  - 2006-01-01 1
+KOD5 - 2011-12-25 1
+KOD6 - - 1
+KODK 2000-03-24 - 1 2000.524
+#KOKB - - 1 complex time series
+KUAQ - - 1
+KUGC - - 1
+KULL - - 1
+KULU 2003-07-01 - 1
+KUUJ - - 1 2010.575
+KWJ1 - - 1
+LBIB - - 1
+LEFN - - 1
+LEV1 - - 1
+LEV2 - - 1
+LEV5 - 2013-01-04 1
+LEV6 - 2013-01-04 1
+#LOGC 1 # aftermath of earthquake on November 3, 2002
+LYNS - - 1
+#MAG0 - - 1 complex time series
+MHAA_MAPS - - 1
+MAUI - - 1
+MCES - - 1 2016.067
+MCMC - - 1
+MDFC - - 1 2013.02
+MDO1 - 2009-01-01 1 
+#MENT 1 # aftermath of earthquake on November 3, 2002
+MED1 - - 1
+MIKI - - 1
+MIK2 - - 1
+MKEA - - 1 2006.79
+#MMEP - - 1  # not enough data yet
+MREP - - 1
+MRGL - - 1
+MORP - - 1
+MSVG - - 1
+MSWB - - 1
+MYVA - 2014-08-01 1
+NAIN - - 1
+NEWL - - 1 2008.378,2008.405,2013.345
+NLIB - - 1 2010.0
+NNVN - - 1
+NORD - - 1 2009.164,2010.82
+NRIL - - 1
+NRSK - - 1
+NSRL - - 1
+NUUK - - 1 2009.467,2010.693
+NYAL - - 1
+NYA1 - - 1
+NYA2 - - 1 2011.55
+#OKCD - - 1  volcano
+#OKCE - - 1  volcano
+OKFG - 2008-07-01 1
+#OKNC - - 1  volcano
+#OKSO - - 1  volcano
+#OSBN - - 1 sparse, noisy
+#OTZF - - 0   # not enough data
+OTZ1 - - 1
+#PALM 1 # aftermath of earthquake on November 3, 2002
+#PAXC 1 # aftermath of earthquake on November 3, 2002
+#PAX2 1 # aftermath of earthquake on November 3, 2002
+PBAY - - 1 2016.067
+PBOC - - 1
+PENT - - 1
+#PETP - - 1  very noisy time series
+#PETR - - 1  outliers
+PETS 2003-07-01 - 1 2006.875,2007.037,2013.395
+PLPK - - 1
+PFRR - - 1
+PFR2 - - 1
+PONC - - 1
+POT1 - - 0
+POT2 1997-04-01 - 0
+POT3 - - 1 2002.8411
+POT4 2002-10-03 - 1 2004.2
+POT5 - - 1 2011.2
+POT6 - - 1
+PRD  - - 1
+#PRDS - - 1  noisy
+PUO1 - - 1
+QAAR - - 1
+QAQ1 - - 1
+QEQE - - 1
+QIKC - - 1
+QIKI - - 1
+QUIC - - 0 2006.45,2012.0
+RCM5 - - 1
+RCM6 - - 1
+RCM7 - - 1
+RDJH - - 1
+RDWB - - 1
+REDC - - 1
+RDSO - - 1
+REPC - - 1
+RESC - - 1
+RESO - - 1
+#REYK - - 1 too complex
+REYZ 2001-02-01 - 1
+#RGBY - - 1  Redoubt eruption signal
+RINK - - 1
+RNKC - - 1
+SACH - - 1
+SASK - - 1
+SCBY - - 1
+SCOB - - 1
+SCOR - - 1
+#SDOU 1  # aftermath of earthquake on November 3, 2002
+SELD - - 1 2002.8411,2016.067
+SENU - - 1 2010.55
+SG27 2006-01-01 - 1
+SISI - - 1
+SNKC - - 1
+SPBG 2006-07-01 - 1
+SPCG 2006-07-01 - 1
+SPCP - - 1
+SPCR 2006-07-01 - 1
+SPIT - - 1 2016.067
+SRMP - - 1
+STAS - - 1
+STJO - - 1 2013.085
+SUAF - - 1 2009.33
+#SUMM - - 1 unstable site
+TAEJ - - 1
+TALC - - 1
+TATC_TATS - - 1 2013.016
+TBON - - 1 2008.351
+TBRD - - 1
+#TERA - - 1   # not enough data
+THU1 - 2001-01-01 1
+THU2 2007-01-01 - 1
+THU3 - - 1
+THU4 - - 1
+TIL  - 2006-01-01 1
+TIMM - - 1
+TIXI - 2010-12-01 1
+TLKA 2013-05-01 - 1
+#TNAC - - 1 postseismic
+TRDS - - 1 2007.35
+TREO - - 1
+TROM - - 1
+TRO1 - - 1
+TSEA 2013-05-01 - 1 2007.15
+#TOOL - - 1   # unstable tower
+TUKT - 2012-11-23 1 
+UAAG - - 1 2007.069,2007.644
+UNBC - - 1
+USNO - 2013-01-01 1
+#USN1 - - 1 not enough data
+USN3 - - 1
+USN5 - - 1 2014.87
+USN7 - - 1
+#USU3 - - 1 complex time series
+UTMG - - 1
+UPVK - - 1
+VARS - - 1 2009.345
+VFDG - - 1
+#VLDZ - - 1 # not enough data
+VOZN - - 1 2016.067
+WAT1 - - 1
+WES2 - - 1
+WHIT - - 1 1996.43,2002.8411,2009.557,2013.016
+WIKR - - 1
+WLLL - 2012-10-27 1 
+WTHG - - 1 
+#YAKA - - 1  short, strong seasonal
+YAKT 2004-01-01 - 1 
+YAKZ - - 1 
+YEL2 - - 1 
+YELL - - 1 1996.643
+YFB1 - - 1 
+YMER - 2013-09-20 1 
+ZAN1 - - 1 2003.309,2007.356
+ZINA - - 0

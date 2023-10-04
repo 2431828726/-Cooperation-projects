@@ -1,0 +1,3586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Alaska_CGPS.kml</name>
+	<open>1</open>
+	<Style id="cgps">
+		<IconStyle>
+			<color>ffb3ff5e</color>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pal4/icon25.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sgps">
+		<IconStyle>
+			<color>ffb3ff5e</color>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pal4/icon24.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Folder>
+		<name>Alaska.subnet</name>
+		<Placemark>
+			<name>299C</name>
+			<description><![CDATA[<b>Long Name:</b> <i>2999 CONTINUOUS</i><br /><b>Marker:</b> <i>(DOMES xxxxxMxxx)</i><br /><b>Longitude:</b> <i>-142.076100000</i><br /><b>Latitude:</b> <i>64.028700000</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-142.0761,64.0287,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AASI</name>
+			<description><![CDATA[<b>Long Name:</b> <i>AASIAT</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>-52.793341863</i><br /><b>Latitude:</b> <i>68.719316758</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-52.793341863,68.71931675800001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB01</name>
+			<description><![CDATA[<b>Long Name:</b> <i>ATKA ISLAND PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-21351-00000)</i><br /><b>Longitude:</b> <i>-174.204756481</i><br /><b>Latitude:</b> <i>52.209504495</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-174.204756481,52.209504495,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB02</name>
+			<description><![CDATA[<b>Long Name:</b> <i>NIKOLSKI PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-21360-00000)</i><br /><b>Longitude:</b> <i>-168.854670371</i><br /><b>Latitude:</b> <i>52.970605470</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-168.854670371,52.97060547,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB04</name>
+			<description><![CDATA[<b>Long Name:</b> <i>SAVOONGA PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-21490-00000)</i><br /><b>Longitude:</b> <i>-170.567443168</i><br /><b>Latitude:</b> <i>63.656864561</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-170.567443168,63.656864561,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB06</name>
+			<description><![CDATA[<b>Long Name:</b> <i>FALSE PASS</i><br /><b>Marker:</b> <i>(PBO 00000000-19337-00000)</i><br /><b>Longitude:</b> <i>-163.423453808</i><br /><b>Latitude:</b> <i>54.885322792</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-163.423453808,54.885322792,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB07</name>
+			<description><![CDATA[<b>Long Name:</b> <i>SAND POINT</i><br /><b>Marker:</b> <i>(PBO 00000000-18579-00000)</i><br /><b>Longitude:</b> <i>-160.476756672</i><br /><b>Latitude:</b> <i>55.349276309</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-160.476756672,55.34927630899999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB08</name>
+			<description><![CDATA[<b>Long Name:</b> <i>MEKORYUK PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-166.200960000</i><br /><b>Latitude:</b> <i>60.384850000</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-166.20096,60.38485,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB09</name>
+			<description><![CDATA[<b>Long Name:</b> <i>RAZORBACK PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-168.062125192</i><br /><b>Latitude:</b> <i>65.614981511</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-168.062125192,65.614981511,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB11</name>
+			<description><![CDATA[<b>Long Name:</b> <i>NOME PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-19780-00000)</i><br /><b>Longitude:</b> <i>-165.373458529</i><br /><b>Latitude:</b> <i>64.564496462</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-165.373458529,64.56449646199999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB12</name>
+			<description><![CDATA[<b>Long Name:</b> <i>PLATINUM PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-21505-00000)</i><br /><b>Longitude:</b> <i>-161.746261503</i><br /><b>Latitude:</b> <i>58.950795165</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-161.746261503,58.95079516500001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB13</name>
+			<description><![CDATA[<b>Long Name:</b> <i>CHIGNIK LGN PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-19980-00000)</i><br /><b>Longitude:</b> <i>-158.503793628</i><br /><b>Latitude:</b> <i>56.307326241</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-158.503793628,56.307326241,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB14</name>
+			<description><![CDATA[<b>Long Name:</b> <i>DILLLINGHAM PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-21505-00000)</i><br /><b>Longitude:</b> <i>-159.091531428</i><br /><b>Latitude:</b> <i>59.108166270</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-159.091531428,59.10816627,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB15</name>
+			<description><![CDATA[<b>Long Name:</b> <i>NYAC GOLD PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-19760-00000)</i><br /><b>Longitude:</b> <i>-159.878361152</i><br /><b>Latitude:</b> <i>61.039753126</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-159.878361152,61.039753126,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB17</name>
+			<description><![CDATA[<b>Long Name:</b> <i>UNALAKLEET PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-160.694730694</i><br /><b>Latitude:</b> <i>63.886359417</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-160.694730694,63.88635941699999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB18</name>
+			<description><![CDATA[<b>Long Name:</b> <i>KOTZEBUE PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-19926-00000)</i><br /><b>Longitude:</b> <i>-162.613507339</i><br /><b>Latitude:</b> <i>66.858363545</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-162.613507339,66.858363545,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB21</name>
+			<description><![CDATA[<b>Long Name:</b> <i>ADAK PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-19611-00000)</i><br /><b>Longitude:</b> <i>-176.662646889</i><br /><b>Latitude:</b> <i>51.864149638</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-176.662646889,51.86414963800001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB22</name>
+			<description><![CDATA[<b>Long Name:</b> <i>ILIAMNA PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-19629-00000)</i><br /><b>Longitude:</b> <i>-154.698258649</i><br /><b>Latitude:</b> <i>59.899320643</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-154.698258649,59.899320643,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB25</name>
+			<description><![CDATA[<b>Long Name:</b> <i>TATALINA AFS PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-156.023390838</i><br /><b>Latitude:</b> <i>62.929310486</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-156.023390838,62.929310486,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB27</name>
+			<description><![CDATA[<b>Long Name:</b> <i>KOBUK VALLEY PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-21550-00000)</i><br /><b>Longitude:</b> <i>-156.904889351</i><br /><b>Latitude:</b> <i>67.055886421</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-156.904889351,67.055886421,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB28</name>
+			<description><![CDATA[<b>Long Name:</b> <i>RAINY PASS PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-19700-00000)</i><br /><b>Longitude:</b> <i>-152.814917265</i><br /><b>Latitude:</b> <i>62.093815831</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-152.814917265,62.09381583100001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB33</name>
+			<description><![CDATA[<b>Long Name:</b> <i>COLDFOOT PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-20044-00000)</i><br /><b>Longitude:</b> <i>-150.172543690</i><br /><b>Latitude:</b> <i>67.251012829</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-150.17254369,67.251012829,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB35</name>
+			<description><![CDATA[<b>Long Name:</b> <i>YAKATAGA PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-142.389870950</i><br /><b>Latitude:</b> <i>60.079065615</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-142.38987095,60.079065615,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB36</name>
+			<description><![CDATA[<b>Long Name:</b> <i>MANLEY HS PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-19765-00000)</i><br /><b>Longitude:</b> <i>-150.743984048</i><br /><b>Latitude:</b> <i>65.030399277</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-150.743984048,65.030399277,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB39</name>
+			<description><![CDATA[<b>Long Name:</b> <i>FORT YUKON PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-145.212630871</i><br /><b>Latitude:</b> <i>66.559346179</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-145.212630871,66.559346179,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB41</name>
+			<description><![CDATA[<b>Long Name:</b> <i>EAGLE AIRPORT PB</i><br /><b>Marker:</b> <i>(PBO 00000000-20120-00000)</i><br /><b>Longitude:</b> <i>-141.158066504</i><br /><b>Latitude:</b> <i>64.777326067</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-141.158066504,64.777326067,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB42</name>
+			<description><![CDATA[<b>Long Name:</b> <i>AKWE PEAK PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-19721-00000)</i><br /><b>Longitude:</b> <i>-138.898810632</i><br /><b>Latitude:</b> <i>59.340374882</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-138.898810632,59.340374882,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB43</name>
+			<description><![CDATA[<b>Long Name:</b> <i>CAPE SPENCER PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-21361-00000)</i><br /><b>Longitude:</b> <i>-136.640807833</i><br /><b>Latitude:</b> <i>58.198841980</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-136.640807833,58.19884197999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB44</name>
+			<description><![CDATA[<b>Long Name:</b> <i>SKAGWAY PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-19315-00000)</i><br /><b>Longitude:</b> <i>-135.228297494</i><br /><b>Latitude:</b> <i>59.528038709</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-135.228297494,59.528038709,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB45</name>
+			<description><![CDATA[<b>Long Name:</b> <i>SAG RIVER PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-148.871151487</i><br /><b>Latitude:</b> <i>68.760495001</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-148.871151487,68.760495001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB46</name>
+			<description><![CDATA[<b>Long Name:</b> <i>ARCTIC VILL PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-145.567901203</i><br /><b>Latitude:</b> <i>68.120671866</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-145.567901203,68.120671866,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB48</name>
+			<description><![CDATA[<b>Long Name:</b> <i>PORT ALEXANDER</i><br /><b>Marker:</b> <i>(PBO 00000000-19257-00000)</i><br /><b>Longitude:</b> <i>-134.646995819</i><br /><b>Latitude:</b> <i>56.245062479</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-134.646995819,56.245062479,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB49</name>
+			<description><![CDATA[<b>Long Name:</b> <i>KLAWOCK PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-19601-00000)</i><br /><b>Longitude:</b> <i>-133.068486713</i><br /><b>Latitude:</b> <i>55.580101728</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-133.068486713,55.580101728,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB50</name>
+			<description><![CDATA[<b>Long Name:</b> <i>MENDENHALL PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-19303-00000)</i><br /><b>Longitude:</b> <i>-134.545300258</i><br /><b>Latitude:</b> <i>58.416775470</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-134.545300258,58.41677547,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB51</name>
+			<description><![CDATA[<b>Long Name:</b> <i>PETERSBURG PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-19227-00000)</i><br /><b>Longitude:</b> <i>-132.913560063</i><br /><b>Latitude:</b> <i>56.797623235</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-132.913560063,56.797623235,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AB53</name>
+			<description><![CDATA[<b>Long Name:</b> <i>CRYSTAL MOUNTAIN</i><br /><b>Marker:</b> <i>(PBO Petersburg, AK)</i><br /><b>Longitude:</b> <i>-132.867246534</i><br /><b>Latitude:</b> <i>56.584755753</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-132.867246534,56.584755753,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC02</name>
+			<description><![CDATA[<b>Long Name:</b> <i>AKHIOK PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-19617-00000)</i><br /><b>Longitude:</b> <i>-154.183044013</i><br /><b>Latitude:</b> <i>56.950585808</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-154.183044013,56.950585808,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC03</name>
+			<description><![CDATA[<b>Long Name:</b> <i>ANCHOR PT PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-xxxxx-00000)</i><br /><b>Longitude:</b> <i>-151.864509001</i><br /><b>Latitude:</b> <i>59.770639000</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-151.864509001,59.770639,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC06</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BRADLEY LAKE PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-19429-00000)</i><br /><b>Longitude:</b> <i>-150.890553268</i><br /><b>Latitude:</b> <i>59.763636825</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-150.890553268,59.763636825,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC07</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BUCKLAND PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-161.286615910</i><br /><b>Latitude:</b> <i>65.961293249</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-161.28661591,65.96129324899999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC08</name>
+			<description><![CDATA[<b>Long Name:</b> <i>CAPE DOUGLASPBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-153.644699932</i><br /><b>Latitude:</b> <i>58.928775163</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-153.644699932,58.928775163,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC09</name>
+			<description><![CDATA[<b>Long Name:</b> <i>KAYAK ISLAND PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-144.523846965</i><br /><b>Latitude:</b> <i>59.868477804</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-144.523846965,59.86847780399999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC10</name>
+			<description><![CDATA[<b>Long Name:</b> <i>CAP SARICHEF PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-164.886727916</i><br /><b>Latitude:</b> <i>54.522581364</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-164.886727916,54.522581364,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC11</name>
+			<description><![CDATA[<b>Long Name:</b> <i>CHICKALOON PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-19271-00000)</i><br /><b>Longitude:</b> <i>-148.331746912</i><br /><b>Latitude:</b> <i>61.807078597</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-148.331746912,61.807078597,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC12</name>
+			<description><![CDATA[<b>Long Name:</b> <i>CHERNABURA PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-159.589561452</i><br /><b>Latitude:</b> <i>54.830963109</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-159.589561452,54.830963109,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC13</name>
+			<description><![CDATA[<b>Long Name:</b> <i>CHIRIKOF PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-155.622399790</i><br /><b>Latitude:</b> <i>55.821896169</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-155.62239979,55.821896169,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC14</name>
+			<description><![CDATA[<b>Long Name:</b> <i>ESTHER ISLE PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-21572-00000)</i><br /><b>Longitude:</b> <i>-147.999579991</i><br /><b>Latitude:</b> <i>60.848700577</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-147.999579991,60.848700577,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC15</name>
+			<description><![CDATA[<b>Long Name:</b> <i>COOPER LNDG PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-19305-00000)</i><br /><b>Longitude:</b> <i>-149.724005884</i><br /><b>Latitude:</b> <i>60.481332598</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-149.724005884,60.481332598,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC16</name>
+			<description><![CDATA[<b>Long Name:</b> <i>DEEP WATER BAY</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-148.093233916</i><br /><b>Latitude:</b> <i>60.518203939</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-148.093233916,60.518203939,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC17</name>
+			<description><![CDATA[<b>Long Name:</b> <i>DRIFT RIVER</i><br /><b>Marker:</b> <i>(PBO 00000000-19981-00000)</i><br /><b>Longitude:</b> <i>-152.403846071</i><br /><b>Latitude:</b> <i>60.663903168</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-152.403846071,60.663903168,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC18</name>
+			<description><![CDATA[<b>Long Name:</b> <i>USHAGAT PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-152.249531052</i><br /><b>Latitude:</b> <i>58.925958177</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-152.249531052,58.925958177,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC19</name>
+			<description><![CDATA[<b>Long Name:</b> <i>FAREWELL MTN PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-153.607332709</i><br /><b>Latitude:</b> <i>62.519213717</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-153.607332709,62.519213717,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC20</name>
+			<description><![CDATA[<b>Long Name:</b> <i>GIRDWOOD PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-19164-00000)</i><br /><b>Longitude:</b> <i>-149.352502331</i><br /><b>Latitude:</b> <i>60.929207433</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-149.352502331,60.929207433,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC21</name>
+			<description><![CDATA[<b>Long Name:</b> <i>PERRYVILLE PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-19761-00000)</i><br /><b>Longitude:</b> <i>-159.127721822</i><br /><b>Latitude:</b> <i>55.921090082</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-159.127721822,55.921090082,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC23</name>
+			<description><![CDATA[<b>Long Name:</b> <i>SOLDOTNA PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-21420-00000)</i><br /><b>Longitude:</b> <i>-150.877953698</i><br /><b>Latitude:</b> <i>60.475093126</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-150.877953698,60.47509312599999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC24</name>
+			<description><![CDATA[<b>Long Name:</b> <i>KING SALMON PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-21043-00000)</i><br /><b>Longitude:</b> <i>-156.652754701</i><br /><b>Latitude:</b> <i>58.681572951</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-156.652754701,58.681572951,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC25</name>
+			<description><![CDATA[<b>Long Name:</b> <i>KING COVE PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-19129-00000)</i><br /><b>Longitude:</b> <i>-162.314051587</i><br /><b>Latitude:</b> <i>55.088968460</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-162.314051587,55.08896846,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC26</name>
+			<description><![CDATA[<b>Long Name:</b> <i>CAPE GULL PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-xxxxx-00000)</i><br /><b>Longitude:</b> <i>-154.150291515</i><br /><b>Latitude:</b> <i>58.214555360</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-154.150291515,58.21455535999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC27</name>
+			<description><![CDATA[<b>Long Name:</b> <i>MCNEIL RIVER SGR</i><br /><b>Marker:</b> <i>(PBO 00000000-18452-00000)</i><br /><b>Longitude:</b> <i>-154.162880200</i><br /><b>Latitude:</b> <i>59.252507692</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-154.1628802,59.252507692,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC28</name>
+			<description><![CDATA[<b>Long Name:</b> <i>NAGAI PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-160.049160141</i><br /><b>Latitude:</b> <i>55.078490856</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-160.049160141,55.078490856,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC29</name>
+			<description><![CDATA[<b>Long Name:</b> <i>MIDDLETON PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-146.339976099</i><br /><b>Latitude:</b> <i>59.429587626</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-146.339976099,59.429587626,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC30</name>
+			<description><![CDATA[<b>Long Name:</b> <i>MONTAGUE ISL PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-147.739232861</i><br /><b>Latitude:</b> <i>59.855817705</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-147.739232861,59.855817705,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC31</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BALD HEAD PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-19722-00000)</i><br /><b>Longitude:</b> <i>-162.239126075</i><br /><b>Latitude:</b> <i>64.637976450</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-162.239126075,64.63797645,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC32</name>
+			<description><![CDATA[<b>Long Name:</b> <i>MT SUSITNA PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-21004-00000)</i><br /><b>Longitude:</b> <i>-150.736899999</i><br /><b>Latitude:</b> <i>61.473100000</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-150.736899999,61.4731,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC33</name>
+			<description><![CDATA[<b>Long Name:</b> <i>TOKO DENALI PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-150.685074007</i><br /><b>Latitude:</b> <i>62.671174868</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-150.685074007,62.671174868,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC34</name>
+			<description><![CDATA[<b>Long Name:</b> <i>OLD HARBOR PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-19680-00000)</i><br /><b>Longitude:</b> <i>-153.279176883</i><br /><b>Latitude:</b> <i>57.220026604</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-153.279176883,57.22002660399999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC35</name>
+			<description><![CDATA[<b>Long Name:</b> <i>PETROF LAKE PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-19706-00000)</i><br /><b>Longitude:</b> <i>-150.793243491</i><br /><b>Latitude:</b> <i>59.375810875</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-150.793243491,59.37581087499999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC36</name>
+			<description><![CDATA[<b>Long Name:</b> <i>MOOSE POINT PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-150.608347955</i><br /><b>Latitude:</b> <i>60.955317324</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-150.608347955,60.95531732399999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC37</name>
+			<description><![CDATA[<b>Long Name:</b> <i>LAKE CLARK PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-153.865383322</i><br /><b>Latitude:</b> <i>60.439687605</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-153.865383322,60.439687605,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC38</name>
+			<description><![CDATA[<b>Long Name:</b> <i>QUARTZ CRK KODIA</i><br /><b>Marker:</b> <i>(PBO 00000000-18871-00000)</i><br /><b>Longitude:</b> <i>-153.341871296</i><br /><b>Latitude:</b> <i>57.753685259</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-153.341871296,57.753685259,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC39</name>
+			<description><![CDATA[<b>Long Name:</b> <i>SHUYAK ISL PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-20801-00000)</i><br /><b>Longitude:</b> <i>-152.394072827</i><br /><b>Latitude:</b> <i>58.609719873</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-152.394072827,58.60971987300001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC40</name>
+			<description><![CDATA[<b>Long Name:</b> <i>PORT HEIDEN PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-158.618570540</i><br /><b>Latitude:</b> <i>56.930352623</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-158.61857054,56.930352623,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC41</name>
+			<description><![CDATA[<b>Long Name:</b> <i>PORT MOLLER PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-19762-00000)</i><br /><b>Longitude:</b> <i>-160.407304263</i><br /><b>Latitude:</b> <i>55.908668957</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-160.407304263,55.908668957,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC42</name>
+			<description><![CDATA[<b>Long Name:</b> <i>SANAK PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-162.783651352</i><br /><b>Latitude:</b> <i>54.471776525</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-162.783651352,54.47177652500001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC43</name>
+			<description><![CDATA[<b>Long Name:</b> <i>SEAL ROCKS PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-149.628735290</i><br /><b>Latitude:</b> <i>59.521278925</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-149.62873529,59.52127892499999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC44</name>
+			<description><![CDATA[<b>Long Name:</b> <i>ARCTIC VLY PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-149.567110001</i><br /><b>Latitude:</b> <i>61.242190000</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-149.567110001,61.24219,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC45</name>
+			<description><![CDATA[<b>Long Name:</b> <i>SITKINAK PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-19677-00000)</i><br /><b>Longitude:</b> <i>-154.180960409</i><br /><b>Latitude:</b> <i>56.564453143</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-154.180960409,56.564453143,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC46</name>
+			<description><![CDATA[<b>Long Name:</b> <i>SKWENTNA PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-20440-00000)</i><br /><b>Longitude:</b> <i>-151.524000001</i><br /><b>Latitude:</b> <i>61.986300000</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-151.524000001,61.9863,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC47</name>
+			<description><![CDATA[<b>Long Name:</b> <i>SLOPE MTN PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-152.623944258</i><br /><b>Latitude:</b> <i>60.081451210</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-152.623944258,60.08145121,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC48</name>
+			<description><![CDATA[<b>Long Name:</b> <i>NAKED ISLAND PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-147.343016083</i><br /><b>Latitude:</b> <i>60.645861484</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-147.343016083,60.645861484,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC50</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BALDY MTN PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-21533-00000)</i><br /><b>Longitude:</b> <i>-164.566569485</i><br /><b>Latitude:</b> <i>65.553849322</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-164.566569485,65.553849322,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC51</name>
+			<description><![CDATA[<b>Long Name:</b> <i>STRANDLINE PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-151.835348054</i><br /><b>Latitude:</b> <i>61.498083498</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-151.835348054,61.498083498,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC52</name>
+			<description><![CDATA[<b>Long Name:</b> <i>PILOT POINT PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-157.574216491</i><br /><b>Latitude:</b> <i>57.567249913</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-157.574216491,57.567249913,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC53</name>
+			<description><![CDATA[<b>Long Name:</b> <i>WILLOW CRK PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-20040-00000)</i><br /><b>Longitude:</b> <i>-150.068951955</i><br /><b>Latitude:</b> <i>61.768972965</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-150.068951955,61.768972965,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC55</name>
+			<description><![CDATA[<b>Long Name:</b> <i>YENTNA RIVER PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-21603-00000)</i><br /><b>Longitude:</b> <i>-151.764589660</i><br /><b>Latitude:</b> <i>62.384444278</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-151.76458966,62.384444278,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC57</name>
+			<description><![CDATA[<b>Long Name:</b> <i>THOMPSON PASS PB</i><br /><b>Marker:</b> <i>(PBO 00000000-20804-00000)</i><br /><b>Longitude:</b> <i>-145.742702832</i><br /><b>Latitude:</b> <i>61.138596379</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-145.742702832,61.138596379,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC58</name>
+			<description><![CDATA[<b>Long Name:</b> <i>ST. PAUL IS. PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-170.217821043</i><br /><b>Latitude:</b> <i>57.156087660</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-170.217821043,57.15608766,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC59</name>
+			<description><![CDATA[<b>Long Name:</b> <i>URSUS HEAD</i><br /><b>Marker:</b> <i>(PBO 00000000-18453-00000)</i><br /><b>Longitude:</b> <i>-153.585200157</i><br /><b>Latitude:</b> <i>59.567198742</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-153.585200157,59.567198742,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC60</name>
+			<description><![CDATA[<b>Long Name:</b> <i>WESTEAST PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>174.076269263</i><br /><b>Latitude:</b> <i>52.714619353</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>174.076269263,52.714619353,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC61</name>
+			<description><![CDATA[<b>Long Name:</b> <i>CHICKEN PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-20280-00000)</i><br /><b>Longitude:</b> <i>-142.075847118</i><br /><b>Latitude:</b> <i>64.029260050</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-142.075847118,64.02926005,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC66</name>
+			<description><![CDATA[<b>Long Name:</b> <i>AMCHITKA</i><br /><b>Marker:</b> <i>(PBO 00000000-19820-00000)</i><br /><b>Longitude:</b> <i>179.301326627</i><br /><b>Latitude:</b> <i>51.378129707</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>179.301326627,51.378129707,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC67</name>
+			<description><![CDATA[<b>Long Name:</b> <i>PILLAR MTN PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-20802-00000)</i><br /><b>Longitude:</b> <i>-152.425432363</i><br /><b>Latitude:</b> <i>57.790717369</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-152.425432363,57.790717369,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC76</name>
+			<description><![CDATA[<b>Long Name:</b> <i>LOG CABIN PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-143.258815864</i><br /><b>Latitude:</b> <i>63.039998193</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-143.258815864,63.039998193,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC78</name>
+			<description><![CDATA[<b>Long Name:</b> <i>TETLIN 2 PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-142.027937930</i><br /><b>Latitude:</b> <i>63.113491281</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-142.02793793,63.11349128099999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC79</name>
+			<description><![CDATA[<b>Long Name:</b> <i>MONTAGUE 2 PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-147.403044773</i><br /><b>Latitude:</b> <i>59.997868378</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-147.403044773,59.99786837800001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AC80</name>
+			<description><![CDATA[<b>Long Name:</b> <i>YENTNA RIV 2 PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-151.765041472</i><br /><b>Latitude:</b> <i>62.394077993</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-151.765041472,62.394077993,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ACC2</name>
+			<description><![CDATA[<b>Long Name:</b> <i>ACCUPOINT CORS</i><br /><b>Marker:</b> <i>(ACCUPOINT 2, ANCHORAGE CORS SITE)</i><br /><b>Longitude:</b> <i>-149.863245054</i><br /><b>Latitude:</b> <i>61.155737625</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-149.863245054,61.155737625,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ACCA</name>
+			<description><![CDATA[<b>Long Name:</b> <i>ACCUPOINT CORS</i><br /><b>Marker:</b> <i>(ACCUPOINT ANCHORAGE NEW CORS SITE)</i><br /><b>Longitude:</b> <i>-149.863304523</i><br /><b>Latitude:</b> <i>61.155736523</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-149.863304523,61.155736523,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ACCU</name>
+			<description><![CDATA[<b>Long Name:</b> <i>ACCUPOINT CORS</i><br /><b>Marker:</b> <i>(ACCUPOINT, ANCHORAGE CORS SITE)</i><br /><b>Longitude:</b> <i>-149.863220598</i><br /><b>Latitude:</b> <i>61.155737489</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-149.863220598,61.15573748900001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AIS1</name>
+			<description><![CDATA[<b>Long Name:</b> <i>ANNETTE IS. USCG</i><br /><b>Marker:</b> <i>(Annette Island USCG 1)</i><br /><b>Longitude:</b> <i>-131.599534097</i><br /><b>Latitude:</b> <i>55.069073392</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-131.599534097,55.06907339200001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AIS2</name>
+			<description><![CDATA[<b>Long Name:</b> <i>ANNETTE IS. USCG</i><br /><b>Marker:</b> <i>(Annette Island USCG 2)</i><br /><b>Longitude:</b> <i>-131.599534097</i><br /><b>Latitude:</b> <i>55.069073392</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-131.599534097,55.06907339200001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AIS5</name>
+			<description><![CDATA[<b>Long Name:</b> <i>ANNETTE IS. USCG</i><br /><b>Marker:</b> <i>(Annette Island USCG 5)</i><br /><b>Longitude:</b> <i>-131.599536173</i><br /><b>Latitude:</b> <i>55.069071837</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-131.599536173,55.069071837,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AIS6</name>
+			<description><![CDATA[<b>Long Name:</b> <i>ANNETTE IS. USCG</i><br /><b>Marker:</b> <i>(Annette Island USCG 6)</i><br /><b>Longitude:</b> <i>-131.599211593</i><br /><b>Latitude:</b> <i>55.068882807</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-131.599211593,55.068882807,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AKGG</name>
+			<description><![CDATA[<b>Long Name:</b> <i>AKUTAN GRN GRASS</i><br /><b>Marker:</b> <i>(SCIGN adaptor on concrete pillar)</i><br /><b>Longitude:</b> <i>-165.993671111</i><br /><b>Latitude:</b> <i>54.198177685</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-165.993671111,54.198177685,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AKLV</name>
+			<description><![CDATA[<b>Long Name:</b> <i>AKUTAN LAVA</i><br /><b>Marker:</b> <i>(SCIGN adaptor on short-braced mon.)</i><br /><b>Longitude:</b> <i>-165.955822217</i><br /><b>Latitude:</b> <i>54.162697241</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-165.955822217,54.162697241,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AKMO</name>
+			<description><![CDATA[<b>Long Name:</b> <i>AKUTAN MORGAN</i><br /><b>Marker:</b> <i>(SCIGN adaptor on short-braced mon.)</i><br /><b>Longitude:</b> <i>-166.012289120</i><br /><b>Latitude:</b> <i>54.090258396</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-166.01228912,54.090258396,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AKRB</name>
+			<description><![CDATA[<b>Long Name:</b> <i>AKUTAN REEF BIGH</i><br /><b>Marker:</b> <i>(SCIGN adaptor on short-braced mon.)</i><br /><b>Longitude:</b> <i>-166.071082319</i><br /><b>Latitude:</b> <i>54.129227752</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-166.071082319,54.12922775200001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ALGO</name>
+			<description><![CDATA[<b>Long Name:</b> <i>ALGONQUIN</i><br /><b>Marker:</b> <i>883160 GPS ARO Alg</i><br /><b>Longitude:</b> <i>-78.071364864</i><br /><b>Latitude:</b> <i>45.955799453</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-78.071364864,45.955799453,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ALRT</name>
+			<description><![CDATA[<b>Long Name:</b> <i>ALERT BASE</i><br /><b>Marker:</b> <i>(DOMES 40162M001)</i><br /><b>Longitude:</b> <i>-62.340460458</i><br /><b>Latitude:</b> <i>82.494293523</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-62.340460458,82.494293523,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ALSC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>ALSEK CONTINUOUS</i><br /><b>Marker:</b> <i>(4ft steel mast on 2.5in well pipe)</i><br /><b>Longitude:</b> <i>-138.318350582</i><br /><b>Latitude:</b> <i>59.186031359</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-138.318350582,59.186031359,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AMC2</name>
+			<description><![CDATA[<b>Long Name:</b> <i>FALCON AFB CLOCK</i><br /><b>Marker:</b> <i>(DOMES 40472S004)</i><br /><b>Longitude:</b> <i>-104.524594119</i><br /><b>Latitude:</b> <i>38.803124159</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-104.524594119,38.803124159,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AMCT</name>
+			<description><![CDATA[<b>Long Name:</b> <i>FALCON AFB CLOCK</i><br /><b>Marker:</b> <i>(DOMES 40472S003)</i><br /><b>Longitude:</b> <i>-104.524596885</i><br /><b>Latitude:</b> <i>38.803114285</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-104.524596885,38.803114285,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ANC1</name>
+			<description><![CDATA[<b>Long Name:</b> <i>ANCHORAGE AIRPOR</i><br /><b>Marker:</b> <i>(Anchorage International Airport CORS)</i><br /><b>Longitude:</b> <i>-149.996770640</i><br /><b>Latitude:</b> <i>61.182380434</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-149.99677064,61.182380434,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ANC2</name>
+			<description><![CDATA[<b>Long Name:</b> <i>ANCHORAGE ARPT 2</i><br /><b>Marker:</b> <i>(Anchorage International Airport CORS)</i><br /><b>Longitude:</b> <i>-149.983441705</i><br /><b>Latitude:</b> <i>61.175225223</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-149.983441705,61.175225223,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ARVC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>ARVIAT CHAIN</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>-94.071487835</i><br /><b>Latitude:</b> <i>61.097951105</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-94.07148783500001,61.097951105,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ASKY</name>
+			<description><![CDATA[<b>Long Name:</b> <i>ASTRUP KYSTLAND</i><br /><b>Marker:</b> <i>(UNAVCO ID 21581)</i><br /><b>Longitude:</b> <i>-58.257347127</i><br /><b>Latitude:</b> <i>75.726128480</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-58.257347127,75.72612848,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ATQK</name>
+			<description><![CDATA[<b>Long Name:</b> <i>ATQASUK</i><br /><b>Marker:</b> <i>(Threaded bolt on building)</i><br /><b>Longitude:</b> <i>-157.407868691</i><br /><b>Latitude:</b> <i>70.472033121</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-157.407868691,70.472033121,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ATTC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>ATT CONTINUOUS</i><br /><b>Marker:</b> <i>(DOMES xxxxxMxxx)</i><br /><b>Longitude:</b> <i>-145.847244991</i><br /><b>Latitude:</b> <i>63.502426848</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-145.847244991,63.50242684800001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ATW2</name>
+			<description><![CDATA[<b>Long Name:</b> <i>ATWC PALMER</i><br /><b>Marker:</b> <i>(DOMES 49934M002)</i><br /><b>Longitude:</b> <i>-149.132331513</i><br /><b>Latitude:</b> <i>61.598160990</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-149.132331513,61.59816099,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ATWC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>ATWC PALMER</i><br /><b>Marker:</b> <i>(DOMES 49934M001)</i><br /><b>Longitude:</b> <i>-149.132331513</i><br /><b>Latitude:</b> <i>61.598160990</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-149.132331513,61.59816099,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AUGL</name>
+			<description><![CDATA[<b>Long Name:</b> <i>AUG. LOWER MOUND</i><br /><b>Marker:</b> <i>(AVO Augustine Lower Mound permanent sit</i><br /><b>Longitude:</b> <i>-153.353909638</i><br /><b>Latitude:</b> <i>59.370300108</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-153.353909638,59.37030010800001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AV01</name>
+			<description><![CDATA[<b>Long Name:</b> <i>AUGUSTINE AV01</i><br /><b>Marker:</b> <i>(PBO 00000000-18435-2004A)</i><br /><b>Longitude:</b> <i>-153.460800298</i><br /><b>Latitude:</b> <i>59.358531300</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-153.460800298,59.3585313,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AV02</name>
+			<description><![CDATA[<b>Long Name:</b> <i>AUGUSTINE AV02</i><br /><b>Marker:</b> <i>(PBO 00000000-18436-2004A)</i><br /><b>Longitude:</b> <i>-153.428389903</i><br /><b>Latitude:</b> <i>59.332974806</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-153.428389903,59.33297480600001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AV03</name>
+			<description><![CDATA[<b>Long Name:</b> <i>AUGUSTINE AV03</i><br /><b>Marker:</b> <i>(PBO 00000000-18437-2004A)</i><br /><b>Longitude:</b> <i>-153.437778127</i><br /><b>Latitude:</b> <i>59.381296477</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-153.437778127,59.381296477,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AV04</name>
+			<description><![CDATA[<b>Long Name:</b> <i>AUGUSTINE AV04</i><br /><b>Marker:</b> <i>(PBO 00000000-18438-2004A)</i><br /><b>Longitude:</b> <i>-153.444671604</i><br /><b>Latitude:</b> <i>59.362583685</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-153.444671604,59.362583685,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AV05</name>
+			<description><![CDATA[<b>Long Name:</b> <i>AUGUSTINE AV05</i><br /><b>Marker:</b> <i>(PBO 00000000-18439-2004A)</i><br /><b>Longitude:</b> <i>-153.422656268</i><br /><b>Latitude:</b> <i>59.362933165</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-153.422656268,59.36293316500001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AV06</name>
+			<description><![CDATA[<b>Long Name:</b> <i>AKUTAN POINT PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-18987-00000)</i><br /><b>Longitude:</b> <i>-165.765720150</i><br /><b>Latitude:</b> <i>54.147179523</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-165.76572015,54.147179523,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AV07</name>
+			<description><![CDATA[<b>Long Name:</b> <i>AKUTAN NWSLOP PB</i><br /><b>Marker:</b> <i>(PBO 00000000-18988-00000)</i><br /><b>Longitude:</b> <i>-166.038536044</i><br /><b>Latitude:</b> <i>54.162937230</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-166.038536044,54.16293723,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AV08</name>
+			<description><![CDATA[<b>Long Name:</b> <i>AKUTAN WSLOPE PB</i><br /><b>Marker:</b> <i>(PBO 00000000-18989-00000)</i><br /><b>Longitude:</b> <i>-166.028270831</i><br /><b>Latitude:</b> <i>54.136299438</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-166.028270831,54.136299438,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AV09</name>
+			<description><![CDATA[<b>Long Name:</b> <i>UNALASKA HAYSTAC</i><br /><b>Marker:</b> <i>(PBO 00000000-18212-2004A)</i><br /><b>Longitude:</b> <i>-166.541835628</i><br /><b>Latitude:</b> <i>53.875635143</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-166.541835628,53.87563514299999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AV10</name>
+			<description><![CDATA[<b>Long Name:</b> <i>AKUTAN SESLOP PB</i><br /><b>Marker:</b> <i>(PBO 00000000-18990-00000)</i><br /><b>Longitude:</b> <i>-165.933764207</i><br /><b>Latitude:</b> <i>54.097609966</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-165.933764207,54.097609966,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AV11</name>
+			<description><![CDATA[<b>Long Name:</b> <i>AUGUSTINE AV11</i><br /><b>Marker:</b> <i>(PBO 00000000-20140-00000)</i><br /><b>Longitude:</b> <i>-153.354685583</i><br /><b>Latitude:</b> <i>59.370627962</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-153.354685583,59.37062796199999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AV12</name>
+			<description><![CDATA[<b>Long Name:</b> <i>AKUTAN OPENBT PB</i><br /><b>Marker:</b> <i>(PBO 00000000-18991-00000)</i><br /><b>Longitude:</b> <i>-165.897545705</i><br /><b>Latitude:</b> <i>54.210799539</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-165.897545705,54.210799539,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AV13</name>
+			<description><![CDATA[<b>Long Name:</b> <i>AKUTAN FUMAROLPB</i><br /><b>Marker:</b> <i>(PBO 00000000-18992-00000)</i><br /><b>Longitude:</b> <i>-165.897814971</i><br /><b>Latitude:</b> <i>54.153081550</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-165.897814971,54.15308155,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AV14</name>
+			<description><![CDATA[<b>Long Name:</b> <i>AKUTAN HARBOR PB</i><br /><b>Marker:</b> <i>(PBO 00000000-18993-00000)</i><br /><b>Longitude:</b> <i>-165.841567915</i><br /><b>Latitude:</b> <i>54.118894972</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-165.841567915,54.118894972,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AV15</name>
+			<description><![CDATA[<b>Long Name:</b> <i>AKUTAN EASTPT PB</i><br /><b>Marker:</b> <i>(PBO 00000000-18994-00000)</i><br /><b>Longitude:</b> <i>-165.710112422</i><br /><b>Latitude:</b> <i>54.100194277</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-165.710112422,54.100194277,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AV16</name>
+			<description><![CDATA[<b>Long Name:</b> <i>AUGUSTINE AV16</i><br /><b>Marker:</b> <i>(PBO 00000000-19982-00000)</i><br /><b>Longitude:</b> <i>-153.535045048</i><br /><b>Latitude:</b> <i>59.385911110</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-153.535045048,59.38591111,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AV17</name>
+			<description><![CDATA[<b>Long Name:</b> <i>AUGUSTINE AV17</i><br /><b>Marker:</b> <i>(PBO 00000000-19983-00000)</i><br /><b>Longitude:</b> <i>-153.451445160</i><br /><b>Latitude:</b> <i>59.403946749</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-153.45144516,59.403946749,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AV18</name>
+			<description><![CDATA[<b>Long Name:</b> <i>AUGUSTINE AV18</i><br /><b>Marker:</b> <i>(PBO 00000000-19984-00000)</i><br /><b>Longitude:</b> <i>-153.436835049</i><br /><b>Latitude:</b> <i>59.380433907</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-153.436835049,59.38043390699999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AV19</name>
+			<description><![CDATA[<b>Long Name:</b> <i>AUGUSTINE AV19</i><br /><b>Marker:</b> <i>(PBO 00000000-19985-00000)</i><br /><b>Longitude:</b> <i>-153.414328459</i><br /><b>Latitude:</b> <i>59.354908121</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-153.414328459,59.354908121,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AV20</name>
+			<description><![CDATA[<b>Long Name:</b> <i>AUGUSTINE AV20</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-153.428205829</i><br /><b>Latitude:</b> <i>59.347381136</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-153.428205829,59.347381136,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AV24</name>
+			<description><![CDATA[<b>Long Name:</b> <i>WESTDAHL NW PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-164.754802407</i><br /><b>Latitude:</b> <i>54.589983824</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-164.754802407,54.58998382399999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AV25</name>
+			<description><![CDATA[<b>Long Name:</b> <i>WESTDAHL W PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-164.779498910</i><br /><b>Latitude:</b> <i>54.530002583</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-164.77949891,54.530002583,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AV26</name>
+			<description><![CDATA[<b>Long Name:</b> <i>WESTDAHL NE PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-164.580464551</i><br /><b>Latitude:</b> <i>54.571654197</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-164.580464551,54.571654197,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AV27</name>
+			<description><![CDATA[<b>Long Name:</b> <i>WESTDAHL SW PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-164.723162316</i><br /><b>Latitude:</b> <i>54.492350893</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-164.723162316,54.492350893,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AV29</name>
+			<description><![CDATA[<b>Long Name:</b> <i>WESTDAHL SE PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-164.586149701</i><br /><b>Latitude:</b> <i>54.472353324</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-164.586149701,54.472353324,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AV34</name>
+			<description><![CDATA[<b>Long Name:</b> <i>ISANOTSKI S PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-163.712918645</i><br /><b>Latitude:</b> <i>54.724909259</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-163.712918645,54.724909259,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AV35</name>
+			<description><![CDATA[<b>Long Name:</b> <i>TUGAMAK RNG PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-164.386916151</i><br /><b>Latitude:</b> <i>54.846695062</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-164.386916151,54.846695062,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AV36</name>
+			<description><![CDATA[<b>Long Name:</b> <i>SHISHALDIN NW PB</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-164.126803359</i><br /><b>Latitude:</b> <i>54.771794427</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-164.126803359,54.771794427,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AV37</name>
+			<description><![CDATA[<b>Long Name:</b> <i>SHISHALDIN SW PB</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-163.997234104</i><br /><b>Latitude:</b> <i>54.709379960</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-163.997234104,54.70937996,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AV38</name>
+			<description><![CDATA[<b>Long Name:</b> <i>ISANOTSKI N PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-163.780873210</i><br /><b>Latitude:</b> <i>54.831468943</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-163.78087321,54.831468943,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AV39</name>
+			<description><![CDATA[<b>Long Name:</b> <i>SHISHALDIN PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-163.998465841</i><br /><b>Latitude:</b> <i>54.811341931</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-163.998465841,54.811341931,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>AV40</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BROWN PEAK PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-163.742967176</i><br /><b>Latitude:</b> <i>54.644536876</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-163.742967176,54.644536876,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BAKE</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BAKER NUNAVUT</i><br /><b>Marker:</b> <i>(DOMES 40152M001)</i><br /><b>Longitude:</b> <i>-96.002344180</i><br /><b>Latitude:</b> <i>64.317819861</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-96.00234417999999,64.317819861,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BASC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BASC BASESTATION</i><br /><b>Marker:</b> <i>(ARP)</i><br /><b>Longitude:</b> <i>-156.677910266</i><br /><b>Latitude:</b> <i>71.324943373</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-156.677910266,71.324943373,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BAY1</name>
+			<description><![CDATA[<b>Long Name:</b> <i>COLD BAY USCG</i><br /><b>Marker:</b> <i>(Cold Bay USCG 1)</i><br /><b>Longitude:</b> <i>-162.707157921</i><br /><b>Latitude:</b> <i>55.190273219</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-162.707157921,55.19027321899999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BAY2</name>
+			<description><![CDATA[<b>Long Name:</b> <i>COLD BAY USCG</i><br /><b>Marker:</b> <i>(Cold Bay USCG 2)</i><br /><b>Longitude:</b> <i>-162.707157921</i><br /><b>Latitude:</b> <i>55.190273219</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-162.707157921,55.19027321899999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BAY5</name>
+			<description><![CDATA[<b>Long Name:</b> <i>COLD BAY USCG</i><br /><b>Marker:</b> <i>(Cold Bay USCG 5)</i><br /><b>Longitude:</b> <i>-162.707159104</i><br /><b>Latitude:</b> <i>55.190270964</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-162.707159104,55.190270964,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BAY6</name>
+			<description><![CDATA[<b>Long Name:</b> <i>COLD BAY USCG</i><br /><b>Marker:</b> <i>(Cold Bay USCG 6)</i><br /><b>Longitude:</b> <i>-162.706764608</i><br /><b>Latitude:</b> <i>55.190417451</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-162.706764608,55.19041745099999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BCCG</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BC CASTLEGAR</i><br /><b>Marker:</b> <i>(rooftop site)</i><br /><b>Longitude:</b> <i>-117.653028001</i><br /><b>Latitude:</b> <i>49.311888000</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-117.653028001,49.31188800000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BCDI</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BC DENNY ISLAND</i><br /><b>Marker:</b> <i>(stainless steel pillar)</i><br /><b>Longitude:</b> <i>-128.110444000</i><br /><b>Latitude:</b> <i>52.158012000</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-128.110444,52.15801199999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BCDL</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BC DEASE LAKE</i><br /><b>Marker:</b> <i>(stainless steel pillar)</i><br /><b>Longitude:</b> <i>-130.025702242</i><br /><b>Latitude:</b> <i>58.425643467</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-130.025702242,58.425643467,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BCES</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BC ESQUIMALT</i><br /><b>Marker:</b> <i>(rooftop site)</i><br /><b>Longitude:</b> <i>-123.428692000</i><br /><b>Latitude:</b> <i>48.429259000</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-123.428692,48.429259,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BCFJ</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BC FT ST JOHN</i><br /><b>Marker:</b> <i>(stainless steel pillar)</i><br /><b>Longitude:</b> <i>-120.749352000</i><br /><b>Latitude:</b> <i>56.246205000</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-120.749352,56.246205,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BCFN</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BC FT NELSON</i><br /><b>Marker:</b> <i>(stainless steel pillar)</i><br /><b>Longitude:</b> <i>-122.584918000</i><br /><b>Latitude:</b> <i>58.840247000</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-122.584918,58.84024699999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BCIN</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BC INVERMERE</i><br /><b>Marker:</b> <i>(rooftop site)</i><br /><b>Longitude:</b> <i>-116.028578000</i><br /><b>Latitude:</b> <i>50.509192000</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-116.028578,50.509192,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BCMR</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BC MAPLE RIDGE</i><br /><b>Marker:</b> <i>(rooftop site)</i><br /><b>Longitude:</b> <i>-122.538518000</i><br /><b>Latitude:</b> <i>49.221151000</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-122.538518,49.221151,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BCNS</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BC NORTH SAANICH</i><br /><b>Marker:</b> <i>(rooftop site)</i><br /><b>Longitude:</b> <i>-123.450978000</i><br /><b>Latitude:</b> <i>48.648492000</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-123.450978,48.648492,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BCPG</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BC PRINCE GEORGE</i><br /><b>Marker:</b> <i>(rooftop site)</i><br /><b>Longitude:</b> <i>-122.798992000</i><br /><b>Latitude:</b> <i>53.908124000</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-122.798992,53.908124,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BCPH</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BC PORT HARDY</i><br /><b>Marker:</b> <i>(concrete pillar)</i><br /><b>Longitude:</b> <i>-127.375333001</i><br /><b>Latitude:</b> <i>50.685559000</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-127.375333001,50.685559,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BCPR</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BC PRINCE RUPERT</i><br /><b>Marker:</b> <i>(rooftop site)</i><br /><b>Longitude:</b> <i>-130.434599088</i><br /><b>Latitude:</b> <i>54.276840762</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-130.434599088,54.276840762,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BCSF</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BC SURREY FIREHA</i><br /><b>Marker:</b> <i>(rooftop site)</i><br /><b>Longitude:</b> <i>-122.860069000</i><br /><b>Latitude:</b> <i>49.192081999</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-122.860069,49.192081999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BCSL</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BC SUMMERLAND</i><br /><b>Marker:</b> <i>(concrete pillar)</i><br /><b>Longitude:</b> <i>-119.644225000</i><br /><b>Latitude:</b> <i>49.565431000</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-119.644225,49.565431,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BCSM</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BC SURVEY MTN</i><br /><b>Marker:</b> <i>(concrete pillar)</i><br /><b>Longitude:</b> <i>-123.799513000</i><br /><b>Latitude:</b> <i>48.559482000</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-123.799513,48.55948200000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BCRK</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BEAVER CR CONT2</i><br /><b>Marker:</b> <i>(SCIGN mount on short braced monument)</i><br /><b>Longitude:</b> <i>-140.860422299</i><br /><b>Latitude:</b> <i>62.414280909</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-140.860422299,62.414280909,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BCSS</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BC SANDSPIT</i><br /><b>Marker:</b> <i>(stainless steel pillar)</i><br /><b>Longitude:</b> <i>-131.807100353</i><br /><b>Latitude:</b> <i>53.253632136</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-131.807100353,53.25363213599999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BCTE</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BC TERRACE</i><br /><b>Marker:</b> <i>(rooftop site)</i><br /><b>Longitude:</b> <i>-128.626576000</i><br /><b>Latitude:</b> <i>54.514826000</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-128.626576,54.514826,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BCVC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BC VANCOUVER FH</i><br /><b>Marker:</b> <i>(concrete pillar)</i><br /><b>Longitude:</b> <i>-123.089328000</i><br /><b>Latitude:</b> <i>49.275760000</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-123.089328,49.27576000000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BCWA</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BC WILLIAMS LAKE</i><br /><b>Marker:</b> <i>(concrete pillar)</i><br /><b>Longitude:</b> <i>-122.064401000</i><br /><b>Latitude:</b> <i>52.187419000</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-122.064401,52.187419,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BEA2</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BEAVER CR CONTIN</i><br /><b>Marker:</b> <i>(DOMES xxxxxMxxx)</i><br /><b>Longitude:</b> <i>-140.862537335</i><br /><b>Latitude:</b> <i>62.407842591</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-140.862537335,62.407842591,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BET1</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BETHEL WAAS 1</i><br /><b>Marker:</b> <i>(BET WAAS 1)</i><br /><b>Longitude:</b> <i>-161.841722105</i><br /><b>Latitude:</b> <i>60.787916537</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-161.841722105,60.787916537,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BETF</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BETHEL FAA</i><br /><b>Marker:</b> <i>(Bethel FAA site)</i><br /><b>Longitude:</b> <i>-161.841508417</i><br /><b>Latitude:</b> <i>60.788274512</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-161.841508417,60.788274512,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BGCC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BERING CONTINUOU</i><br /><b>Marker:</b> <i>(7ft steel mast on 4 in pipe)</i><br /><b>Longitude:</b> <i>-143.284151857</i><br /><b>Latitude:</b> <i>60.120343090</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-143.284151857,60.12034309000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BILI</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BILIBINO PERM</i><br /><b>Marker:</b> <i>(DOMES 12363M001)</i><br /><b>Longitude:</b> <i>166.437961735</i><br /><b>Latitude:</b> <i>68.076130456</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>166.437961735,68.076130456,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BIS1</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BIORKA IS. USCG</i><br /><b>Marker:</b> <i>(Biorka Island USCG 1)</i><br /><b>Longitude:</b> <i>-135.539295127</i><br /><b>Latitude:</b> <i>56.854492784</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-135.539295127,56.85449278400001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BIS2</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BIORKA IS. USCG</i><br /><b>Marker:</b> <i>(Biorka Island USCG 2)</i><br /><b>Longitude:</b> <i>-135.539294012</i><br /><b>Latitude:</b> <i>56.854493173</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-135.539294012,56.85449317299999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BIS5</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BIORKA IS. USCG</i><br /><b>Marker:</b> <i>(Biorka Island USCG 1)</i><br /><b>Longitude:</b> <i>-135.539296868</i><br /><b>Latitude:</b> <i>56.854492185</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-135.539296868,56.854492185,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BIS6</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BIORKA IS. USCG</i><br /><b>Marker:</b> <i>(Biorka Island USCG 6)</i><br /><b>Longitude:</b> <i>-135.539578999</i><br /><b>Latitude:</b> <i>56.854314907</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-135.539578999,56.85431490700001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BITS</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BITS</i><br /><b>Marker:</b> <i>(DOMES xxxxxMxxx)</i><br /><b>Longitude:</b> <i>-148.188318424</i><br /><b>Latitude:</b> <i>63.304711798</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-148.188318424,63.304711798,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BKI</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BERING ISLAND</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>165.983624691</i><br /><b>Latitude:</b> <i>55.192167299</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>165.983624691,55.192167299,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BLAS</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BLAASOR</i><br /><b>Marker:</b> <i>(BEDROCK-BOLTED MAST)</i><br /><b>Longitude:</b> <i>-22.974720270</i><br /><b>Latitude:</b> <i>79.538607864</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-22.97472027,79.538607864,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BLMG</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BLMG ACCUPOINT</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>-145.544726027</i><br /><b>Latitude:</b> <i>62.109391148</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-145.544726027,62.109391148,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BMCP</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BLUE MOUSE COVE</i><br /><b>Marker:</b> <i>(short braced-steel mon.)</i><br /><b>Longitude:</b> <i>-136.479600000</i><br /><b>Latitude:</b> <i>58.782900000</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-136.4796,58.7829,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BREW</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BREWSTER WA</i><br /><b>Marker:</b> <i>(DOMES 40473M001)</i><br /><b>Longitude:</b> <i>-119.682633224</i><br /><b>Latitude:</b> <i>48.131523966</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-119.682633224,48.131523966,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BRMU</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BERMUDA</i><br /><b>Marker:</b> <i>(not available)</i><br /><b>Longitude:</b> <i>-64.696270940</i><br /><b>Latitude:</b> <i>32.370397278</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-64.69627094000001,32.370397278,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BRNG</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BERING ISLAND NE</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>165.983585768</i><br /><b>Latitude:</b> <i>55.193847585</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>165.983585768,55.19384758499999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BRW1</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BARROW WAAS 1</i><br /><b>Marker:</b> <i>(BRW WAAS 1)</i><br /><b>Longitude:</b> <i>-156.425300001</i><br /><b>Latitude:</b> <i>71.384800000</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-156.425300001,71.3848,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>CBBC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>CAMBRIDGE BAY CH</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>-105.115207026</i><br /><b>Latitude:</b> <i>69.101937933</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-105.115207026,69.101937933,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>CCPT</name>
+			<description><![CDATA[<b>Long Name:</b> <i>PRUDHOE BAY CCPT</i><br /><b>Marker:</b> <i>(DOMES 49640S001)</i><br /><b>Longitude:</b> <i>-148.500302518</i><br /><b>Latitude:</b> <i>70.319639867</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-148.500302518,70.31963986700001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>CDB7</name>
+			<description><![CDATA[<b>Long Name:</b> <i>COLD BAY WAAS 7</i><br /><b>Marker:</b> <i>(CDB WAAS 7)</i><br /><b>Longitude:</b> <i>-162.718471712</i><br /><b>Latitude:</b> <i>55.200335171</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-162.718471712,55.200335171,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>CDB8</name>
+			<description><![CDATA[<b>Long Name:</b> <i>COLD BAY WAAS 8</i><br /><b>Marker:</b> <i>(CDB WAAS 8)</i><br /><b>Longitude:</b> <i>-162.706404666</i><br /><b>Latitude:</b> <i>55.192374141</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-162.706404666,55.192374141,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>CDBF</name>
+			<description><![CDATA[<b>Long Name:</b> <i>COLD BAY FAA</i><br /><b>Marker:</b> <i>(Cold Bay FAA site)</i><br /><b>Longitude:</b> <i>-162.718377745</i><br /><b>Latitude:</b> <i>55.200476457</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-162.718377745,55.200476457,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>CENA</name>
+			<description><![CDATA[<b>Long Name:</b> <i>CENTRAL FSL</i><br /><b>Marker:</b> <i>(Central, Alaska FSL site)</i><br /><b>Longitude:</b> <i>-144.677630380</i><br /><b>Latitude:</b> <i>65.498166063</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-144.67763038,65.498166063,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>CHI1</name>
+			<description><![CDATA[<b>Long Name:</b> <i>C. HINCHINBROOK</i><br /><b>Marker:</b> <i>(Cape Hinchinbrook USCG 1)</i><br /><b>Longitude:</b> <i>-146.647039490</i><br /><b>Latitude:</b> <i>60.237320023</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-146.64703949,60.237320023,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>CHI2</name>
+			<description><![CDATA[<b>Long Name:</b> <i>C. HINCHINBROOK</i><br /><b>Marker:</b> <i>(Cape Hinchinbrook USCG 2)</i><br /><b>Longitude:</b> <i>-146.646989399</i><br /><b>Latitude:</b> <i>60.237223122</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-146.646989399,60.237223122,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>CHI3</name>
+			<description><![CDATA[<b>Long Name:</b> <i>C. HINCHINBROOK</i><br /><b>Marker:</b> <i>(Cape Hinchinbrook USCG 3)</i><br /><b>Longitude:</b> <i>-146.646563577</i><br /><b>Latitude:</b> <i>60.237511870</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-146.646563577,60.23751187,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>CHI4</name>
+			<description><![CDATA[<b>Long Name:</b> <i>C. HINCHINBROOK</i><br /><b>Marker:</b> <i>(Cape Hinchinbrook USCG 4)</i><br /><b>Longitude:</b> <i>-146.646520940</i><br /><b>Latitude:</b> <i>60.237739098</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-146.64652094,60.23773909800001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>CHI5</name>
+			<description><![CDATA[<b>Long Name:</b> <i>C. HINCHINBROOK</i><br /><b>Marker:</b> <i>(Cape Hinchinbrook USCG 5)</i><br /><b>Longitude:</b> <i>-146.646567670</i><br /><b>Latitude:</b> <i>60.237512784</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-146.64656767,60.237512784,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>CHI6</name>
+			<description><![CDATA[<b>Long Name:</b> <i>C. HINCHINBROOK</i><br /><b>Marker:</b> <i>(Cape Hinchinbrook USCG 6)</i><br /><b>Longitude:</b> <i>-146.646525838</i><br /><b>Latitude:</b> <i>60.237740013</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-146.646525838,60.237740013,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>CHRC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>CHURCHILL CHAIN</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>-94.086616696</i><br /><b>Latitude:</b> <i>58.759288280</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-94.08661669599999,58.75928828,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>CHUR</name>
+			<description><![CDATA[<b>Long Name:</b> <i>CHURCHILL</i><br /><b>Marker:</b> <i>924001 CHURCHILL</i><br /><b>Longitude:</b> <i>-94.088698901</i><br /><b>Latitude:</b> <i>58.759065809</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-94.088698901,58.759065809,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>CLGO</name>
+			<description><![CDATA[<b>Long Name:</b> <i>COLLEGE OBSERV</i><br /><b>Marker:</b> <i>(main GPS pillar)</i><br /><b>Longitude:</b> <i>-147.860486743</i><br /><b>Latitude:</b> <i>64.873776049</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-147.860486743,64.873776049,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>CMJV</name>
+			<description><![CDATA[<b>Long Name:</b> <i>CRAZY MTNS JV</i><br /><b>Marker:</b> <i>(screw on CMJV builing roof)</i><br /><b>Longitude:</b> <i>-149.844914784</i><br /><b>Latitude:</b> <i>61.165835206</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-149.844914784,61.165835206,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>CORC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>CORAL HBR CHAIN</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>-83.349872898</i><br /><b>Latitude:</b> <i>64.188213278</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-83.349872898,64.18821327800001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>DAEJ</name>
+			<description><![CDATA[<b>Long Name:</b> <i>TAEJON</i><br /><b>Marker:</b> <i>KAO GPS STATION</i><br /><b>Longitude:</b> <i>127.374477707</i><br /><b>Latitude:</b> <i>36.399429012</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>127.374477707,36.399429012,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>DANE</name>
+			<description><![CDATA[<b>Long Name:</b> <i>DANEBORG</i><br /><b>Marker:</b> <i>(BEDROCK-BOLTED MAST)</i><br /><b>Longitude:</b> <i>-20.199826510</i><br /><b>Latitude:</b> <i>74.311946471</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-20.19982651,74.311946471,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>DEHO</name>
+			<description><![CDATA[<b>Long Name:</b> <i>DEHO ACCUPOINT</i><br /><b>Marker:</b> <i>(Accupoint Deadhorse CORS)</i><br /><b>Longitude:</b> <i>-148.389699788</i><br /><b>Latitude:</b> <i>70.227904291</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-148.389699788,70.227904291,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>DGJG</name>
+			<description><![CDATA[<b>Long Name:</b> <i>DAUGAARD JENSEN</i><br /><b>Marker:</b> <i>(BEDROCK-BOLTED MAST)</i><br /><b>Longitude:</b> <i>-29.850204806</i><br /><b>Latitude:</b> <i>71.786533091</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-29.850204806,71.786533091,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>DH32</name>
+			<description><![CDATA[<b>Long Name:</b> <i>DENALI HWY MP32</i><br /><b>Marker:</b> <i>(DOMES xxxxxMxxx)</i><br /><b>Longitude:</b> <i>-146.312692820</i><br /><b>Latitude:</b> <i>63.083606629</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-146.31269282,63.083606629,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>DKSG</name>
+			<description><![CDATA[<b>Long Name:</b> <i>DOECKER SMITH GL</i><br /><b>Marker:</b> <i>(BEDROCK-BOLTED MAST)</i><br /><b>Longitude:</b> <i>-61.677670361</i><br /><b>Latitude:</b> <i>76.351620852</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-61.67767036099999,76.351620852,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>DLTJ</name>
+			<description><![CDATA[<b>Long Name:</b> <i>DELTA JCT CONTIN</i><br /><b>Marker:</b> <i>(DOMES xxxxxMxxx)</i><br /><b>Longitude:</b> <i>-145.713623711</i><br /><b>Latitude:</b> <i>64.049306346</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-145.713623711,64.04930634599999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>DNLC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>DONNELLY CONTIN</i><br /><b>Marker:</b> <i>(DOMES xxxxxMxxx)</i><br /><b>Longitude:</b> <i>-145.887697469</i><br /><b>Latitude:</b> <i>63.695060071</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-145.887697469,63.695060071,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>DRMC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>DRUM VIEW CONTIN</i><br /><b>Marker:</b> <i>(DOMES xxxxxMxxx)</i><br /><b>Longitude:</b> <i>-144.303900000</i><br /><b>Latitude:</b> <i>62.713999999</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-144.3039,62.713999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>DSL1</name>
+			<description><![CDATA[<b>Long Name:</b> <i>PRUDHOE DRILL L1</i><br /><b>Marker:</b> <i>(DOMES 49518S001)</i><br /><b>Longitude:</b> <i>-148.472747695</i><br /><b>Latitude:</b> <i>70.333437437</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-148.472747695,70.333437437,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>DUBO</name>
+			<description><![CDATA[<b>Long Name:</b> <i>LAC DU BONNET</i><br /><b>Marker:</b> <i>(DOMES 40137M001)</i><br /><b>Longitude:</b> <i>-95.866180217</i><br /><b>Latitude:</b> <i>50.258808838</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-95.86618021699998,50.258808838,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>DUTC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>DUTCH HARBOR AVO</i><br /><b>Marker:</b> <i>(SCIGN mount)</i><br /><b>Longitude:</b> <i>-166.548485308</i><br /><b>Latitude:</b> <i>53.905013516</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-166.548485308,53.905013516,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>DVC1</name>
+			<description><![CDATA[<b>Long Name:</b> <i>DVC1 ACCUPOINT</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>-148.917016019</i><br /><b>Latitude:</b> <i>63.730807194</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-148.917016019,63.730807194,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>EDMC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>EDMONTON CHAIN</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>-112.973858555</i><br /><b>Latitude:</b> <i>53.350824866</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-112.973858555,53.350824866,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>EDOC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>PRUDHOE EAST DOC</i><br /><b>Marker:</b> <i>(DOMES 49517S001)</i><br /><b>Longitude:</b> <i>-148.318482445</i><br /><b>Latitude:</b> <i>70.310271023</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-148.318482445,70.310271023,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>EIL1</name>
+			<description><![CDATA[<b>Long Name:</b> <i>NGA ALASKA EIL</i><br /><b>Marker:</b> <i>(NGA Alaska Monitor site)</i><br /><b>Longitude:</b> <i>-147.112967176</i><br /><b>Latitude:</b> <i>64.687938464</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-147.112967176,64.687938464,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>EIL2</name>
+			<description><![CDATA[<b>Long Name:</b> <i>NGA ALASKA EIL</i><br /><b>Marker:</b> <i>(NGA Alaska Monitor site)</i><br /><b>Longitude:</b> <i>-147.112967139</i><br /><b>Latitude:</b> <i>64.687938509</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-147.112967139,64.68793850900001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ELDC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>ELDRED ROCK</i><br /><b>Marker:</b> <i>(short braced-steel mon.)</i><br /><b>Longitude:</b> <i>-135.222200000</i><br /><b>Latitude:</b> <i>58.971900000</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-135.2222,58.9719,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>EUR2</name>
+			<description><![CDATA[<b>Long Name:</b> <i>EUREKA STATION</i><br /><b>Marker:</b> <i>(DOMES 40153M002)</i><br /><b>Longitude:</b> <i>-85.937591535</i><br /><b>Latitude:</b> <i>79.988946053</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-85.937591535,79.98894605300001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>EURC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>EUREKA CHAIN</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>-85.902494636</i><br /><b>Latitude:</b> <i>79.990100314</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-85.902494636,79.990100314,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>EURK</name>
+			<description><![CDATA[<b>Long Name:</b> <i>EUREKA STATION</i><br /><b>Marker:</b> <i>(DOMES 40153M001)</i><br /><b>Longitude:</b> <i>-85.939924486</i><br /><b>Latitude:</b> <i>79.988536060</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-85.939924486,79.98853606,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>EYAC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>MT EYAK SKI AREA</i><br /><b>Marker:</b> <i>CORDOVA (SCIGN-CONCRETE PILLAR)</i><br /><b>Longitude:</b> <i>-145.749857603</i><br /><b>Latitude:</b> <i>60.548703807</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-145.749857603,60.548703807,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>FAI1</name>
+			<description><![CDATA[<b>Long Name:</b> <i>FAIRBANKS WAAS 1</i><br /><b>Marker:</b> <i>(FAI WAAS 1)</i><br /><b>Longitude:</b> <i>-147.860542972</i><br /><b>Latitude:</b> <i>64.804459070</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-147.860542972,64.80445906999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>FAI2</name>
+			<description><![CDATA[<b>Long Name:</b> <i>GILMORE CREEK</i><br /><b>Marker:</b> <i>(GPS/MET receiver on roof)</i><br /><b>Longitude:</b> <i>-147.498593494</i><br /><b>Latitude:</b> <i>64.977900224</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-147.498593494,64.977900224,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>FAIF</name>
+			<description><![CDATA[<b>Long Name:</b> <i>FAIRBANKS FAA</i><br /><b>Marker:</b> <i>(Fairbanks FAA site)</i><br /><b>Longitude:</b> <i>-147.847227411</i><br /><b>Latitude:</b> <i>64.809644886</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-147.847227411,64.809644886,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>FAIR</name>
+			<description><![CDATA[<b>Long Name:</b> <i>GILMORE CREEK</i><br /><b>Marker:</b> <i>(UNSTAMPED) "BIG RED" GPS PIER Fai</i><br /><b>Longitude:</b> <i>-147.499237081</i><br /><b>Latitude:</b> <i>64.978002111</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-147.499237081,64.978002111,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>FAIV</name>
+			<description><![CDATA[<b>Long Name:</b> <i>GILMORE CREEK</i><br /><b>Marker:</b> <i>(GGN L2C monument on roof)</i><br /><b>Longitude:</b> <i>-147.498517027</i><br /><b>Latitude:</b> <i>64.978144293</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-147.498517027,64.978144293,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>FLIN</name>
+			<description><![CDATA[<b>Long Name:</b> <i>FLIN FLON</i><br /><b>Marker:</b> <i>FLIN FLON 965000</i><br /><b>Longitude:</b> <i>-101.978034350</i><br /><b>Latitude:</b> <i>54.725584392</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-101.97803435,54.725584392,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>FRIG</name>
+			<description><![CDATA[<b>Long Name:</b> <i>REFRIGERATOR ROC</i><br /><b>Marker:</b> <i>(DOMES xxxxxMxxx)</i><br /><b>Longitude:</b> <i>-143.005199999</i><br /><b>Latitude:</b> <i>62.411000000</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-143.005199999,62.411,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>FSIC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>FT SIMPSON CHAIN</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>-121.228081281</i><br /><b>Latitude:</b> <i>61.756558253</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-121.228081281,61.75655825299999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>FSMC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>FORT SMITH CHAIN</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>-111.932915539</i><br /><b>Latitude:</b> <i>60.026101829</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-111.932915539,60.026101829,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>GILC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>GILLAM CHAIN</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>-94.643820556</i><br /><b>Latitude:</b> <i>56.376610506</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-94.64382055599999,56.376610506,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>GJOC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>GJOA HARBOR CHAI</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>-95.848308968</i><br /><b>Latitude:</b> <i>68.632640805</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-95.84830896800001,68.63264080499999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>GMMA</name>
+			<description><![CDATA[<b>Long Name:</b> <i>GAMMA O</i><br /><b>Marker:</b> <i>(BEDROCK-BOLTED MAST)</i><br /><b>Longitude:</b> <i>-19.652116171</i><br /><b>Latitude:</b> <i>77.809425222</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-19.652116171,77.809425222,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>GNAA</name>
+			<description><![CDATA[<b>Long Name:</b> <i>GLENNALLEN FSL</i><br /><b>Marker:</b> <i>(Glennallen, Alaska FSL site)</i><br /><b>Longitude:</b> <i>-145.970215432</i><br /><b>Latitude:</b> <i>62.112383023</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-145.970215432,62.112383023,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>GOL2</name>
+			<description><![CDATA[<b>Long Name:</b> <i>MOJ 7288</i><br /><b>Marker:</b> <i>GOLDSTONE DSS10</i><br /><b>Longitude:</b> <i>-116.889247158</i><br /><b>Latitude:</b> <i>35.425156290</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-116.889247158,35.42515629,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>GOLD</name>
+			<description><![CDATA[<b>Long Name:</b> <i>MOJ 7288</i><br /><b>Marker:</b> <i>GOLDSTONE DSS10</i><br /><b>Longitude:</b> <i>-116.889247158</i><br /><b>Latitude:</b> <i>35.425156290</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-116.889247158,35.42515629,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>GRNR</name>
+			<description><![CDATA[<b>Long Name:</b> <i>GARNER PERMANENT</i><br /><b>Marker:</b> <i>(GARNER Permanent Site)</i><br /><b>Longitude:</b> <i>-148.978336575</i><br /><b>Latitude:</b> <i>63.835760426</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-148.978336575,63.835760426,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>GRNX</name>
+			<description><![CDATA[<b>Long Name:</b> <i>GARNER PERMANENT</i><br /><b>Marker:</b> <i>(GARNER short-braced GRNX)</i><br /><b>Longitude:</b> <i>-148.978191645</i><br /><b>Latitude:</b> <i>63.835499867</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-148.978191645,63.835499867,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>GROK</name>
+			<description><![CDATA[<b>Long Name:</b> <i>GRONNE NUNATAK</i><br /><b>Marker:</b> <i>(BEDROCK-BOLTED MAST)</i><br /><b>Longitude:</b> <i>-22.903762669</i><br /><b>Latitude:</b> <i>78.442698652</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-22.903762669,78.442698652,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>GRWD</name>
+			<description><![CDATA[<b>Long Name:</b> <i>GRWD ACCUPOINT</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>-149.158142547</i><br /><b>Latitude:</b> <i>60.949008551</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-149.158142547,60.949008551,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>GUS1</name>
+			<description><![CDATA[<b>Long Name:</b> <i>GUSTAVUS USCG</i><br /><b>Marker:</b> <i>(Gustavus USCG 1)</i><br /><b>Longitude:</b> <i>-135.697484107</i><br /><b>Latitude:</b> <i>58.417657211</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-135.697484107,58.417657211,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>GUS2</name>
+			<description><![CDATA[<b>Long Name:</b> <i>GUSTAVUS USCG</i><br /><b>Marker:</b> <i>(Gustavus USCG 2)</i><br /><b>Longitude:</b> <i>-135.697484107</i><br /><b>Latitude:</b> <i>58.417657211</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-135.697484107,58.417657211,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>GUS5</name>
+			<description><![CDATA[<b>Long Name:</b> <i>GUSTAVUS USCG</i><br /><b>Marker:</b> <i>(Gustavus USCG 5)</i><br /><b>Longitude:</b> <i>-135.697484107</i><br /><b>Latitude:</b> <i>58.417657211</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-135.697484107,58.417657211,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>GUS6</name>
+			<description><![CDATA[<b>Long Name:</b> <i>GUSTAVUS USCG</i><br /><b>Marker:</b> <i>(Gustavus USCG 6)</i><br /><b>Longitude:</b> <i>-135.697484107</i><br /><b>Latitude:</b> <i>58.417657211</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-135.697484107,58.417657211,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>HALC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>HALL BEACH CHAIN</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>-81.256482549</i><br /><b>Latitude:</b> <i>68.767291684</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-81.256482549,68.767291684,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>HDPW</name>
+			<description><![CDATA[<b>Long Name:</b> <i>HOMER DPW</i><br /><b>Marker:</b> <i>(KBRR Continuous Site)</i><br /><b>Longitude:</b> <i>-151.531189838</i><br /><b>Latitude:</b> <i>59.641683938</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-151.531189838,59.641683938,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>HEL2</name>
+			<description><![CDATA[<b>Long Name:</b> <i>HELHEIM GLACIER</i><br /><b>Marker:</b> <i>(UNAVCO ID 21582)</i><br /><b>Longitude:</b> <i>-38.215704165</i><br /><b>Latitude:</b> <i>66.401156795</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-38.215704165,66.40115679500001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>HIWC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>HIWAY CONTINUOUS</i><br /><b>Marker:</b> <i>(DOMES xxxxxMxxx)</i><br /><b>Longitude:</b> <i>-148.807256817</i><br /><b>Latitude:</b> <i>63.464357671</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-148.807256817,63.46435767100001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>HJOR</name>
+			<description><![CDATA[<b>Long Name:</b> <i>HJORNEFJELDET</i><br /><b>Marker:</b> <i>(BEDROCK-BOLTED MAST)</i><br /><b>Longitude:</b> <i>-41.147868340</i><br /><b>Latitude:</b> <i>63.418209821</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-41.14786834,63.418209821,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>HMBG</name>
+			<description><![CDATA[<b>Long Name:</b> <i>HAMBURG GLETSCHE</i><br /><b>Marker:</b> <i>(BEDROCK-BOLTED MAST)</i><br /><b>Longitude:</b> <i>-28.129069450</i><br /><b>Latitude:</b> <i>73.675981601</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-28.12906945,73.675981601,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>HOLM</name>
+			<description><![CDATA[<b>Long Name:</b> <i>HOLMAN</i><br /><b>Marker:</b> <i>M019000 (DOMES 40148M001)</i><br /><b>Longitude:</b> <i>-117.761233531</i><br /><b>Latitude:</b> <i>70.736304443</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-117.761233531,70.73630444299999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>HRDG</name>
+			<description><![CDATA[<b>Long Name:</b> <i>HARDER GLETSCHER</i><br /><b>Marker:</b> <i>(BEDROCK-BOLTED MAST)</i><br /><b>Longitude:</b> <i>-44.517372690</i><br /><b>Latitude:</b> <i>81.879831809</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-44.51737269,81.879831809,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>HURC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>HURRICANE CONTIN</i><br /><b>Marker:</b> <i>(DOMES xxxxxMxxx)</i><br /><b>Longitude:</b> <i>-149.608818260</i><br /><b>Latitude:</b> <i>62.999305648</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-149.60881826,62.999305648,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ILUL</name>
+			<description><![CDATA[<b>Long Name:</b> <i>ILULISSAT</i><br /><b>Marker:</b> <i>(DOMES 43009M001)</i><br /><b>Longitude:</b> <i>-51.060753961</i><br /><b>Latitude:</b> <i>69.240414415</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-51.060753961,69.240414415,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>INVK</name>
+			<description><![CDATA[<b>Long Name:</b> <i>INUVIK</i><br /><b>Marker:</b> <i>M009004 (DOMES 40150M001)</i><br /><b>Longitude:</b> <i>-133.526959316</i><br /><b>Latitude:</b> <i>68.306185933</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-133.526959316,68.30618593299999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>IQAC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>IQALUIT CHAIN</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>-68.540275617</i><br /><b>Latitude:</b> <i>63.737391076</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-68.54027561700001,63.737391076,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>IQAL</name>
+			<description><![CDATA[<b>Long Name:</b> <i>IQALUIT</i><br /><b>Marker:</b> <i>(DOMES 40194M001)</i><br /><b>Longitude:</b> <i>-68.510497434</i><br /><b>Latitude:</b> <i>63.755964070</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-68.510497434,63.75596407,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>IRKT</name>
+			<description><![CDATA[<b>Long Name:</b> <i>IRKUTSK</i><br /><b>Marker:</b> <i>EAST GPS/GLONASS GEODYNAMICAL MARK</i><br /><b>Longitude:</b> <i>104.316237031</i><br /><b>Latitude:</b> <i>52.219024348</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>104.316237031,52.219024348,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>JANL</name>
+			<description><![CDATA[<b>Long Name:</b> <i>JAN LAKE</i><br /><b>Marker:</b> <i>(DOMES xxxxxMxxx)</i><br /><b>Longitude:</b> <i>-143.905718864</i><br /><b>Latitude:</b> <i>63.568520042</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-143.905718864,63.568520042,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>JGBL</name>
+			<description><![CDATA[<b>Long Name:</b> <i>JORGEN BRONLUND</i><br /><b>Marker:</b> <i>(BEDROCK-BOLTED MAST)</i><br /><b>Longitude:</b> <i>-31.004201528</i><br /><b>Latitude:</b> <i>82.208758098</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-31.004201528,82.208758098,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>JNU1</name>
+			<description><![CDATA[<b>Long Name:</b> <i>JUNEAU WAAS 1</i><br /><b>Marker:</b> <i>(JNU WAAS 1)</i><br /><b>Longitude:</b> <i>-134.585705141</i><br /><b>Latitude:</b> <i>58.362575454</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-134.585705141,58.362575454,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>JPLM</name>
+			<description><![CDATA[<b>Long Name:</b> <i>PASADENA</i><br /><b>Marker:</b> <i>JPL MV3 1983</i><br /><b>Longitude:</b> <i>-118.173220909</i><br /><b>Latitude:</b> <i>34.204818097</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-118.173220909,34.204818097,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>JWLF</name>
+			<description><![CDATA[<b>Long Name:</b> <i>JEWELL FJORD</i><br /><b>Marker:</b> <i>(BEDROCK-BOLTED MAST)</i><br /><b>Longitude:</b> <i>-45.119835235</i><br /><b>Latitude:</b> <i>83.111653147</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-45.119835235,83.111653147,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>KAGA</name>
+			<description><![CDATA[<b>Long Name:</b> <i>KANGIA NORTH</i><br /><b>Marker:</b> <i>(KAGA)</i><br /><b>Longitude:</b> <i>-49.814626359</i><br /><b>Latitude:</b> <i>69.222300690</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-49.814626359,69.22230069,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>KAGZ</name>
+			<description><![CDATA[<b>Long Name:</b> <i>KAP AGASSIZ</i><br /><b>Marker:</b> <i>(UNAVCO ID 21599)</i><br /><b>Longitude:</b> <i>-65.852955973</i><br /><b>Latitude:</b> <i>79.131958440</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-65.85295597299999,79.13195844000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>KBG</name>
+			<description><![CDATA[<b>Long Name:</b> <i>KORTBERG</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>162.711422718</i><br /><b>Latitude:</b> <i>56.258431366</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>162.711422718,56.258431366,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>KBUG</name>
+			<description><![CDATA[<b>Long Name:</b> <i>KOGE BUGT</i><br /><b>Marker:</b> <i>(UNAVCO ID 21594)</i><br /><b>Longitude:</b> <i>-41.157544166</i><br /><b>Latitude:</b> <i>65.143681816</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-41.157544166,65.143681816,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>KDK1</name>
+			<description><![CDATA[<b>Long Name:</b> <i>KODIAK IS. USCG</i><br /><b>Marker:</b> <i>(Kodiak Island USCG 1)</i><br /><b>Longitude:</b> <i>-152.193426712</i><br /><b>Latitude:</b> <i>57.617692445</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-152.193426712,57.617692445,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>KDK2</name>
+			<description><![CDATA[<b>Long Name:</b> <i>KODIAK IS. USCG</i><br /><b>Marker:</b> <i>(Kodiak Island USCG 2)</i><br /><b>Longitude:</b> <i>-152.193426712</i><br /><b>Latitude:</b> <i>57.617692445</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-152.193426712,57.617692445,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>KELY</name>
+			<description><![CDATA[<b>Long Name:</b> <i>KELLYVILLE</i><br /><b>Marker:</b> <i>KELLYVILLE 1995</i><br /><b>Longitude:</b> <i>-50.944837622</i><br /><b>Latitude:</b> <i>66.987417204</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-50.944837622,66.987417204,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>KEN1</name>
+			<description><![CDATA[<b>Long Name:</b> <i>NIKISKI USCG</i><br /><b>Marker:</b> <i>(Nikiski USCG 1)</i><br /><b>Longitude:</b> <i>-151.350181754</i><br /><b>Latitude:</b> <i>60.675081486</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-151.350181754,60.675081486,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>KEN2</name>
+			<description><![CDATA[<b>Long Name:</b> <i>NIKISKI USCG</i><br /><b>Marker:</b> <i>(Nikiski USCG 2)</i><br /><b>Longitude:</b> <i>-151.350181754</i><br /><b>Latitude:</b> <i>60.675081486</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-151.350181754,60.675081486,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>KEN5</name>
+			<description><![CDATA[<b>Long Name:</b> <i>NIKISKI USCG</i><br /><b>Marker:</b> <i>(Nikiski USCG 5)</i><br /><b>Longitude:</b> <i>-151.350182619</i><br /><b>Latitude:</b> <i>60.675077951</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-151.350182619,60.675077951,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>KEN6</name>
+			<description><![CDATA[<b>Long Name:</b> <i>NIKISKI USCG</i><br /><b>Marker:</b> <i>(Nikiski USCG 6)</i><br /><b>Longitude:</b> <i>-151.350164665</i><br /><b>Latitude:</b> <i>60.674803782</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-151.350164665,60.67480378199999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>KLRS</name>
+			<description><![CDATA[<b>Long Name:</b> <i>KLUANE LAKE RS</i><br /><b>Marker:</b> <i>(SCIGN mount)</i><br /><b>Longitude:</b> <i>-138.410450157</i><br /><b>Latitude:</b> <i>61.027592097</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-138.410450157,61.027592097,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>KMJP</name>
+			<description><![CDATA[<b>Long Name:</b> <i>KAP MORRIS JESSU</i><br /><b>Marker:</b> <i>(BEDROCK-BOLTED MAST)</i><br /><b>Longitude:</b> <i>-33.377080141</i><br /><b>Latitude:</b> <i>83.643237336</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-33.377080141,83.643237336,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>KMOR</name>
+			<description><![CDATA[<b>Long Name:</b> <i>KAP MORTON</i><br /><b>Marker:</b> <i>(BEDROCK-BOLTED MAST)</i><br /><b>Longitude:</b> <i>-63.527399613</i><br /><b>Latitude:</b> <i>81.252714753</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-63.527399613,81.25271475300001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>KMS</name>
+			<description><![CDATA[<b>Long Name:</b> <i>KAMENSKOE</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>166.210696752</i><br /><b>Latitude:</b> <i>62.456290182</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>166.210696752,62.456290182,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>KOD5</name>
+			<description><![CDATA[<b>Long Name:</b> <i>KODIAK IS. USCG</i><br /><b>Marker:</b> <i>(Kodiak Island USCG 5)</i><br /><b>Longitude:</b> <i>-152.193429770</i><br /><b>Latitude:</b> <i>57.617691962</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-152.19342977,57.617691962,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>KOD6</name>
+			<description><![CDATA[<b>Long Name:</b> <i>KODIAK IS. USCG</i><br /><b>Marker:</b> <i>(Kodiak Island USCG 6)</i><br /><b>Longitude:</b> <i>-152.193882153</i><br /><b>Latitude:</b> <i>57.617591831</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-152.193882153,57.617591831,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>KODK</name>
+			<description><![CDATA[<b>Long Name:</b> <i>KODIAK IGS</i><br /><b>Marker:</b> <i>(permanent antenna mount)</i><br /><b>Longitude:</b> <i>-152.501375849</i><br /><b>Latitude:</b> <i>57.735106755</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-152.501375849,57.735106755,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>KOKB</name>
+			<description><![CDATA[<b>Long Name:</b> <i>KOKEE</i><br /><b>Marker:</b> <i>KOKEE 3028-S 1987 Kok</i><br /><b>Longitude:</b> <i>-159.664919289</i><br /><b>Latitude:</b> <i>22.126258601</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-159.664919289,22.126258601,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>KOTZ</name>
+			<description><![CDATA[<b>Long Name:</b> <i>KOTZ ACCUPOINT</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>-162.601595274</i><br /><b>Latitude:</b> <i>66.894853059</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-162.601595274,66.894853059,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>KUAQ</name>
+			<description><![CDATA[<b>Long Name:</b> <i>KANGERDLUSSUAQ</i><br /><b>Marker:</b> <i>(BEDROCK-BOLTED MAST)</i><br /><b>Longitude:</b> <i>-33.052746493</i><br /><b>Latitude:</b> <i>68.586999238</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-33.052746493,68.586999238,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>KUGC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>KUGLUKTUK CHAIN</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>-115.134757011</i><br /><b>Latitude:</b> <i>67.817787356</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-115.134757011,67.817787356,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>KULL</name>
+			<description><![CDATA[<b>Long Name:</b> <i>KULLORSUAQ</i><br /><b>Marker:</b> <i>(UNAVCO ID 21593)</i><br /><b>Longitude:</b> <i>-57.227056170</i><br /><b>Latitude:</b> <i>74.580624556</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-57.22705617,74.580624556,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>KULU</name>
+			<description><![CDATA[<b>Long Name:</b> <i>KULUSUK</i><br /><b>Marker:</b> <i>(KULU)</i><br /><b>Longitude:</b> <i>-37.149356641</i><br /><b>Latitude:</b> <i>65.579334794</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-37.149356641,65.579334794,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>KUUJ</name>
+			<description><![CDATA[<b>Long Name:</b> <i>KUUJJUARAPIK</i><br /><b>Marker:</b> <i>(DOMES 40154M001)</i><br /><b>Longitude:</b> <i>-77.745434849</i><br /><b>Latitude:</b> <i>55.278361023</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-77.74543484900001,55.278361023,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>KWJ1</name>
+			<description><![CDATA[<b>Long Name:</b> <i>KWAJALEIN ATOLL</i><br /><b>Marker:</b> <i>(DOMES 50506M001)</i><br /><b>Longitude:</b> <i>167.730245874</i><br /><b>Latitude:</b> <i>8.722202172</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>167.730245874,8.722202171999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>LBIB</name>
+			<description><![CDATA[<b>Long Name:</b> <i>L BISTRUP ISBRAE</i><br /><b>Marker:</b> <i>(BEDROCK-BOLTED MAST)</i><br /><b>Longitude:</b> <i>-23.852941788</i><br /><b>Latitude:</b> <i>75.893807999</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-23.852941788,75.893807999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>LEFN</name>
+			<description><![CDATA[<b>Long Name:</b> <i>LEFFINGWELL NUNA</i><br /><b>Marker:</b> <i>(BEDROCK-BOLTED MAST)</i><br /><b>Longitude:</b> <i>-26.293459669</i><br /><b>Latitude:</b> <i>80.456682557</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-26.293459669,80.45668255699999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>LEV1</name>
+			<description><![CDATA[<b>Long Name:</b> <i>LEVEL ISL. USCG</i><br /><b>Marker:</b> <i>(DOMES 49796S001 Level Island USCG 1)</i><br /><b>Longitude:</b> <i>-133.092780690</i><br /><b>Latitude:</b> <i>56.465680820</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-133.09278069,56.46568082,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>LEV2</name>
+			<description><![CDATA[<b>Long Name:</b> <i>LEVEL ISL. USCG</i><br /><b>Marker:</b> <i>(Level Island USCG 2)</i><br /><b>Longitude:</b> <i>-133.092385174</i><br /><b>Latitude:</b> <i>56.465660246</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-133.092385174,56.465660246,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>LEV5</name>
+			<description><![CDATA[<b>Long Name:</b> <i>LEVEL ISL. USCG</i><br /><b>Marker:</b> <i>(Level Island USCG 5)</i><br /><b>Longitude:</b> <i>-133.092781943</i><br /><b>Latitude:</b> <i>56.465680320</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-133.092781943,56.46568032,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>LEV6</name>
+			<description><![CDATA[<b>Long Name:</b> <i>LEVEL ISL. USCG</i><br /><b>Marker:</b> <i>(Level Island USCG 6)</i><br /><b>Longitude:</b> <i>-133.092386682</i><br /><b>Latitude:</b> <i>56.465659583</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-133.092386682,56.465659583,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>LOGC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>LOG CABIN CONTIN</i><br /><b>Marker:</b> <i>(DOMES xxxxxMxxx)</i><br /><b>Longitude:</b> <i>-143.345500000</i><br /><b>Latitude:</b> <i>63.022600000</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-143.3455,63.0226,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>LYNS</name>
+			<description><![CDATA[<b>Long Name:</b> <i>LYNAES</i><br /><b>Marker:</b> <i>(UNAVCO ID 21597)</i><br /><b>Longitude:</b> <i>-40.198052821</i><br /><b>Latitude:</b> <i>64.430480472</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-40.198052821,64.430480472,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>MAG0</name>
+			<description><![CDATA[<b>Long Name:</b> <i>MAGADAN</i><br /><b>Marker:</b> <i>(5/8 inch stainless steel rod)</i><br /><b>Longitude:</b> <i>150.770246951</i><br /><b>Latitude:</b> <i>59.575717933</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>150.770246951,59.575717933,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>MAPS</name>
+			<description><![CDATA[<b>Long Name:</b> <i>MAKUSHIN MAPS</i><br /><b>Marker:</b> <i>(SCIGN adaptor on short-braced monument)</i><br /><b>Longitude:</b> <i>-166.940453947</i><br /><b>Latitude:</b> <i>53.808095927</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-166.940453947,53.80809592699999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>MAUI</name>
+			<description><![CDATA[<b>Long Name:</b> <i>MAUI HALEAKALA</i><br /><b>Marker:</b> <i>(DOMES 40445S008)</i><br /><b>Longitude:</b> <i>-156.257024880</i><br /><b>Latitude:</b> <i>20.706654669</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-156.25702488,20.706654669,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>MCES</name>
+			<description><![CDATA[<b>Long Name:</b> <i>MCNEIL CYN ELEM</i><br /><b>Marker:</b> <i>(KBRR Continuous Site)</i><br /><b>Longitude:</b> <i>-151.257831727</i><br /><b>Latitude:</b> <i>59.746076893</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-151.257831727,59.746076893,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>MCMC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>FT MCMURRAY CHAI</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>-111.220294246</i><br /><b>Latitude:</b> <i>56.649542008</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-111.220294246,56.649542008,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>MDFC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>MILLION $ FALLS</i><br /><b>Marker:</b> <i>(DOMES xxxxxMxxx)</i><br /><b>Longitude:</b> <i>-136.958300000</i><br /><b>Latitude:</b> <i>60.121800000</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-136.9583,60.12180000000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>MDO1</name>
+			<description><![CDATA[<b>Long Name:</b> <i>MCDONALD OBSERV.</i><br /><b>Marker:</b> <i>JPL GPS 4011-S 1993 McD</i><br /><b>Longitude:</b> <i>-104.014990986</i><br /><b>Latitude:</b> <i>30.680511182</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-104.014990986,30.680511182,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>MED1</name>
+			<description><![CDATA[<b>Long Name:</b> <i>MEDNIY ISL CGPS</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>168.093661563</i><br /><b>Latitude:</b> <i>54.505248229</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>168.093661563,54.505248229,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>MENT</name>
+			<description><![CDATA[<b>Long Name:</b> <i>MENTASTA PASS</i><br /><b>Marker:</b> <i>(DOMES xxxxxMxxx)</i><br /><b>Longitude:</b> <i>-143.704152173</i><br /><b>Latitude:</b> <i>62.831504455</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-143.704152173,62.831504455,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>MIK2</name>
+			<description><![CDATA[<b>Long Name:</b> <i>MIKIS FJORD 2</i><br /><b>Marker:</b> <i>(BEDROCK-BOLTED MAST)</i><br /><b>Longitude:</b> <i>-31.451821470</i><br /><b>Latitude:</b> <i>68.140280244</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-31.45182147,68.140280244,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>MIKI</name>
+			<description><![CDATA[<b>Long Name:</b> <i>MIKIS FJORD</i><br /><b>Marker:</b> <i>(BEDROCK-BOLTED MAST)</i><br /><b>Longitude:</b> <i>-31.450468169</i><br /><b>Latitude:</b> <i>68.141194544</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-31.450468169,68.141194544,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>MKEA</name>
+			<description><![CDATA[<b>Long Name:</b> <i>MAUNA KEA</i><br /><b>Longitude:</b> <i>-155.456339792</i><br /><b>Latitude:</b> <i>19.801353314</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-155.456339792,19.801353314,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>MREP</name>
+			<description><![CDATA[<b>Long Name:</b> <i>MAKUSHIN MREP</i><br /><b>Marker:</b> <i>(SCIGN adaptor on concrete pillar)</i><br /><b>Longitude:</b> <i>-166.748343953</i><br /><b>Latitude:</b> <i>53.809594683</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-166.748343953,53.809594683,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>MRGL</name>
+			<description><![CDATA[<b>Long Name:</b> <i>MARIE GLETCHER</i><br /><b>Marker:</b> <i>(BEDROCK-BOLTED MAST)</i><br /><b>Longitude:</b> <i>-65.694624392</i><br /><b>Latitude:</b> <i>77.187037242</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-65.69462439199999,77.187037242,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>MSVG</name>
+			<description><![CDATA[<b>Long Name:</b> <i>MESTERSVIG</i><br /><b>Marker:</b> <i>(BEDROCK-BOLTED MAST)</i><br /><b>Longitude:</b> <i>-23.912862262</i><br /><b>Latitude:</b> <i>72.240821971</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-23.912862262,72.240821971,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>MSWB</name>
+			<description><![CDATA[<b>Long Name:</b> <i>MAKUSHIN MSWB</i><br /><b>Marker:</b> <i>(SCIGN adaptor on concrete pillar)</i><br /><b>Longitude:</b> <i>-166.787882045</i><br /><b>Latitude:</b> <i>53.914694365</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-166.787882045,53.914694365,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>MYVA</name>
+			<description><![CDATA[<b>Long Name:</b> <i>MYVATN ICELAND</i><br /><b>Marker:</b> <i>(DOMES 10205M001)</i><br /><b>Longitude:</b> <i>-16.891352739</i><br /><b>Latitude:</b> <i>65.642321068</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-16.891352739,65.642321068,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>NAIN</name>
+			<description><![CDATA[<b>Long Name:</b> <i>NAIN</i><br /><b>Marker:</b> <i>(DOMES 40164M001)</i><br /><b>Longitude:</b> <i>-61.688716530</i><br /><b>Latitude:</b> <i>56.536975348</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-61.68871653,56.536975348,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>NLIB</name>
+			<description><![CDATA[<b>Long Name:</b> <i>NORTH LIBERTY</i><br /><b>Marker:</b> <i>JPL GPS 4007-S Nor</i><br /><b>Longitude:</b> <i>-91.574892399</i><br /><b>Latitude:</b> <i>41.771590823</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-91.57489239900002,41.771590823,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>NNVN</name>
+			<description><![CDATA[<b>Long Name:</b> <i>N NIVIARSIAT NUN</i><br /><b>Marker:</b> <i>(BEDROCK-BOLTED MAST)</i><br /><b>Longitude:</b> <i>-44.901066519</i><br /><b>Latitude:</b> <i>61.631876194</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-44.901066519,61.63187619400001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>NRIL</name>
+			<description><![CDATA[<b>Long Name:</b> <i>NORILSK</i><br /><b>Marker:</b> <i>(DOMES 12364M001)</i><br /><b>Longitude:</b> <i>88.359780455</i><br /><b>Latitude:</b> <i>69.361833071</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>88.35978045500001,69.36183307100001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>NRSK</name>
+			<description><![CDATA[<b>Long Name:</b> <i>NORSKE OYE</i><br /><b>Marker:</b> <i>(BEDROCK-BOLTED MAST)</i><br /><b>Longitude:</b> <i>-17.725415780</i><br /><b>Latitude:</b> <i>79.155028280</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-17.72541578,79.15502828,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>NYA1</name>
+			<description><![CDATA[<b>Long Name:</b> <i>NY ALLESUND</i><br /><b>Marker:</b> <i>(DOMES 10317M003)</i><br /><b>Longitude:</b> <i>11.865302349</i><br /><b>Latitude:</b> <i>78.929553752</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>11.865302349,78.929553752,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>NYAL</name>
+			<description><![CDATA[<b>Long Name:</b> <i>NY ALLESUND</i><br /><b>Marker:</b> <i>(unstamped GPS point) Ny</i><br /><b>Longitude:</b> <i>11.865076565</i><br /><b>Latitude:</b> <i>78.929582907</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>11.865076565,78.929582907,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>OKCD</name>
+			<description><![CDATA[<b>Long Name:</b> <i>OKMOK CONE D</i><br /><b>Marker:</b> <i>(SCIGN adaptor on short-braced mon.)</i><br /><b>Longitude:</b> <i>-168.114483313</i><br /><b>Latitude:</b> <i>53.429436445</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-168.114483313,53.42943644500001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>OKCE</name>
+			<description><![CDATA[<b>Long Name:</b> <i>OKMOK CONE E</i><br /><b>Marker:</b> <i>(SCIGN adaptor on concrete pillar)</i><br /><b>Longitude:</b> <i>-168.166152187</i><br /><b>Latitude:</b> <i>53.426163994</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-168.166152187,53.42616399400001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>OKFG</name>
+			<description><![CDATA[<b>Long Name:</b> <i>OKMOK FORT GLENN</i><br /><b>Marker:</b> <i>(SCIGN adaptor on short-braced mon.)</i><br /><b>Longitude:</b> <i>-167.911554555</i><br /><b>Latitude:</b> <i>53.410708216</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-167.911554555,53.410708216,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>OKNC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>OKMOK NORTH CALD</i><br /><b>Marker:</b> <i>(SCIGN adaptor on short-braced mon.)</i><br /><b>Longitude:</b> <i>-168.125634005</i><br /><b>Latitude:</b> <i>53.456085836</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-168.125634005,53.456085836,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>OKSO</name>
+			<description><![CDATA[<b>Long Name:</b> <i>OKMOK SOUTH</i><br /><b>Marker:</b> <i>(SCIGN adaptor on short-braced mon.)</i><br /><b>Longitude:</b> <i>-168.162046396</i><br /><b>Latitude:</b> <i>53.356461829</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-168.162046396,53.356461829,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>OSBN</name>
+			<description><![CDATA[<b>Long Name:</b> <i>OSBN ACCUPOINT</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>-147.701391798</i><br /><b>Latitude:</b> <i>64.810714974</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-147.701391798,64.81071497400001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>OTZ1</name>
+			<description><![CDATA[<b>Long Name:</b> <i>KOTZEBUE WAAS 1</i><br /><b>Marker:</b> <i>(OTZ WAAS 1)</i><br /><b>Longitude:</b> <i>-162.611370091</i><br /><b>Latitude:</b> <i>66.887333125</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-162.611370091,66.887333125,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>OTZF</name>
+			<description><![CDATA[<b>Long Name:</b> <i>KOTZEBUE FAA</i><br /><b>Marker:</b> <i>(Kotzebue FAA site)</i><br /><b>Longitude:</b> <i>-162.613388863</i><br /><b>Latitude:</b> <i>66.886253678</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-162.613388863,66.886253678,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>PALM</name>
+			<description><![CDATA[<b>Long Name:</b> <i>PALMER AKDOT</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>-149.119035301</i><br /><b>Latitude:</b> <i>61.585724154</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-149.119035301,61.58572415399999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>PAX2</name>
+			<description><![CDATA[<b>Long Name:</b> <i>PAXSON CONTIN 2</i><br /><b>Marker:</b> <i>(DOMES xxxxxMxxx)</i><br /><b>Longitude:</b> <i>-145.451874502</i><br /><b>Latitude:</b> <i>62.967322800</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-145.451874502,62.9673228,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>PAXC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>PAXSON CONTINUOU</i><br /><b>Marker:</b> <i>(DOMES xxxxxMxxx)</i><br /><b>Longitude:</b> <i>-145.451707632</i><br /><b>Latitude:</b> <i>62.967273611</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-145.451707632,62.967273611,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>PBAY</name>
+			<description><![CDATA[<b>Long Name:</b> <i>PETERSON BAY</i><br /><b>Marker:</b> <i>(KBRR Continuous Site)</i><br /><b>Longitude:</b> <i>-151.272237993</i><br /><b>Latitude:</b> <i>59.572707224</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-151.272237993,59.57270722400001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>PBOC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>PRUDHOE BAY OPCT</i><br /><b>Marker:</b> <i>(DOMES 49640S002)</i><br /><b>Longitude:</b> <i>-148.334913207</i><br /><b>Latitude:</b> <i>70.256403437</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-148.334913207,70.256403437,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>PENT</name>
+			<description><![CDATA[<b>Long Name:</b> <i>PENTICTON</i><br /><b>Marker:</b> <i>PENTICTON 887006 Pen</i><br /><b>Longitude:</b> <i>-119.624979221</i><br /><b>Latitude:</b> <i>49.322620010</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-119.624979221,49.32262000999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>PETP</name>
+			<description><![CDATA[<b>Long Name:</b> <i>PETROPAVLOVSK K</i><br /><b>Marker:</b> <i>PET1</i><br /><b>Longitude:</b> <i>158.607078054</i><br /><b>Latitude:</b> <i>53.066732108</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>158.607078054,53.066732108,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>PETR</name>
+			<description><![CDATA[<b>Long Name:</b> <i>PETROPAVLOVSK K</i><br /><b>Marker:</b> <i>(5/8 inch stainless steel rod)</i><br /><b>Longitude:</b> <i>158.606608305</i><br /><b>Latitude:</b> <i>53.066533445</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>158.606608305,53.066533445,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>PETS</name>
+			<description><![CDATA[<b>Long Name:</b> <i>PETROPAVLOVSK S</i><br /><b>Marker:</b> <i>(SEISMIC GSN DOMES 12355M003)</i><br /><b>Longitude:</b> <i>158.650134443</i><br /><b>Latitude:</b> <i>53.023299659</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>158.650134443,53.023299659,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>PFR2</name>
+			<description><![CDATA[<b>Long Name:</b> <i>POKER FLAT RR</i><br /><b>Marker:</b> <i>(SCIGN mount)</i><br /><b>Longitude:</b> <i>-147.433066635</i><br /><b>Latitude:</b> <i>65.117438075</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-147.433066635,65.117438075,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>PFRR</name>
+			<description><![CDATA[<b>Long Name:</b> <i>POKER FLAT RR</i><br /><b>Marker:</b> <i>(SCIGN mount)</i><br /><b>Longitude:</b> <i>-147.433066906</i><br /><b>Latitude:</b> <i>65.117438071</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-147.433066906,65.117438071,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>PLPK</name>
+			<description><![CDATA[<b>Long Name:</b> <i>PILAPPIK</i><br /><b>Marker:</b> <i>(UNAVCO ID 21567)</i><br /><b>Longitude:</b> <i>-34.033459804</i><br /><b>Latitude:</b> <i>66.897727025</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-34.033459804,66.89772702499999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>PONC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>POND INLET CHAIN</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>-77.955066447</i><br /><b>Latitude:</b> <i>72.693179192</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-77.95506644699999,72.693179192,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POT1</name>
+			<description><![CDATA[<b>Long Name:</b> <i>POTATO PT USCG</i><br /><b>Marker:</b> <i>(Potato Point USCG 1)</i><br /><b>Longitude:</b> <i>-146.697230121</i><br /><b>Latitude:</b> <i>61.056418676</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-146.697230121,61.056418676,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POT2</name>
+			<description><![CDATA[<b>Long Name:</b> <i>POTATO PT USCG</i><br /><b>Marker:</b> <i>(Potato Point USCG 2)</i><br /><b>Longitude:</b> <i>-146.696659350</i><br /><b>Latitude:</b> <i>61.056345179</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-146.69665935,61.05634517899999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POT3</name>
+			<description><![CDATA[<b>Long Name:</b> <i>POTATO PT USCG</i><br /><b>Marker:</b> <i>(Potato Point USCG 3)</i><br /><b>Longitude:</b> <i>-146.696832938</i><br /><b>Latitude:</b> <i>61.056260157</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-146.696832938,61.05626015699999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POT4</name>
+			<description><![CDATA[<b>Long Name:</b> <i>POTATO PT USCG</i><br /><b>Marker:</b> <i>(Potato Point USCG 4)</i><br /><b>Longitude:</b> <i>-146.697356599</i><br /><b>Latitude:</b> <i>61.056307500</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-146.697356599,61.0563075,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POT5</name>
+			<description><![CDATA[<b>Long Name:</b> <i>POTATO PT USCG</i><br /><b>Marker:</b> <i>(Potato Point USCG 5)</i><br /><b>Longitude:</b> <i>-146.696836818</i><br /><b>Latitude:</b> <i>61.056260501</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-146.696836818,61.056260501,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POT6</name>
+			<description><![CDATA[<b>Long Name:</b> <i>POTATO PT USCG</i><br /><b>Marker:</b> <i>(Potato Point USCG 6)</i><br /><b>Longitude:</b> <i>-146.697359070</i><br /><b>Latitude:</b> <i>61.056307811</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-146.69735907,61.056307811,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>PRDS</name>
+			<description><![CDATA[<b>Long Name:</b> <i>PRIDDIS</i><br /><b>Marker:</b> <i>PRDS (DOMES 40124M001)</i><br /><b>Longitude:</b> <i>-114.293497135</i><br /><b>Latitude:</b> <i>50.871351249</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-114.293497135,50.871351249,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>PUO1</name>
+			<description><![CDATA[<b>Long Name:</b> <i>PRUDHOE BAY ARPT</i><br /><b>Marker:</b> <i>(DOMES 49516S001)</i><br /><b>Longitude:</b> <i>-148.343256475</i><br /><b>Latitude:</b> <i>70.253872386</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-148.343256475,70.253872386,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>QAAR</name>
+			<description><![CDATA[<b>Long Name:</b> <i>QAARSUUT</i><br /><b>Marker:</b> <i>(BEDROCK-BOLTED MAST)</i><br /><b>Longitude:</b> <i>-52.688374381</i><br /><b>Latitude:</b> <i>70.740405793</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-52.68837438100001,70.74040579299999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>QAQ1</name>
+			<description><![CDATA[<b>Long Name:</b> <i>QAQORTOQ</i><br /><b>Marker:</b> <i>QAQ1 (DOMES 43007M001)</i><br /><b>Longitude:</b> <i>-46.047762103</i><br /><b>Latitude:</b> <i>60.715262947</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-46.04776210299999,60.715262947,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>QEQE</name>
+			<description><![CDATA[<b>Long Name:</b> <i>QEQERTARSUAQ</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>-53.522324563</i><br /><b>Latitude:</b> <i>69.252627759</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-53.522324563,69.25262775900001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>QIKC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>QIKIQTARJUAQ CHA</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>-64.033669680</i><br /><b>Latitude:</b> <i>67.559339851</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-64.03366968,67.559339851,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>QIKI</name>
+			<description><![CDATA[<b>Long Name:</b> <i>QIKIQTARJUAQ</i><br /><b>Marker:</b> <i>QIKI (DOMES 40166M001)</i><br /><b>Longitude:</b> <i>-64.033669300</i><br /><b>Latitude:</b> <i>67.559341571</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-64.0336693,67.559341571,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>QUIC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>QUEEN INLET</i><br /><b>Marker:</b> <i>(short braced-steel mon.)</i><br /><b>Longitude:</b> <i>-136.586800000</i><br /><b>Latitude:</b> <i>58.908600000</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-136.5868,58.9086,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>RCM5</name>
+			<description><![CDATA[<b>Long Name:</b> <i>RICHMOND</i><br /><b>Marker:</b> <i>RCM5 (unknown)</i><br /><b>Longitude:</b> <i>-80.384673881</i><br /><b>Latitude:</b> <i>25.612475442</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-80.384673881,25.612475442,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>RCM6</name>
+			<description><![CDATA[<b>Long Name:</b> <i>RICHMOND</i><br /><b>Marker:</b> <i>RCM6 (unknown)</i><br /><b>Longitude:</b> <i>-80.383930645</i><br /><b>Latitude:</b> <i>25.613779198</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-80.38393064500001,25.613779198,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>RCM7</name>
+			<description><![CDATA[<b>Long Name:</b> <i>RICHMOND</i><br /><b>Marker:</b> <i>RCM7 (unknown)</i><br /><b>Longitude:</b> <i>-80.384066959</i><br /><b>Latitude:</b> <i>25.614097835</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-80.38406695899999,25.614097835,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>RDJH</name>
+			<description><![CDATA[<b>Long Name:</b> <i>REDOUBT JUERGENS</i><br /><b>Marker:</b> <i>(SCIGN mount on short-braced monument)</i><br /><b>Longitude:</b> <i>-152.805240813</i><br /><b>Latitude:</b> <i>60.590763888</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-152.805240813,60.590763888,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>RDSO</name>
+			<description><![CDATA[<b>Long Name:</b> <i>REDOUBT SOUTH</i><br /><b>Marker:</b> <i>(SCIGN adaptor on short-braced monument)</i><br /><b>Longitude:</b> <i>-152.744927750</i><br /><b>Latitude:</b> <i>60.453580091</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-152.74492775,60.453580091,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>RDWB</name>
+			<description><![CDATA[<b>Long Name:</b> <i>REDOUBT WEST BB</i><br /><b>Marker:</b> <i>(SCIGN adaptor on concrete pillar)</i><br /><b>Longitude:</b> <i>-152.843635051</i><br /><b>Latitude:</b> <i>60.486806448</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-152.843635051,60.486806448,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>REDC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>REDOUBT RED CGPS</i><br /><b>Marker:</b> <i>(SCIGN adaptor on short-braced monument)</i><br /><b>Longitude:</b> <i>-152.774412595</i><br /><b>Latitude:</b> <i>60.419437247</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-152.774412595,60.419437247,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>REPC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>REPULSE BAY CHAI</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>-86.231050322</i><br /><b>Latitude:</b> <i>66.523600503</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-86.231050322,66.523600503,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>RESO</name>
+			<description><![CDATA[<b>Long Name:</b> <i>RESOLUTE</i><br /><b>Marker:</b> <i>M009002 (DOMES 40149M001)</i><br /><b>Longitude:</b> <i>-94.893336134</i><br /><b>Latitude:</b> <i>74.690826470</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-94.89333613399999,74.69082647,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>REYK</name>
+			<description><![CDATA[<b>Long Name:</b> <i>REYKJAVIK</i><br /><b>Marker:</b> <i>(unstamped bolt)</i><br /><b>Longitude:</b> <i>-21.955484416</i><br /><b>Latitude:</b> <i>64.138783146</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-21.955484416,64.13878314599999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>REYZ</name>
+			<description><![CDATA[<b>Long Name:</b> <i>REYKJAVIK</i><br /><b>Marker:</b> <i>(DOMES 10202M003)</i><br /><b>Longitude:</b> <i>-21.955475908</i><br /><b>Latitude:</b> <i>64.138793227</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-21.955475908,64.13879322699999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>RINK</name>
+			<description><![CDATA[<b>Long Name:</b> <i>RINKS ISBRAE</i><br /><b>Marker:</b> <i>(BEDROCK-BOLTED MAST)</i><br /><b>Longitude:</b> <i>-50.993963483</i><br /><b>Latitude:</b> <i>71.848500189</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-50.99396348300001,71.84850018900001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>RNKC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>RANKIN INLET CHA</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>-92.114729434</i><br /><b>Latitude:</b> <i>62.824710525</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-92.114729434,62.824710525,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SACH</name>
+			<description><![CDATA[<b>Long Name:</b> <i>SACHS HARBOR</i><br /><b>Marker:</b> <i>(DOMES 40163M001)</i><br /><b>Longitude:</b> <i>-125.249859597</i><br /><b>Latitude:</b> <i>71.990325307</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-125.249859597,71.99032530700001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SASK</name>
+			<description><![CDATA[<b>Long Name:</b> <i>SASKATOON</i><br /><b>Marker:</b> <i>(DOMES 40167M001)</i><br /><b>Longitude:</b> <i>-106.398354249</i><br /><b>Latitude:</b> <i>52.196254836</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-106.398354249,52.196254836,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SCBY</name>
+			<description><![CDATA[<b>Long Name:</b> <i>KAP SCHOUBYE</i><br /><b>Marker:</b> <i>(BEDROCK-BOLTED MAST)</i><br /><b>Longitude:</b> <i>-59.593619335</i><br /><b>Latitude:</b> <i>80.260132913</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-59.593619335,80.26013291300001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SCOB</name>
+			<description><![CDATA[<b>Long Name:</b> <i>SCORESBYSUND</i><br /><b>Marker:</b> <i>(DOMES 43006M001)</i><br /><b>Longitude:</b> <i>-21.950839871</i><br /><b>Latitude:</b> <i>70.485234017</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-21.950839871,70.485234017,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SCOR</name>
+			<description><![CDATA[<b>Long Name:</b> <i>SCORESBYSUND</i><br /><b>Marker:</b> <i>(DOMES 43006M002)</i><br /><b>Longitude:</b> <i>-21.950336316</i><br /><b>Latitude:</b> <i>70.485333371</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-21.950336316,70.485333371,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SDOU</name>
+			<description><![CDATA[<b>Long Name:</b> <i>SOURDOUGH CONTIN</i><br /><b>Marker:</b> <i>(DOMES xxxxxMxxx)</i><br /><b>Longitude:</b> <i>-145.426261287</i><br /><b>Latitude:</b> <i>62.688026667</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-145.426261287,62.688026667,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SELD</name>
+			<description><![CDATA[<b>Long Name:</b> <i>SELDOVIA AIRPORT</i><br /><b>Marker:</b> <i>(SELDOVIA Permanent Site)</i><br /><b>Longitude:</b> <i>-151.706670193</i><br /><b>Latitude:</b> <i>59.445711256</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-151.706670193,59.445711256,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SENU</name>
+			<description><![CDATA[<b>Long Name:</b> <i>SERMIP NUNATAA</i><br /><b>Marker:</b> <i>(BEDROCK-BOLTED MAST)</i><br /><b>Longitude:</b> <i>-47.141315466</i><br /><b>Latitude:</b> <i>61.069580164</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-47.141315466,61.06958016399999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SG27</name>
+			<description><![CDATA[<b>Long Name:</b> <i>BARROW SUOMINET</i><br /><b>Marker:</b> <i>(SCIGN mount on wooden piling)</i><br /><b>Longitude:</b> <i>-156.610330853</i><br /><b>Latitude:</b> <i>71.322895609</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-156.610330853,71.322895609,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SITF</name>
+			<description><![CDATA[<b>Long Name:</b> <i>SITKA FAA</i><br /><b>Marker:</b> <i>(Sitka FAA site)</i><br /><b>Longitude:</b> <i>-135.324661000</i><br /><b>Latitude:</b> <i>57.051834000</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-135.324661,57.051834,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SNKC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>SANIKILUAQ CHAIN</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>-79.231242030</i><br /><b>Latitude:</b> <i>56.536371466</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-79.23124203,56.53637146599999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SPBG</name>
+			<description><![CDATA[<b>Long Name:</b> <i>SPURR BARRIER GL</i><br /><b>Marker:</b> <i>(SCIGN adaptor on concrete pillar)</i><br /><b>Longitude:</b> <i>-152.372221836</i><br /><b>Latitude:</b> <i>61.259183363</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-152.372221836,61.259183363,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SPCG</name>
+			<description><![CDATA[<b>Long Name:</b> <i>SPURR CAPPS GL.</i><br /><b>Marker:</b> <i>(SCIGN adaptor on concrete pillar)</i><br /><b>Longitude:</b> <i>-152.022186644</i><br /><b>Latitude:</b> <i>61.291275532</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-152.022186644,61.291275532,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SPCP</name>
+			<description><![CDATA[<b>Long Name:</b> <i>SPURR CRATER PEA</i><br /><b>Marker:</b> <i>(SCIGN adaptor on concrete pillar)</i><br /><b>Longitude:</b> <i>-152.155483099</i><br /><b>Latitude:</b> <i>61.265527660</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-152.155483099,61.26552766,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SPCR</name>
+			<description><![CDATA[<b>Long Name:</b> <i>SPURR CHAKACHATN</i><br /><b>Marker:</b> <i>(SCIGN adaptor on concrete pillar)</i><br /><b>Longitude:</b> <i>-152.209174634</i><br /><b>Latitude:</b> <i>61.200310687</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-152.209174634,61.200310687,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SPIT</name>
+			<description><![CDATA[<b>Long Name:</b> <i>HOMER SPIT</i><br /><b>Marker:</b> <i>(KBRR Continuous Site)</i><br /><b>Longitude:</b> <i>-151.427015000</i><br /><b>Latitude:</b> <i>59.608047000</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-151.427015,59.608047,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SRMP</name>
+			<description><![CDATA[<b>Long Name:</b> <i>SERMIP NUUNATAA</i><br /><b>Marker:</b> <i>(UNAVCO ID 21566)</i><br /><b>Longitude:</b> <i>-54.393704061</i><br /><b>Latitude:</b> <i>72.910677680</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-54.39370406100001,72.91067768000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>STJO</name>
+			<description><![CDATA[<b>Long Name:</b> <i>ST JOHNS</i><br /><b>Marker:</b> <i>STJO GPS 920000 St.</i><br /><b>Longitude:</b> <i>-52.677747746</i><br /><b>Latitude:</b> <i>47.595237545</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-52.677747746,47.595237545,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SUAF</name>
+			<description><![CDATA[<b>Long Name:</b> <i>UAF NAT SCI BASE</i><br /><b>Marker:</b> <i>(permanent mount)</i><br /><b>Longitude:</b> <i>-147.835802174</i><br /><b>Latitude:</b> <i>64.858692911</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-147.835802174,64.85869291100001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SUMM</name>
+			<description><![CDATA[<b>Long Name:</b> <i>SUMMIT CAP</i><br /><b>Marker:</b> <i>(SUMM)</i><br /><b>Longitude:</b> <i>-38.457319668</i><br /><b>Latitude:</b> <i>72.579189744</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-38.457319668,72.579189744,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>TAEJ</name>
+			<description><![CDATA[<b>Long Name:</b> <i>DAEJEON</i><br /><b>Marker:</b> <i>KAO GPS STATION</i><br /><b>Longitude:</b> <i>127.366078848</i><br /><b>Latitude:</b> <i>36.374421529</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>127.366078848,36.374421529,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>TALC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>TALOYOAK CHAIN</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>-93.556691003</i><br /><b>Latitude:</b> <i>69.540933443</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-93.556691003,69.540933443,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>TATC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>TATS CONTINUOUS</i><br /><b>Marker:</b> <i>(DOMES xxxxxMxxx)</i><br /><b>Longitude:</b> <i>-137.737900000</i><br /><b>Latitude:</b> <i>59.630500000</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-137.7379,59.63049999999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>TBON</name>
+			<description><![CDATA[<b>Long Name:</b> <i>TBON BONIFACE DO</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>-149.785139649</i><br /><b>Latitude:</b> <i>61.179716278</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-149.785139649,61.179716278,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>TERA</name>
+			<description><![CDATA[<b>Long Name:</b> <i>TERA ACCUPOINT</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>-149.104118987</i><br /><b>Latitude:</b> <i>61.591389841</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-149.104118987,61.591389841,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>THU1</name>
+			<description><![CDATA[<b>Long Name:</b> <i>THULE AFB</i><br /><b>Marker:</b> <i>(DOMES 43001M001)</i><br /><b>Longitude:</b> <i>-68.788007602</i><br /><b>Latitude:</b> <i>76.537337184</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-68.78800760199999,76.53733718399999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>THU2</name>
+			<description><![CDATA[<b>Long Name:</b> <i>THULE AFB</i><br /><b>Marker:</b> <i>(DOMES 43001M002)</i><br /><b>Longitude:</b> <i>-68.825036303</i><br /><b>Latitude:</b> <i>76.537047456</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-68.825036303,76.537047456,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>THU3</name>
+			<description><![CDATA[<b>Long Name:</b> <i>THULE AFB</i><br /><b>Marker:</b> <i>(DOMES 43001M002)</i><br /><b>Longitude:</b> <i>-68.825034474</i><br /><b>Latitude:</b> <i>76.537047340</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-68.82503447400001,76.53704734,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>TIL</name>
+			<description><![CDATA[<b>Long Name:</b> <i>TILITIKI</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>166.146897208</i><br /><b>Latitude:</b> <i>60.445335162</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>166.146897208,60.445335162,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>TIMM</name>
+			<description><![CDATA[<b>Long Name:</b> <i>TIMMIARMIUT</i><br /><b>Marker:</b> <i>(BEDROCK-BOLTED MAST)</i><br /><b>Longitude:</b> <i>-42.286151140</i><br /><b>Latitude:</b> <i>62.535542776</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-42.28615114,62.535542776,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>TIXI</name>
+			<description><![CDATA[<b>Long Name:</b> <i>TIXI PERMANENT</i><br /><b>Marker:</b> <i>(stainless steel rod)</i><br /><b>Longitude:</b> <i>128.866417054</i><br /><b>Latitude:</b> <i>71.634474524</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>128.866417054,71.634474524,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>TLKA</name>
+			<description><![CDATA[<b>Long Name:</b> <i>TALKEETNA FSL</i><br /><b>Marker:</b> <i>(Talkeetna, Alaska FSL site)</i><br /><b>Longitude:</b> <i>-150.420292869</i><br /><b>Latitude:</b> <i>62.307655885</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-150.420292869,62.307655885,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>TNAC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>TINA CONTINUOUS</i><br /><b>Marker:</b> <i>(DOMES xxxxxMxxx)</i><br /><b>Longitude:</b> <i>-142.026500000</i><br /><b>Latitude:</b> <i>63.112600000</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-142.0265,63.11260000000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>TOOL</name>
+			<description><![CDATA[<b>Long Name:</b> <i>TOOLIK LAKE DGPS</i><br /><b>Marker:</b> <i>(Toolik Lake Camp DGPS Base)</i><br /><b>Longitude:</b> <i>-149.597757967</i><br /><b>Latitude:</b> <i>68.627534062</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-149.597757967,68.627534062,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>TREO</name>
+			<description><![CDATA[<b>Long Name:</b> <i>TREFOLDIGHEDENS</i><br /><b>Marker:</b> <i>(BEDROCK-BOLTED MAST)</i><br /><b>Longitude:</b> <i>-41.375077323</i><br /><b>Latitude:</b> <i>64.277069348</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-41.375077323,64.277069348,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>TRO1</name>
+			<description><![CDATA[<b>Long Name:</b> <i>TROMSOE</i><br /><b>Marker:</b> <i>(DOMES 10302M006) Tro</i><br /><b>Longitude:</b> <i>18.939642024</i><br /><b>Latitude:</b> <i>69.662717166</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>18.939642024,69.66271716599999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>TROM</name>
+			<description><![CDATA[<b>Long Name:</b> <i>TROMSOE</i><br /><b>Marker:</b> <i>TSS GPSM Tro</i><br /><b>Longitude:</b> <i>18.938324059</i><br /><b>Latitude:</b> <i>69.662746121</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>18.938324059,69.662746121,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>TSEA</name>
+			<description><![CDATA[<b>Long Name:</b> <i>TSEA</i><br /><b>Marker:</b> <i>(unstamped)</i><br /><b>Longitude:</b> <i>-149.894971976</i><br /><b>Latitude:</b> <i>61.187327396</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-149.894971976,61.187327396,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>TUKT</name>
+			<description><![CDATA[<b>Long Name:</b> <i>TUKTOYAKTUK</i><br /><b>Marker:</b> <i>(DOMES 40165M001)</i><br /><b>Longitude:</b> <i>-132.994349089</i><br /><b>Latitude:</b> <i>69.438235337</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-132.994349089,69.43823533699999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>UAAG</name>
+			<description><![CDATA[<b>Long Name:</b> <i>UAA GEOMATICS</i><br /><b>Marker:</b> <i>(UAA GEOMATICS CORS SITE)</i><br /><b>Longitude:</b> <i>-149.824092093</i><br /><b>Latitude:</b> <i>61.191071527</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-149.824092093,61.191071527,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>UNBC</name>
+			<description><![CDATA[<b>Long Name:</b> <i>U NEW BRUNS CHAI</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>-66.641148931</i><br /><b>Latitude:</b> <i>45.947440233</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-66.641148931,45.947440233,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>USN3</name>
+			<description><![CDATA[<b>Long Name:</b> <i>US NAVAL OBSERV</i><br /><b>Marker:</b> <i>(DOMES 40451S007)</i><br /><b>Longitude:</b> <i>-77.066273926</i><br /><b>Latitude:</b> <i>38.920564957</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-77.06627392599999,38.920564957,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>USNO</name>
+			<description><![CDATA[<b>Long Name:</b> <i>US NAVAL OBSERV</i><br /><b>Marker:</b> <i>(DOMES 40451S003)</i><br /><b>Longitude:</b> <i>-77.066225348</i><br /><b>Latitude:</b> <i>38.918962756</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-77.066225348,38.918962756,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>USU3</name>
+			<description><![CDATA[<b>Long Name:</b> <i>USUDA</i><br /><b>Marker:</b> <i>CONTROL ROOM ROOF RESET 10/92</i><br /><b>Longitude:</b> <i>138.362043163</i><br /><b>Latitude:</b> <i>36.133119046</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>138.362043163,36.133119046,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>UTMG</name>
+			<description><![CDATA[<b>Long Name:</b> <i>UP TIMMIARMIUT G</i><br /><b>Marker:</b> <i>(BEDROCK-BOLTED MAST)</i><br /><b>Longitude:</b> <i>-43.306419878</i><br /><b>Latitude:</b> <i>62.927205980</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-43.306419878,62.92720598,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>VFDG</name>
+			<description><![CDATA[<b>Long Name:</b> <i>VESTFJORD GLETSC</i><br /><b>Marker:</b> <i>(BEDROCK-BOLTED MAST)</i><br /><b>Longitude:</b> <i>-29.817640477</i><br /><b>Latitude:</b> <i>70.299922973</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-29.817640477,70.29992297299999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>VLDZ</name>
+			<description><![CDATA[<b>Long Name:</b> <i>VLDZ ACCUPOINT</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>-146.343751938</i><br /><b>Latitude:</b> <i>61.124343403</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-146.343751938,61.124343403,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>VOZN</name>
+			<description><![CDATA[<b>Long Name:</b> <i>VOZNESENKA</i><br /><b>Marker:</b> <i>(KBRR Continuous Site)</i><br /><b>Longitude:</b> <i>-151.125198999</i><br /><b>Latitude:</b> <i>59.808453000</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-151.125198999,59.808453,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>WAT1</name>
+			<description><![CDATA[<b>Long Name:</b> <i>SUSITNA-WATANA 1</i><br /><b>Marker:</b> <i>(Susitna-Watana Continuous Site)</i><br /><b>Longitude:</b> <i>-148.551045670</i><br /><b>Latitude:</b> <i>62.829458489</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-148.55104567,62.829458489,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>WES2</name>
+			<description><![CDATA[<b>Long Name:</b> <i>WESTFORD</i><br /><b>Marker:</b> <i>(unknown)</i><br /><b>Longitude:</b> <i>-71.493324480</i><br /><b>Latitude:</b> <i>42.613355453</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-71.49332448,42.613355453,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>WHIT</name>
+			<description><![CDATA[<b>Long Name:</b> <i>WHITEHORSE</i><br /><b>Marker:</b> <i>7787017 (Whitehorse - Firetower)</i><br /><b>Longitude:</b> <i>-135.222110789</i><br /><b>Latitude:</b> <i>60.750513411</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-135.222110789,60.750513411,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>WIKR</name>
+			<description><![CDATA[<b>Long Name:</b> <i>WICKER84K PBO</i><br /><b>Marker:</b> <i>(PBO 00000000-XXXXX-00000)</i><br /><b>Longitude:</b> <i>-150.922210000</i><br /><b>Latitude:</b> <i>63.552729999</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-150.92221,63.55272999900001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>WLLL</name>
+			<description><![CDATA[<b>Long Name:</b> <i>WILLIAMS LAKE</i><br /><b>Marker:</b> <i>(DOMES 40134M001)</i><br /><b>Longitude:</b> <i>-122.167810461</i><br /><b>Latitude:</b> <i>52.236868581</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-122.167810461,52.23686858100001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>WTHG</name>
+			<description><![CDATA[<b>Long Name:</b> <i>WALTERHAUSEN GLE</i><br /><b>Marker:</b> <i>(BEDROCK-BOLTED MAST)</i><br /><b>Longitude:</b> <i>-24.308920108</i><br /><b>Latitude:</b> <i>73.955198679</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-24.308920108,73.95519867900001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>YAKA</name>
+			<description><![CDATA[<b>Long Name:</b> <i>YAKUTSK</i><br /><b>Marker:</b> <i>(5/8 inch stainless steel rod)</i><br /><b>Longitude:</b> <i>129.680300190</i><br /><b>Latitude:</b> <i>62.030960562</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>129.68030019,62.030960562,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>YAKT</name>
+			<description><![CDATA[<b>Long Name:</b> <i>YAKUTSK</i><br /><b>Marker:</b> <i>(threaded rod in roof of seism. sta)</i><br /><b>Longitude:</b> <i>129.680302319</i><br /><b>Latitude:</b> <i>62.030960324</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>129.680302319,62.030960324,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>YAKZ</name>
+			<description><![CDATA[<b>Long Name:</b> <i>YAKUTSK</i><br /><b>Marker:</b> <i>(5/8 inch stainless steel rod)</i><br /><b>Longitude:</b> <i>129.680300190</i><br /><b>Latitude:</b> <i>62.030960562</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>129.68030019,62.030960562,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>YELL</name>
+			<description><![CDATA[<b>Long Name:</b> <i>YELLOWKNIFE YELLOWKNIFE</i><br /><b>Marker:</b> <i>YELLOWKNIFE 869211 Yel YELLOWKNIFE 869201</i><br /><b>Longitude:</b> <i>-114.480694735</i><br /><b>Latitude:</b> <i>62.480895228</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-114.480694735,62.48089522799999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>YFB1</name>
+			<description><![CDATA[<b>Long Name:</b> <i>IQALUIT WAAS</i><br /><b>Marker:</b> <i>(YFB WAAS 1)</i><br /><b>Longitude:</b> <i>-68.543181359</i><br /><b>Latitude:</b> <i>63.731490049</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-68.543181359,63.731490049,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>YMER</name>
+			<description><![CDATA[<b>Long Name:</b> <i>YMER NUNATAK</i><br /><b>Marker:</b> <i>(BEDROCK-BOLTED MAST)</i><br /><b>Longitude:</b> <i>-24.326326283</i><br /><b>Latitude:</b> <i>77.432894765</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-24.326326283,77.432894765,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ZAN1</name>
+			<description><![CDATA[<b>Long Name:</b> <i>ANCHORAGE WAAS 1</i><br /><b>Marker:</b> <i>(ZAN WAAS 1)</i><br /><b>Longitude:</b> <i>-149.780248108</i><br /><b>Latitude:</b> <i>61.229202673</i><br />]]></description>
+			<styleUrl>#cgps</styleUrl>
+			<Point>
+				<coordinates>-149.780248108,61.22920267300001,0</coordinates>
+			</Point>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>

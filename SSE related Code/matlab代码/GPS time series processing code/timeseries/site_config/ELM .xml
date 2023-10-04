@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<station name="ELM "><!--Automatically created on 30-Oct-2008 09:24:36-->
+   <periodics/>
+   <displacements/>
+   <logarithmic-relaxation/>
+   <exponential-relaxation/>
+   <hyperbolic-tangent/>
+</station>
