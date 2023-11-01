@@ -1,0 +1,823 @@
+0898 - - 0
+0999 2009-01-01 - 0
+1000 - - 0 2002.8411
+126G 2014-01-01 - 0
+1293 - - 0
+152T - - 0
+1600 - - 0
+2201 - - 0 2002.8411
+2210 - - 0
+2400 - - 0
+2437 - - 0
+2441 - - 0
+2447 - - 0
+2484 - - 0
+2629 - - 0
+2915 - - 0
+2999 - 2002-11-01 0
+2BAD - - 0
+3443 - - 0 2002.8411
+3444 - - 0 2002.8411
+3502 - - 0
+3651 - - 0
+4050 - - 0
+4168 - - 0
+4212 - - 0
+4240 - - 0
+444C - - 0
+489F - - 0 2013.016
+4A1A - - 0
+508F - - 0
+5J22 - - 0
+7297 - 2002-11-01 0
+7SUN - - 0
+8130 2004-01-01 - 0 2002.8411
+8691 - - 0
+8756 - - 0
+875G - - 0
+8917 - - 0
+891G - - 0
+9016 - - 0
+9450 - - 0
+9758 - - 0
+A1   - 2006-01-01 0
+A2   - 2006-01-01 0
+A4   - 2006-01-01 0
+A5   - 2006-01-01 0 1995.0
+A6   - 2006-01-01 0
+#A7   - - 0 lack of data
+#A8   - - 0 lack of data
+A9   - 2006-01-01 0
+A10  - 2006-01-01 0
+A11  - 2006-01-01 0
+A12  2000-01-01 2006-01-01 0
+#A14  - - 0 lack of data
+#A15  - - 0 sliding down hill
+#A16  - - 0 lack of data
+#A17  - - 0 lack of data
+A18  - - 0 2002.8411
+#A940 - - 0 bad Aniakchak site
+#A941 - - 0 bad Aniakchak site
+#A942 - - 0 bad Aniakchak site
+#A943 - - 0 bad Aniakchak site
+#A944 - - 0 bad Aniakchak site
+#A945 - - 0 bad Aniakchak site
+#A946 - - 0 bad Aniakchak site
+#A948 - - 0 bad Aniakchak site
+#A949 - - 0 bad Aniakchak site
+ABBT_ABBO - - 0 2002.8411
+ACHU - - 0
+ADLK - - 0
+ADZE - - 0
+AFGR - - 0
+AHKI - - 0 1999.933
+AID1 - - 0
+AISH - - 0
+#AKHB - - 0 1998.0 complex Akutan site
+AKNA - - 0
+AKNB - - 0
+AKHB - - 0
+AKPS - - 0 1998.0
+#AKSO - - 0 complex Akutan site
+AKU  - - 0
+AKUN - - 0
+ALAS - - 0 2002.8411
+ALIF - - 0
+ALIK 1992-01-01 - 0
+ALSE - - 0 2008.668
+AMBE - - 0 2002.8411
+AMRG 2002-01-01 - 0
+ANAD - - 0
+ANCC - - 0
+ANCR - - 0
+ANCX - - 0 2002.8411
+AND2 - - 0
+ANDY - - 0
+ANIT - - 0
+ANNX - - 0
+ARMO - - 0
+AS   - - 0 2002.8411
+ASBL - - 0
+ASPE - - 0
+AT18 - - 0
+ATT  - 2002-11-01 0
+ATKA - - 0
+ATLI - 2012-10-27 0
+AUGB - - 0 2006.078
+AUGK - - 0 2006.078
+AUGM - - 0 2006.078
+AUGS - - 0 2006.078
+AUGW - - 0 2006.078
+B86  - - 0
+BAGL - - 0
+BAGO - - 0
+BALD - - 0
+#BC   - - 0
+BCT5 - - 0 2013.016
+BEAR - - 0 2002.8411
+BED1 - - 0
+BER1 - - 0
+BER2 - - 0
+BERG - - 0
+BERI - - 0
+BETC - - 0
+BETF - - 0
+BETT - - 0
+BEUT - - 0 2013.016
+BGCC - - 1
+BIRD - - 0
+BKDM - - 0
+#BKEB - - 0 2003.879 complex Amchitka site
+BLCL - - 0
+BLF2 - - 0
+BLGA - - 0
+BLKP - - 0
+BLO1 - - 0 2008.57
+BLUE - - 0
+BM6  - - 0
+#BMCT - - 0  Blue Mouse Cove tie site
+BNYV - - 0
+#BODE - - 0 2002.8411  tricky
+BR2  - - 0
+BR39 - - 0
+BR6  - - 0
+BRAD - - 0 2002.8411
+BRCT - - 0 2008.57
+BREM - - 0 2002.8411
+BRGT - - 0 2013.016
+BRKN - - 0
+BRKS - - 0
+#BROD - - 0 1998.0 complex Akutan site
+BROK - - 0
+BRWN - 2002-11-01 0
+BSB4 - 2002-11-01 0
+BSL1 - - 0
+BSL2 - - 0
+BSL3 - - 0
+BSHW - - 0
+BTT1 - - 0
+BTTA - - 0
+#BUD  - - 0  apply Denali offset
+#BUDD - - 0  apply Denali offset
+BUGS - - 0
+C123 - 2002-11-01 0
+C85G - - 0 2002.8411
+CABN - - 0
+CALY - - 0
+CANN - - 0
+CAPE - - 0
+CARL - 2002-10-15 0
+CAYO - - 0
+#CB   - - 0  apply Denali offset
+CBOU - - 0
+CC   - - 0 2002.8411
+CDST - - 0
+CENO - - 0
+CENT - - 0
+CGLO - - 0 2002.80,2002.8411
+#CGNU - - 0  tied to CGNN
+CHGA - - 0
+CHIN - - 0
+CHIR - - 0
+CHKT - - 0
+CHN1_CHNB 1992-01-01 - 0
+CHNG - - 0 2002.8411
+CHWB - - 0
+CHOS - - 0
+CHRN - - 0
+CHUG - - 0
+CINC - - 0
+CKLN - - 0 2002.8411
+CKOT - - 0
+CLAM - - 0
+CLFF - - 0
+CLMB - - 0
+CLUB - - 0
+CMBR - - 0
+#CNNK - - 0 2003.879  tricky Amchitka site
+COAL - - 0
+CODO - - 0 2002.8411
+COGH - - 0
+COMB - - 0
+COFL - - 0 2002.8411
+CONG - - 0
+CP32 - - 0
+CPLK - - 0 2002.8411
+CPR  - - 0 2002.8411
+CPT1 - - 0
+CPT2 - - 0
+CPT3 - - 0
+CPTH - - 0
+CPTI - - 0
+CRNB - - 0
+#CROS_K76 - - 0 2002.8411
+CROW - - 0
+CRSC - - 0 2002.8411
+#CT0H - - 0  suspect height
+D151 2014-01-01 - 0
+D78  - - 0
+D79  - - 0
+DACE - - 0
+DAHL - - 0 2002.8411
+DAKA - - 0 1999.933
+DAM  - - 0
+DAWS 2004-01-01 - 0
+DAY  - - 0
+DCH1 - - 0
+DEAS - - 0
+DEC2 - - 0
+DELT - - 0
+DEPT - - 0
+DEST - - 0 2002.8411
+DEZA - - 0 2002.8411,2013.016
+DFLY - 2002-10-15 0
+DFOE - - 0
+DH97 - 2002-10-15 0
+DHFA - - 0
+DIAN - - 0 2002.8411
+DILL - - 0
+DISA - - 0
+DIVD - - 0
+DIXI - - 0 2002.8411
+DMC3 2012-01-01 - 0
+DMP2 - - 0
+DNJK - - 0
+DNL3 2009-01-01 - 0
+DNLY - 2002-11-01 0
+DON  - - 0 2002.8411
+DONJ - - 0
+DRYB - - 0
+DSPT - - 0
+DT16 - - 0
+DT19 - - 0
+DTOC - - 0
+DUKY - - 0 2013.016
+E175 2011-01-01 - 0
+BSL1 - - 0
+EA22 - - 0
+#EAAA 2004-01-01 - 0  tied to AB41
+EAGL - - 0
+EAGP - - 0 2002.8411
+EAMA - - 0 2002.8411
+EBAY - - 0 2002.8411
+EC44 - - 0
+EDDI - - 0 2013.016
+EDMN - - 0
+EGG  - - 0 2002.8411
+EGL2 - 2002-11-01 0
+EGMT - - 0
+EGV1 - - 0
+EGVK - - 0
+EKG3 - - 0 2002.8411
+EKLU - - 0 2002.8411
+#ELD  - - 0  tied to ELDC
+ELIB_ELIA - - 0
+ELIS - - 0
+ELSE - - 0 2013.016
+ENDI - - 0
+ENMA - - 0
+ENMB - - 0
+ENMC - - 0
+ENUN - - 0 2002.8411
+EPLT - - 0
+ESKI - - 0
+EST1_ESTD - - 0 1999.0
+ETID - - 0
+EX   - - 0
+EYAK - - 0
+FAIT - 2002-11-01 0
+FALL - - 0
+#FARE - - 0  apply Denali offset
+FARO - - 0
+FAUS - - 0
+FAWN - - 0
+FC01 - - 0
+FC02 - - 0
+FC03 - - 0
+FC04 - - 0
+FC05 - - 0
+FCRK - 2002-11-01 0
+FING - - 0
+FINL - - 0
+FLAT - - 0
+FLCN - - 0
+FLOW - - 0
+FNEL - - 0
+FNGB - - 0
+FNGR - - 0
+FOG  - - 0
+FOUR - - 0
+FRF1 - - 0
+FRF2 - - 0
+FRF3 - - 0
+FROK - - 0
+FS32 - - 0 2013.016
+FSHK - - 0
+FSHL - - 0 2002.8411
+FSRH - - 0
+FTGL - - 0 2008.57
+FTOP - - 0
+FTRS - - 0
+FTSJ - - 0
+FTVM - - 0
+FURR - - 0
+FXCR - - 0
+G142 - - 0
+GAIN - - 0 2002.8411
+GAMB - - 0
+GATE - 2011-01-01 0
+GDPR - - 0
+GEEB - - 0 2002.8411
+GEO1 - - 0 2003.879
+GIAN - - 0 2002.8411
+GILB - - 0
+GKNC - - 0
+GLDN - - 0
+GLRY - - 0
+GNAT - - 0
+GNFD - - 0
+GOAT - - 0
+GOGO - - 0 2002.8411
+GOOS - - 0
+GOVP - - 0
+GRAV - - 0 2002.8411
+GRIS - - 0
+GRIZ - 2002-10-15 0
+GRMS - - 0
+GRN2 - - 0 2002.8411
+GRSI - - 0 2002.8411
+GRST - - 0
+GS75 - - 0
+GSPA - - 0
+GSSP - - 0
+GTMT - - 0
+GULL - - 0
+GUNN - - 0
+GUSA - - 0
+GUSB - - 0
+GUY  - - 0 2002.8411
+H61  - - 0
+H81  - - 0
+HAG  - - 0 2008.57
+HAM  - - 0 2002.8411
+HAM2 - - 0
+HANN - - 0 2002.8411
+HAR3 - - 0 2002.8411
+HARP - - 0
+HAWK - - 0
+HDBY - - 0
+HEID - - 0
+HIDD - - 0
+#HILL - - 0 not enough data without 1991
+HILS - - 0 2002.8411
+HIWA - 2002-10-15 0
+HNSA - - 0
+HNSD - - 0 2013.016
+HNTN - - 0
+HOGH - 2002-11-01 0
+HOMA - - 0 2002.8411
+HOOP - - 0
+HPBB_HPBA - - 0
+HSB  - - 0
+HUB1 - 2008-07-01 0
+HUEY - - 0
+HURR - 2002-10-15 0
+I177 - 2009-01-01 0 
+ICBD - - 0
+ICE4 - - 0
+ICE9 - - 0
+ILIA 1992-01-01 - 0 2002.8411
+ILIU - - 0
+INCK - - 0 2002.8411
+INDI - - 0
+INSU 1992-01-01 - 0
+IPAD - - 0
+ISLE - - 0 2002.8411
+ISLK - - 0
+ISLZ - - 0 2002.8411
+IYSA - - 0
+J122 - - 0
+JA08 - - 0
+JANE - - 0 2002.8411
+#JENE - - 0  apply Denali offset
+JILL - - 0
+JIMM - - 0
+JNUT - - 0 2002.8411,2013.016
+KALS 1992-01-01 - 0
+KAOS - - 0
+KARL - - 0 1999.933
+KARP - - 0
+KASI - - 0
+KASK - - 0
+KATN - - 0
+KATY - - 0
+KCGB - - 0
+KHIT - - 0
+KIAG - - 0
+KICH - - 0
+#KICM - - 0 complex Kanaga site
+#KINC - - 0 complex Kanaga site
+KIRH - - 0
+#KIRK - - 0 2003.879 must assume offset or velocity
+KIRT - - 0
+KITS - - 0
+KNBG - - 0
+KNDL - - 0
+KNUT - - 0
+KOD2 - - 0
+KODI - - 0
+KOPP 1992-01-01 - 0
+KSM2 - - 0
+KSTN - - 0
+KTNR - - 0
+KUSA - - 0
+KUSH - - 0
+L2C6 - 2002-10-15 0
+LAG  - - 0
+LAKE - - 0
+LARI - - 0
+LAST - - 0
+LATE - - 0
+LAV1 - - 0
+LDDR - - 0
+LDMN - - 0
+LEPR - - 0
+LETH - - 0
+LIBF 2006-01-01 - 0
+#LIME - - 0  apply Denali offset
+LITD - - 0
+LITT - - 0
+LITU - - 0
+LOCN - - 0
+LOG  - 2002-10-15 0
+LOGN - - 0
+LONE - - 0
+LORA - - 0
+LORB - - 0
+LRNG - - 0
+#LSD1 - - 0
+LSDP 1992-01-01 - 0
+LSG1 - - 0
+LSTR - - 0
+LUKY - - 0
+#LVA2 - - 0 1998.0 complex Akutan site
+M110 - 2002-10-15 0
+M155 - - 0
+M175 2012-01-01 - 0
+M78  - - 0 2002.8411
+MAC  - - 0
+MAIN - - 0
+MAMI - - 0
+MARG - - 0
+MARO - - 0
+MART - - 0
+MCAR 2007-01-01 - 0
+MCCA - - 0
+MCCF - - 0
+MCGA - - 0
+MCGB - - 0
+MDFT - - 0
+MDLK - - 0
+MDPK - - 0
+MDR1 - - 0
+MELS - - 0
+MEN  - 2002-11-01 0
+MENA - - 0 2002.8411
+MENG - - 0
+MGRA - - 0 2002.8411
+#MHAA - - 0  tied to MAPS
+MID  - - 0
+MIDB - - 0
+MIDD - - 0 2002.8411
+MIDK - - 0
+MINE - - 0
+MINT - - 0
+MIST - - 0
+MLSP - - 0
+MMOR - - 0
+MNDR - - 0
+MNFS - - 0
+MNTO - - 0
+#MOBE - - 0  apply Denali offset
+MOOS - - 0
+MOS2 - - 0 2002.8411
+MOSR - - 0
+MOTD - - 0 2002.8411
+MOTG - - 0 2002.8411
+MOUN 1992-01-01 - 0
+MPCK - - 0
+MPEN - - 0 2002.8411
+MQTO - - 0
+MRK1 - - 0
+MRKV - - 0
+MRLK - - 0
+MROS 2008-01-01 2016-01-01 0
+MS15 - - 0
+MSB2 - - 0
+MSUN - - 0
+MSUS - - 0
+MURD - - 0
+MUSK - - 0 2002.8411
+N82  - - 0
+NA   - - 0 2002.8411
+NARM - - 0
+NATI - - 0
+NBTF - - 0
+NCAP - - 0
+NCRS - 2012-10-27 0
+NEAL - - 0 2002.8411
+NENA - 2002-10-15 0
+NFLW - - 0
+NIK  - - 0
+NIK2 - - 0 2002.8411
+NINI - - 0 2002.8411
+NO17 - - 0
+NOME - - 0
+NORM - - 0
+#NORW - - 0 not enough data
+NOVA - - 0
+NOVR - - 0
+NOYL - - 0
+NQ1  - - 0
+NQ4  - - 0
+NRDG - - 0
+NSLM - - 0 2002.8411
+NT01 - - 0
+NT02 - - 0
+NT03 - - 0
+NUKA - - 0 2002.8411
+#NWFT - - 0  Okmok site
+NWOD - - 0 2002.8411
+NWP  - - 0 2002.8411
+#OK11 - - 0  Okmok site
+#OK12 - - 0  Okmok site
+#OK13 - - 0  Okmok site
+#OK21 - - 0  Okmok site
+#OK22 - - 0  Okmok site
+#OK23 - - 0  Okmok site
+#OK24 - - 0  Okmok site
+#OK25 - - 0  Okmok site
+#OK26 - - 0  Okmok site
+#OK27 - - 0  Okmok site
+#OK28 - - 0  Okmok site
+#OK29 - - 0  Okmok site
+#OK30 - - 0  Okmok site
+#OK31 - - 0  Okmok site
+#OK32 - - 0  Okmok site
+#OK33 - - 0  Okmok site
+#OK34 - - 0  Okmok site
+#OK35 - - 0  Okmok site
+#OK36 - - 0  Okmok site
+#OK37 - - 0  Okmok site
+#OK39 - - 0  Okmok site
+OLET - - 0
+#OMAL - - 0  not enough data
+OMEA - - 0
+OMEB - - 0
+OPEN - - 0
+ORTT - 2002-11-01 0
+OTZF - - 0
+OVAL - - 0
+P118 - - 0
+PANA - 2002-10-15 0
+PANK - - 0
+PASA - - 0
+PAXS - 2002-11-01 0
+PEDR - - 0
+PEEP - - 0
+PENU - - 0
+PERF - - 0
+PETE - - 0
+PEV1 - - 0
+PEV2 - - 0
+PEVA - - 0
+PEVK - - 0
+PF12 - - 0
+PF19 - - 0 2002.8411
+#PF30 - - 0  not enough data, tie Z22A?
+PISA - 2002-10-15 0
+POLL - - 0 2002.8411,2009.1
+PONR - - 0
+POOR - - 0 2002.8411
+POPL - - 0 2002.8411
+POPZ - - 0 2002.8411
+POWE - 2002-01-01 0 
+PPLN - 2002-10-15 0
+PRAL - - 0
+PRG6 - - 0
+PRSP - - 0
+PRTG - - 0 2002.8411
+PRV1 - - 0
+PRVD - - 0
+PSGA - - 0
+PTVL - - 0 2002.8411
+PUPA - - 0
+PURI - - 0 2002.8411
+PV02 - - 0
+QICT - - 0
+QRRY - - 0 2002.8411
+R109 - 2002-10-15 0
+R122 - 2002-10-15 0
+R205 - - 0 2013.016
+RAG  - - 0
+RALF - - 0
+RAVE - - 0
+RCHR - - 0
+RDMD - - 0
+REED 2001-03-01 2008-01-01 0 2002.8411
+REEF - - 0
+REF2 - - 0
+REFL - - 0
+REG8 - - 0
+RG12 - - 0
+RG14 - - 0
+RGGI - - 0 2002.8411
+RIOU - - 0 2002.8411
+RKAV - - 0
+ROC  - - 0 2002.8411
+ROE2 - - 0
+ROSR - - 0
+ROTK - - 0
+ROWD - - 0
+RUB2 - - 0
+RUDE - - 0
+#S1   - - 0 2002.8411  tricky
+S103 - - 0 2002.8411
+S123 - - 0
+S72  - - 0 2002.8411
+S79R - - 0 2002.8411
+SACC - - 0
+SAK4 - - 0
+SARA - - 0
+SASG - - 0
+SATT - - 0
+SBS2 - - 0
+SCAP - - 0
+SDC1 - - 0
+SDC2 - - 0
+SDC3 - - 0
+SDCR - - 0
+SDP1 - - 0
+SDPT - - 0
+SEMI - - 0
+SENI - - 0
+#SEWA - - 0
+SGTN - - 0
+SHIP - - 0 2008.57
+SHM1 - - 0
+SHMI - - 0
+SHTG - - 0
+SIDE - - 0
+SILA - - 0
+SITA - - 0
+SITK - - 0
+SITU - - 0
+SKI  - - 0
+SKLK - - 0
+SLCH - 2002-10-15 0
+SLIM - 2002-10-15 0
+SLOP - - 0 2002.8411
+SLRV - - 0
+SLVL - - 0
+SMNF_SIME - - 0
+SMPS - - 0
+SMTH - - 0
+SNDP - - 0
+SOUR - 2002-10-15 0
+SPIL - 2002-11-01 0
+SPSW 1992-01-01 - 0
+SSWB - 2002-10-15 0
+SSW2 2010-01-01 - 0
+#STA1 - - 0  apply Denali offset
+ST19 2008-01-01 - 0
+STAR - - 0
+STCK - - 0
+STEE - - 0
+STEG - - 0
+STEL - - 0 2002.8411
+STEP - - 0 2002.8411
+STRI - 2002-11-01 0
+STRM - - 0 2002.8411
+STRT - - 0
+SUD  - - 0
+SUR6 - - 0
+SVAC - - 0
+SWB4 - - 0
+SWCR - - 0
+SWED 1992-01-01 - 0
+SXQC - - 0 2002.8411
+SXQD - - 0 2002.8411
+T187 - - 0
+T18N - - 0
+T19  - - 0 2002.8411
+T20N - - 0 2002.8411
+TAAZ - - 0 2002.8411
+TALB - - 0
+TALK - - 0 2002.8411
+TANR - - 0
+TATB - - 0 2002.8411
+#TATS - - 0   tied to TATC
+TAZL - 2002-11-01 0
+TDOG - - 0
+TELE - - 0
+TENA - - 0
+THIN - - 0 2002.8411
+THM1 - - 0 2002.8411
+THMB - - 0
+THMP - - 0 2002.8411
+TIME - - 0 2002.8411
+TIMS - - 0 2008.57
+TKHR - - 0
+TLGT - - 0
+TLTA - - 0
+TOLO - - 0
+TOMH - - 0
+TOWH 2012-01-01 - 0
+#TOYU - - 0 2002.8411  apply Denali offset or keep 1993 despite sigtol
+TRC3 - - 0
+TRLK - - 0 2002.8411
+TRM2 - - 0
+TRNR - - 0
+TRTH - - 0 2002.8411,2013.016
+TSIN - - 0 2002.8411
+TSLN - - 0 2013.016
+TURN - - 0 2002.8411
+TWIN - - 0
+TWLV - 2002-11-01 0  
+U76  - - 0
+UAMF - - 0 2002.8411
+UDIG - - 0
+UGOL - - 0
+UNAL - - 0 2008.57
+UNAM - - 0
+UNF  - - 0 2002.8411
+#UNKA - - 0 not enough data
+UPMO - - 0
+UPTO - - 0
+V77  - - 0
+VASS - - 0
+VDUS - - 0
+VDZW - - 0
+VETN - - 0
+VRN4 - - 0
+VRN9 - - 0
+VSG  - - 0
+VYAK - - 0
+#W152 - - 0  unstable
+W81  - - 0
+W86  - - 0
+WABM - - 0
+WALT - - 0 2003.879
+WARE - - 0
+WARR - - 0
+WATL - - 0
+WATS - - 0
+WDR2 - 2002-11-01 0
+WEDG 1992-01-01 - 0
+WEFC - - 0
+WESE - - 0
+WESN - - 0
+#WESP - - 0  huge motion, landslide?
+WESS - - 0
+WFAR - - 0
+WHAL - - 0
+WHB0 - - 0
+WHL  - - 0
+WHTU - - 0 2002.8411
+WICK - - 0 2002.8411
+WILL - 2002-11-01 0
+WIK - - 0
+WLKR - - 0 2002.8411
+WLVC - - 0
+WNDA - - 0
+WOLK - - 0
+WOLV - - 0
+WOND - - 0 2002.8411
+WOOL - - 0
+WPOG - - 0
+WVN3 - - 0
+#WWFT - - 0 Okmok site
+WWLL - - 0
+X122 - - 0 2002.8411
+#X147 - - 0  apply Denali offset
+X7   - - 0 2002.8411,2013.016
+Y565 - - 0 2002.8411,2013.016
+YAHT - - 0
+YAK2 - - 0
+YAKK - - 0
+YAKN - - 0
+YAKR - - 0
+#YAKU - - 0  apply Denali offset
+YAST - - 0
+YEL5 - - 0
+YESS - - 0
+YKTT - - 0 2002.8411
+YOKL - - 0 2003.879
+YRKT - - 0
+YUK  - - 0
+YUKO 2009-01-01 - 0
+#Z22A - - 0  tricky SSE
+Z82  - - 0
+ZANB - - 0
+#ZEKE - - 0 2002.8411 apply Denali offset
+ZETP - - 0

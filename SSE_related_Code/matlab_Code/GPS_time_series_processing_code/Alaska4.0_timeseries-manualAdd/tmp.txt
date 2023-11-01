@@ -1,0 +1,1 @@
+4 2 9 0 0 9 Motion rate   11.1 +-  0.2 (mm/yr) Repeatability  10.8 (mm) 
