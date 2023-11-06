@@ -9,4 +9,6 @@ Python code related to time series, modified from Li's MATLAB code.
 (2) Verified with Matlab, parameter values are all equal. The code section that removes the effects of the 1964 earthquake is correct.
 ""
 
-2023.10.31-
+2023.10.31-2023.11.6完成
+（1）框架转为ITRF to NOAM：geodvel函数以及xyzllh
+（2）修改了xyz2enu函数中的部分内容，具体见此函数
