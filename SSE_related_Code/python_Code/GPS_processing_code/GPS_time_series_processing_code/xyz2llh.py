@@ -14,7 +14,7 @@ def xyz2llh(xyz):
     a = 6378137
     f = 1/298.257223563
     e2 = 2*f - f*f
-    
+    xyz = xyz.reshape(-1, 1)#xyz = xyz.reshape(-1, 1)#Reshape the dimension of xyz into (rows, 1) instead of (rows,).（notxyz.reshape((3, 1))
     num = xyz.shape[1]
     llh = np.zeros((3, num))
     
@@ -22,7 +22,6 @@ def xyz2llh(xyz):
         p = np.sqrt(np.sum(xyz[0:2, i]**2))
         r = np.sqrt(np.sum(xyz[:, i]**2))
         lon = np.arctan2(xyz[1, i], xyz[0, i])
-        
         lat = np.arctan2(xyz[2, i]/p, (1-e2))
         n = a/np.sqrt((1 - e2*np.sin(lat)**2))
         h = p/np.cos(lat) - n

@@ -27,6 +27,8 @@ def xyz2enu(llh, xyz, covxyz=None):
                       [clat*clon, clat*slon, slat]])
         return t
  # Transpose the input vector if needed to make sure dimensions match for the matrix multiplication for transformation.
+    llh = llh.reshape(-1, 1)#Reshape the dimension of 11h into (rows, 1) instead of (rows,).
+    xyz = xyz.reshape(-1, 1)#Reshape the dimension of xyz into (rows, 1) instead of (rows,).
     if xyz.shape[0] == 1:
         xyz = xyz.T
 
@@ -64,7 +66,7 @@ def xyz2enu(llh, xyz, covxyz=None):
                 k2 = 3 * jsta
                 covenu[k1:k1+3, k2:k2+3] = np.dot(np.dot(t, covxyz[k1:k1+3, k2:k2+3]), t.T)
 
-    if covxyz is not None:
+    if covxyz is not None:        
         return enu, covenu
     else:
         return enu
