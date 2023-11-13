@@ -138,7 +138,7 @@ if section == 5:
 
 
 
-
+     
              
 # read continuous sites
             consitefile = 'continuous_paper.txt'
@@ -163,7 +163,7 @@ if section == 5:
                                 fid.write(f'{lon[j]:.2f} {lat[j]:.2f} {Ve[j]:.3f} {Vn[j]:.3f} {Se[j]:.3f} {Sn[j]:.3f} {Rho[j]:.3f} {newsite}\n')
                             else:
                                 fid.write(f'{lon[j]:.2f} {lat[j]:.2f} {Ve[j]:.3f} {Vn[j]:.3f} {Se[j]:.3f} {Sn[j]:.3f} {Rho[j]:.3f} {Site[j]}\n')
-                numpostcon = len(loncon)
+                numpostcon = len(lonCont)
 # Up to this point, you should have obtained data for the first site. To verify the feasibility of the preceding code, 
 #you can check the .ts file to see if the site has been written according to our requirements (e.g., for site 1000, it should include lon, lat, ...).
                 for q in range(numpostcon):
@@ -175,36 +175,37 @@ if section == 5:
                 datafile = f"{pdir}/{staname}.pfiles"   
                # format in datafile is mm.
                 sigtol = np.array([12, 12, 25])
-                dat1 = read_timeseries(datafile, sigtol)
+              
+                dat6 = read_timeseries(datafile, sigtol)
                 # format for data in dat1 is meter, so we need to convert back to mm
-                numpos = len(dat1['east'])
-                dat2 = dat1.copy()
-                dat2_NOAM = copy.deepcopy(dat2)  # 使用深层拷贝 
+                numpos = len(dat6['east'])
+                dat7 = dat6.copy()
+                dat7_NOAM = copy.deepcopy(dat7)  # 使用深层拷贝 
                 for p in range(numpos):  # loop for all the points for each station
 # step1:remove the postseismic signal(read_timeseries,get_postseis,xyz2enu,llh2xyz)，We have verified the accuracy by comparing it with the results obtained from Matlab.
-                    dat2['time'][p] = dat1['time'][p]
+                    dat7['time'][p] = dat6['time'][p]
 
-                    dat2['east'][p] = dat1['east'][p] * 1000 - postve * (dat1['time'][p] - dat1['time'][0])  # mm
-                    dat2['east'][p] = dat2['east'][p] / 1000  # meter
-                    dat2['esig'][p] = dat1['esig'][p]  # meter
+                    dat7['east'][p] = dat6['east'][p] * 1000 - postve * (dat6['time'][p] - dat6['time'][0])  # mm
+                    dat7['east'][p] = dat7['east'][p] / 1000  # meter
+                    dat7['esig'][p] = dat6['esig'][p]  # meter
 
-                    dat2['north'][p] = dat1['north'][p] * 1000 - postvn * (dat1['time'][p] - dat1['time'][0])  # mm
-                    dat2['north'][p] = dat2['north'][p] / 1000  # meter
-                    dat2['nsig'][p] = dat1['nsig'][p]  # meter
+                    dat7['north'][p] = dat6['north'][p] * 1000 - postvn * (dat6['time'][p] - dat6['time'][0])  # mm
+                    dat7['north'][p] = dat7['north'][p] / 1000  # meter
+                    dat7['nsig'][p] = dat6['nsig'][p]  # meter
 
-                    dat2['height'][p] = dat1['height'][p] * 1000 - postvu * (dat1['time'][p] - dat1['time'][0])  # mm
-                    dat2['height'][p] = dat2['height'][p] / 1000  # meter
-                    dat2['hsig'][p] = dat1['hsig'][p]  # meter
+                    dat7['height'][p] = dat6['height'][p] * 1000 - postvu * (dat6['time'][p] - dat6['time'][0])  # mm
+                    dat7['height'][p] = dat7['height'][p] / 1000  # meter
+                    dat7['hsig'][p] = dat6['hsig'][p]  # meter
 #step2:Convert the reference frame from ITRF to NOAM(calc_geodvel,xyz2llh(xyz-EUH),read_timeseries,)
 #We need to use calc_geodvel to obtain the values of vrel_plate and vRPcov
-                    vrel_plate, _, vRPcov = calc_geodvel('NOAM', dat2['refxyz'])
-                    dat2_NOAM['east'][p] = dat2['east'][p] - vrel_plate[0] * (dat1['time'][p] - dat1['time'][0])  # meter，
+                    vrel_plate, _, vRPcov = calc_geodvel('NOAM', dat7['refxyz'])
+                    dat7_NOAM['east'][p] = dat7['east'][p] - vrel_plate[0] * (dat6['time'][p] - dat6['time'][0])  # meter，
                     #We fixed this portion of the code on 2023.11.12. What we need is the component from data2, not data2_NOAW.
-                    dat2_NOAM['esig'][p] = np.sqrt(dat2['esig'][p]**2 + vRPcov[0, 0] * ((dat1['time'][p] - dat1['time'][0]) ** 2))  # meter, due to error propagation law
-                    dat2_NOAM['north'][p] = dat2['north'][p] - vrel_plate[1] * (dat1['time'][p] - dat1['time'][0])  # meter
-                    dat2_NOAM['nsig'][p] = np.sqrt(dat2['nsig'][p]**2 + vRPcov[1, 1] * ((dat1['time'][p] - dat1['time'][0]) ** 2))  # meter, due to error propagation law
-                    dat2_NOAM['height'][p] = dat2['height'][p] - vrel_plate[2] * (dat1['time'][p] - dat1['time'][0])  # meter
-                    dat2_NOAM['hsig'][p] = np.sqrt(dat2['hsig'][p]**2 + vRPcov[2, 2] * ((dat1['time'][p] - dat1['time'][0]) ** 2))  # meter, due to error propagation law
+                    dat7_NOAM['esig'][p] = np.sqrt(dat7['esig'][p]**2 + vRPcov[0, 0] * ((dat6['time'][p] - dat6['time'][0]) ** 2))  # meter, due to error propagation law
+                    dat7_NOAM['north'][p] = dat7['north'][p] - vrel_plate[1] * (dat6['time'][p] - dat6['time'][0])  # meter
+                    dat7_NOAM['nsig'][p] = np.sqrt(dat7['nsig'][p]**2 + vRPcov[1, 1] * ((dat6['time'][p] - dat6['time'][0]) ** 2))  # meter, due to error propagation law
+                    dat7_NOAM['height'][p] = dat7['height'][p] - vrel_plate[2] * (dat6['time'][p] - dat6['time'][0])  # meter
+                    dat7_NOAM['hsig'][p] = np.sqrt(dat7['hsig'][p]**2 + vRPcov[2, 2] * ((dat6['time'][p] - dat6['time'][0]) ** 2))  # meter, due to error propagation law
 #step3： remove the seasonal signal，We need to call the function ts_eval_seasonal and read_seasonal_file to obtain the value of seasonal_modval
 #Read and subtract the seasonal model in the .season file if it exists
 #We do this at this step because the covariance needs to be the same as for the regular model
@@ -212,25 +213,25 @@ if section == 5:
                   print("Removing seasonal from observed time series")
                   #seasonal：bintim，binsize，east，north，height
                   seasonal = read_seasonal_file(f"{sdir}{staname}_{stype}.seasonal")
-                  seasonal_modval = ts_eval_seasonal(dat2_NOAM['time'], seasonal)
+                  seasonal_modval = ts_eval_seasonal(dat7_NOAM['time'], seasonal)
 
                 # subtract seasonal modval from data
-                  dat2_season_removed = dat2_NOAM.copy()
-                  dat2_season_removed['east']   = dat2_NOAM['east']   - seasonal_modval[:,0]
-                  dat2_season_removed['north']  = dat2_NOAM['north']  - seasonal_modval[:,1]
-                  dat2_season_removed['height'] = dat2_NOAM['height'] - seasonal_modval[:,2]
-                  dat2_season_removed['enu']    = dat2_NOAM['enu']    - seasonal_modval.T
+                  dat7_season_removed = dat7_NOAM.copy()
+                  dat7_season_removed['east']   = dat7_NOAM['east']   - seasonal_modval[:,0]
+                  dat7_season_removed['north']  = dat7_NOAM['north']  - seasonal_modval[:,1]
+                  dat7_season_removed['height'] = dat7_NOAM['height'] - seasonal_modval[:,2]
+                  dat7_season_removed['enu']    = dat7_NOAM['enu']    - seasonal_modval.T
                 else:
-                   dat2_season_removed = None
+                   dat7_season_removed = None
 
-                dat3 = dat2_season_removed  # now still meters
+                dat5 = dat7_season_removed  # now still meters
                     # Final lines for time series data in the input file
-                numpos2 = len(dat3['east'])
+                numpos2 = len(dat5['east'])
 
                 for q in range(numpos2):
-                    fid.write(f'{dat3["time"][q]:4.4f} {dat3["east"][q]*1000:3.4f} {dat3["esig"][q]*1000:3.4f} '
-                              f'{dat3["north"][q]*1000:3.4f} {dat3["nsig"][q]*1000:3.4f} {dat3["height"][q]*1000:3.4f} '
-                               f'{dat3["hsig"][q]*1000:3.4f}\n')
+                    fid.write(f'{dat5["time"][q]:4.4f} {dat5["east"][q]*1000:3.4f} {dat5["esig"][q]*1000:3.4f} '
+                              f'{dat5["north"][q]*1000:3.4f} {dat5["nsig"][q]*1000:3.4f} {dat5["height"][q]*1000:3.4f} '
+                               f'{dat5["hsig"][q]*1000:3.4f}\n')
                     # Format is mm now.
 
                 endsign = 9999.0
