@@ -340,7 +340,7 @@ end
             %[nameCont,lonCont,latCont,veleCont,velnCont,veluCont] = Get_postseis(ContinuousSites,postseis,Cont_postOrg);
             
             numpostcon = length(lonCont);
-            
+% The code was modified on 2023.11.17 in the following section to meet the requirements for the correct processing of the data related to the 1964 earthquake.            
 for q = 1:numpostcon
     disp(['Comparing ' nameCont{q} ' with ' consitename{i}]);
     if(strcmp(nameCont{q}, consitename{i}))
@@ -348,7 +348,7 @@ for q = 1:numpostcon
         postvn = velnCont(q);
         postvu = veluCont(q);
         disp(['Found postseismic data for ' consitename{i}]);
-        break; % 可能需要终止循环，因为已经找到了匹配的站点
+        break; 
     end
 end
             
