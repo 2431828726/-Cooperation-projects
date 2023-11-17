@@ -16,7 +16,7 @@ All processing steps have been completed as of now.
 Introduction to the Code Usage Operation
 
 Data Preparation:
-(1) Mobile and continuous stations are distributed in the paper.txt file.
+(1) campaign and continuous stations are placed separately in the paper.txt file.
 (2) Data affected by the 1964 earthquake (sites_all_name_lat_lon_Up.vec).
 (3) Seasonal files and original time series files.
 (4) Velocity of all sites in Alaska (allsites_alaska_ssl_v1.0.vec).
@@ -46,7 +46,7 @@ Operation Steps:
 
 下面具体介绍代码使用操作
 需要准备的数据
-（1）流动站点以及持续站点，我们把它们分布放在paper.txt文件中
+（1）流动站点以及持续站点，我们把它们分别放在paper.txt文件中
 （2）1964年大地震影响的数据（sites_all_name_lat_lon_Up.vec）
 （3）季节性文件以及原始时间序列文件
 （4）阿拉斯加所有站点的速度（allsites_alaska_ssl_v1.0.vec）
