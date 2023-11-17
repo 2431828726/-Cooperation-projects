@@ -52,6 +52,7 @@ Operation Steps:
 （4）阿拉斯加所有站点的速度（allsites_alaska_ssl_v1.0.vec）
 注意点
 （1）在实验前时我们必须修改对应文件的位置比如原始时间序列，季节性文件，最后结果的位置（Get_TimeseriesData.py）
+（2）我们把geodvel.py中的omegacov的数据放在了本地，我们以名为omegacov.xls存放它所以你需要下载他，然后在geodvel.py中对应位置要修改他的路径
 操作过程
 （1）准备数据
 （2）在代码中修改数据位置
