@@ -23,6 +23,7 @@ Data Preparation:
 
 Notes:
 (1) Before the experiment, it is necessary to modify the locations of corresponding files, such as the original time series, seasonal files, and the location for the final results (Get_TimeseriesData.py).
+(2) We have stored the data for omegacov in the local directory of geodvel.py, naming it omegacov.xls. You need to download it, and then modify its path in the corresponding location in geodvel.py.
 
 Operation Steps:
 (1) Prepare the data.
