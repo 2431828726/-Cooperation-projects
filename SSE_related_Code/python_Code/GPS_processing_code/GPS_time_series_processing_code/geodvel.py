@@ -136,5 +136,3 @@ def load_argus2005_model():
     omegacov[35, 35] = 300. / 10**22
     # Return the variables plates, omegas, omegacov, geocenter_xyz, and geocenter_cov.
     return plates, omegas, omegacov, geocenter_xyz, geocenter_cov
-
-   
