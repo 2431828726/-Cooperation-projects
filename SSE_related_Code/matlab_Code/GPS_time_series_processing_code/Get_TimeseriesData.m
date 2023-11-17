@@ -341,13 +341,16 @@ end
             
             numpostcon = length(lonCont);
             
-            for q = 1:numpostcon
-                if(isequal(nameCont(q),consitename{i})==1)
-                    postve = veleCont(q);
-                    postvn = velnCont(q);
-                    postvu = veluCont(q);
-                end
-            end
+for q = 1:numpostcon
+    disp(['Comparing ' nameCont{q} ' with ' consitename{i}]);
+    if(strcmp(nameCont{q}, consitename{i}))
+        postve = veleCont(q);
+        postvn = velnCont(q);
+        postvu = veluCont(q);
+        disp(['Found postseismic data for ' consitename{i}]);
+        break; % 可能需要终止循环，因为已经找到了匹配的站点
+    end
+end
             
             
             staname = consitename{i};
