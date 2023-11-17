@@ -27,8 +27,8 @@ def xyz2enu(llh, xyz, covxyz=None):
                       [clat*clon, clat*slon, slat]], dtype=object)
         return t
  # Transpose the input vector if needed to make sure dimensions match for the matrix multiplication for transformation.
-    llh = llh.reshape(-1, 1)#Reshape the dimension of 11h into (rows, 1) instead of (rows,).Revised on November 6, 2023
-    xyz = xyz.reshape(-1, 1)#Reshape the dimension of xyz into (rows, 1) instead of (rows,).Revised on November 6, 2023
+    llh = llh.reshape(-1, 1)#Reshape the dimension of 11h into (rows, 1) instead of (rows,).
+    xyz = xyz.reshape(-1, 1)#Reshape the dimension of xyz into (rows, 1) instead of (rows,).
     if xyz.shape[0] == 1:
         xyz = xyz.T
 
