@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+ 
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+ 
+    #header {
+      background-color: #0a87da;
+      color: #e61406;
+    
+      display: flex;
+      align-items: center;
+      height: 10vw; 
+      font-size: 2vw; 
+      letter-spacing: 2vw; 
+      border: 1vw solid #dab437; 
+    }
+    
+    #header h1 {
+      margin: 0;
+      flex-grow: 1; 
+      text-align: center;
+    }
+    
+    #header img {
+      height: 10vw;
+      margin-right: 2vw; 
+    }
+    
+    #header-bottom {
+      background-color: #f8ec68;
+      height: 2vw;
+      border: 1vw solid #dab437; 
+      display: flex;
+      align-items: center;
+      padding: 0 1vw;
+      font-size: 1vw; 
+      overflow: hidden;
+      position: relative;
+    }
+    
+    #header-bottom a {
+      text-decoration: none; 
+      color: rgb(14, 10, 10);
+      font-family: "Times New Roman", serif;
+      position: absolute;
+      right: 1vw; 
+    }
+    
+    #header-bottom .scrolling-container {
+      position: relative; 
+      width: 100%; 
+      height: 100%; 
+    }
+    
+    #header-bottom .scrolling-text {
+      white-space: nowrap;
+      animation: scrollText linear infinite;
+      animation-duration: 5s;
+      animation-timing-function: linear;
+      position: absolute; 
+      top: 0; 
+      right: 5%; 
+    }
+    
+    @keyframes scrollText {
+      0% {
+        transform: translateX(0%); 
+      }
+      100% {
+        transform: translateX(-100%); 
+      }
+    }
+    #main {
+      background-color: #62c2e2;
+      padding: 1vw;
+      position: relative;
+      width: 98%;
+      height: 180vh;
+    }
+    
+    .grid-item {
+      background-color: #ddd;
+
+      width: 50vw;
+    
+      text-align: center;
+      position: absolute;
+    }
+    
+    #item2 {
+      background-color: rgb(229, 233, 235);
+      color: rgb(14, 10, 10);
+      top: 0.1vw;
+      left: 26vw;
+     
+      width: 50vw;
+      font-family: "Times New Roman", serif;
+      font-size: 1.4vw;
+    }
+
+    #map-container {
+      width: 40vw;
+      height: 60vw;
+      top: 4%;
+      left: 10%;
+      border: 4px solid #2ea2d4; 
+    }
+    #map-container .BMap_pop {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+#map-container .shaking-icon {
+      animation: shakeIcon linear infinite; 
+    }
+
+    @keyframes shakeIcon {
+      0% {
+        transform: translateX(-5px);
+      }
+      50% {
+        transform: translateX(5px);
+      }
+      100% {
+        transform: translateX(-5px);
+      }
+    }
+    #main p {
+  margin: 0;
+  text-align: center;
+  font-size: 12px;
+  color: #130c0c; 
+}
+     
+  </style>
+  <script src="http://api.map.baidu.com/api?v=2.0&ak=lrTbteD7Lh9MtlhNPHVWK2qhX1mrkZoZ"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <div id="header">
+    <img src="icon.png" alt="Logo">
+    <h1>Science Outreach</h1>
+  </div>
+  <div id="header-bottom">
+    <span class="scrolling-container">
+      <span class="scrolling-text">
+        <span class="bell">&#128227;</span> Welcome to the Earthquake Science Outreach. It is currently Beijing time<span id="current-time"></span>
+      </span>
+    </span>
+    <a href="kepu.html">Return</a>
+  </div>
+ 
+
+  <div id="main">
+    <div id="grid">
+        <div class="grid-item" id="item2">
+            <h1>Distribution of Magnitude 4-5 Earthquakes in China and Surrounding Areas</h1>
+            <p>Note: Black icons represent data points, click to activate the animation effect.</p>
+            <div id="map-container"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // You can add logic and interactive behaviors here
+    function initializeMap() {
+        var map = new BMap.Map("map-container"); // Create a map instance
+        var point = new BMap.Point(116.404, 39.915); // Create a point coordinate representing the center position of the map (here, using the latitude and longitude of Beijing as an example)
+        map.centerAndZoom(point, 4); // Initialize the map, set the center coordinates, and zoom level
+        map.enableScrollWheelZoom(true); // Enable scroll wheel zoom
+
+        var isAnimationPlaying = false;
+        // Use AJAX to get earthquake data from the server
+        $.ajax({
+            type: "GET",
+            url: "https://earthquake.usgs.gov/fdsnws/event/1/query",
+            data: {
+                format: "geojson",
+                starttime: "1990-01-01",
+                endtime: "2023-12-31",
+                minmagnitude: 4,
+                maxmagnitude: 5,
+                minlatitude: 18,
+                maxlatitude: 54,
+                minlongitude: 73,
+                maxlongitude: 135,
+            },
+            success: function (response) {
+                var features = response.features;
+                for (var i = 0; i < features.length; i++) {
+                    var feature = features[i];
+                    var coordinates = feature.geometry.coordinates;
+                    var magnitude = feature.properties.mag;
+
+                    var point = new BMap.Point(coordinates[0], coordinates[1]);
+
+                    var icon = new BMap.Icon('house-chimney-crack-solid.svg', new BMap.Size(11, 11));
+                    var marker = new BMap.Marker(point, { icon: icon }); // Create a marker and set the icon
+
+                    map.addOverlay(marker); // Add the marker to the map
+
+                    // Create content for the info window
+                    var infoWindowContent =
+                        "Earthquake Information:<br>Magnitude: " + magnitude.toFixed(1) +
+                        "<br>Location: " + feature.properties.place +
+                        "<br>Longitude: " + coordinates[0] + "<br>Latitude: " + coordinates[1];
+
+                    // Add a click event to the marker to display the info window when clicked
+                    addClickHandler(infoWindowContent, marker);
+                }
+            },
+            error: function (xhr, status, error) {
+                console.log("AJAX Request Failed. Error: " + error);
+            },
+        });
+
+        // Add a click event to the marker
+        function addClickHandler(content, marker) {
+            marker.addEventListener("click", function () {
+                openInfo(content, marker);
+            });
+        }
+
+        // Open the info window
+        function openInfo(content, marker) {
+            var infoWindow = new BMap.InfoWindow(content); // Create an info window object
+            marker.openInfoWindow(infoWindow); // Open the info window
+
+            if (!isAnimationPlaying) {
+                marker.setAnimation(BMAP_ANIMATION_BOUNCE); // Play the bounce animation for the marker
+                isAnimationPlaying = true;
+            } else {
+                marker.setAnimation(null); // Stop the marker animation
+                isAnimationPlaying = false;
+            }
+        }
+    }
+
+    window.onload = function () {
+        initializeMap(); // Initialize the map
+    };
+</script>
+</body>
+</html>
+

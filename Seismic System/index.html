@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="buttons">
+        <a href="txt.html" class="button">Information Report</a>
+        <a href="index1.html" class="button">Return to Main Screen</a>
+        <button class="button" onclick="sendHelp()">Emergency Request</button>
+      </div>
+      <h1>Real-time Disaster Reporting</h1>
+      <div class="showTime"></div>
+    </header>
+    <script>
+      var t = null;
+      t = setTimeout(time, 1000); 
+      function time() {
+        clearTimeout(t); 
+        dt = new Date();
+        var y = dt.getFullYear();
+        var mt = dt.getMonth() + 1;
+        var day = dt.getDate();
+        var h = dt.getHours(); 
+        var m = dt.getMinutes(); 
+        var s = dt.getSeconds(); 
+        document.querySelector(".showTime").innerHTML =
+          "Current Time: " +
+          y +
+          "." +
+          mt +
+          "." +
+          day +
+          "." +
+          h +
+          ":" +
+          m +
+          ":" +
+          s +
+          ":";
+        t = setTimeout(time, 1000); 
+      }
+
+      function sendHelp() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+        } else {
+          alert("Unable to get current location information");
+        }
+      }
+
+      function successCallback(position) {
+        var latitude = position.coords.latitude;
+        var longitude = position.coords.longitude;
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "shenbao1.php", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            alert("Help information has been sent");
+          }
+        };
+        xhr.send("latitude=" + latitude + "&longitude=" + longitude);
+      }
+
+      function errorCallback(error) {
+        alert("Unable to get current location information: " + error.message);
+      }
+
+      function updateCounts(realtimeCount, emergencyCount) {
+        var realtimeElement = document.querySelector("#realtimeCount");
+        var emergencyElement = document.querySelector("#emergencyCount");
+
+        realtimeElement.classList.remove("count");
+        emergencyElement.classList.remove("count");
+
+        realtimeElement.textContent = realtimeCount;
+        emergencyElement.textContent = emergencyCount;
+
+        setTimeout(function() {
+          realtimeElement.classList.add("count");
+          emergencyElement.classList.add("count");
+        }, 0);
+      }
+
+      function getCurrentEmergencyCount() {
+        fetch('map2.php')
+          .then(response => response.json())
+          .then(data => {
+            var emergencyCount = data.length; 
+            updateCounts(getCurrentRealtimeCount(), emergencyCount);
+          })
+          .catch(error => {
+            console.log('Error getting emergency count:', error);
+          });
+      }
+
+      function getCurrentRealtimeCount() {
+        fetch('map1.php')
+          .then(response => response.json())
+          .then(data => {
+            var realtimeCount = data.length; 
+            updateCounts(realtimeCount, getCurrentEmergencyCount());
+          })
+          .catch(error => {
+            console.log('Error getting real-time count:', error);
+          });
+      }
+
+      setInterval(getCurrentRealtimeCount, 5000); 
+      getCurrentRealtimeCount();
+
+      var data = [];
+      var currentIndex = 0;
+
+      function displayReporters(data) {
+        var reportersContainer = document.querySelector("#reportersContainer");
+
+        reportersContainer.innerHTML = '';
+
+        for (var i = 0; i < data.length; i++) {
+          var reporter = data[i];
+
+          var reporterInfo = document.createElement('div');
+          reporterInfo.className = 'reporter-info';
+          reporterInfo.innerHTML = '<p>' + (reporter.序号 || 'No data') + '，' +
+                                   'Location: ' + (reporter.当前位置 || 'No data') + '，' +
+                                   'Time: ' + (reporter.填报时间 || 'No data') + '，' +
+                                   'Urgent Needs: ' + (reporter.急需物品 || 'No data') + '</p>';
+
+          reportersContainer.appendChild(reporterInfo);
+        }
+
+        var containerHeight = reportersContainer.offsetHeight;
+        var reporterHeight = reportersContainer.querySelector('.reporter-info').offsetHeight;
+
+        if (containerHeight < reportersContainer.scrollHeight) {
+          var clonedContainer = reportersContainer.cloneNode(true);
+          reportersContainer.innerHTML = '';
+
+          while (reportersContainer.offsetHeight < containerHeight) {
+            reportersContainer.appendChild(clonedContainer.cloneNode(true));
+          }
+        }
+      }
+
+      function getReportersData() {
+        fetch('6.php')
+          .then(response => response.json())
+          .then(responseData => {
+            data = responseData.data; 
+            displayNextReporters();
+          })
+          .catch(error => {
+            console.log('Error getting reporter information:', error);
+          });
+      }
+
+      function displayNextReporters() {
+        var batch = data.slice(currentIndex, currentIndex + 6); 
+        currentIndex += 6; 
+
+        displayReporters(batch);
+
+        if (currentIndex < data.length) {
+          setTimeout(function() {
+            fetch('6.php')
+              .then(response => response.json())
+              .then(responseData => {
+                data = data.concat(responseData.data); 
+                displayNextReporters();
+              })
+              .catch(error => {
+                console.log('Error getting reporter information:', error);
+              });
+          }, 3000); 
+        }
+      }
+
+      getReportersData();
+
+    </script>
+    </header>
+    <section class="mainbox">
+      <div class="column">
+        <div class="panel bar">
+          <h2>Building Damage</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+
+        <div class="panel bar1">
+          <h2>Disaster Personnel Situation</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+
+        <div class="panel pie1">
+          <h2>Urgent Needs</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="no">
+          <div class="no-hd">
+            <ul>
+              <li id="emergencyCount" class="count"></li>
+              <li id="realtimeCount" class="count"></li>
+            </ul>
+          </div>
+          <div class="no-bd">
+            <ul>
+              <li>Actual Reporters</li>
+              <li>Emergency Requests</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="map">
+          <div class="chart"></div>
+          <div class="map1"></div>
+          <div class="map2"></div>
+          <div class="map3"></div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="panel line1">
+          <h2>Real-time Reporter Count Change</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+
+        <div class="panel line">
+          <h2>Other Disasters</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+
+        <div class="panel pie">
+          <h2>Reporter Information</h2>
+          <div id="reportersContainer"></div>
+        </div>
+      </div>
+    </section>
+    <script src="js/flexible.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/china.js"></script>
+    <script src="js/myMap.js"></script>
+  </body>
+</html>

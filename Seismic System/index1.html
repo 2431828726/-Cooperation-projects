@@ -1,0 +1,2282 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8" />
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==" crossorigin="" />
+   <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js" integrity="sha512-WXoSHqw/t26DszhdMhOXOkI7qCiv5QWXhH9R7CgvgZMHz1ImlkVQ3uNsiQKu5wwbbxtPzFXd1hK4tzno2VqhpA==" crossorigin=""></script>
+   <link rel="stylesheet" href="css1/screen.css" />
+   <script src="js/leaflet.markercluster-src.js"></script>
+   <script src="js/realworld.388.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.3/d3.min.js"></script>
+   <script src= "./js/leaflet-heat.js"></script>
+<!-- heatmap json -->
+<script type="text/javascript" src="./json/heatpoint.js"></script>
+<!-- fault json -->
+ <script src="fault.js"></script>
+ <script src="sichuan.js"></script>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css" />
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- heatmap -->
+<script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+
+<!-- Leaflet.markercluster CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+
+<!-- Leaflet.markercluster JS -->
+<script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+ 
+
+</head>
+  <style>
+   /* CSS */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1e84d2;
+}
+
+.container {
+  display: flex;
+  height: 100%; 
+  width: 100%;
+}
+
+/* title style */
+.title-bar {
+  background-color: #333;
+  color: #110b0b;
+  padding: 1px;
+  text-align: center;
+  font-family: "Times New Roman", serif;
+  font-weight: bold;
+  font-size: 1.5vw;
+  background-image: linear-gradient(to right, #138ae4 0%, #97bedf 50%, #2690e0 100%);
+  border: 0.7vw solid #096dba; 
+}
+
+/* left-column */
+.left-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  color: #e8e2e2;
+  font-family: "Times New Roman", serif;
+}
+
+.middle-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 25vw; 
+  font-family: "Times New Roman", serif;
+  font-size: 1vw;
+}
+
+/* right-column style */
+.right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 50vw;
+  font-family: "Times New Roman", serif;
+}
+
+/* left-top */
+.left-top {
+  background-color: #2f0707;
+  width: 24.5vw; 
+  height: 7vw; 
+
+  font-size: 1vw; 
+  text-align: center;
+}
+
+/* left-middle */
+.left-middle {
+  background-color: #81bfd7;
+  width: 24.5vw; 
+  height: 88.3vh; 
+  
+}
+
+/* middle-top */
+.middle-top {
+  background-color: #2f0707;
+  width: 49.4vw; 
+  height: 7vw; 
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-buttons {
+  display: flex;
+  justify-content: space-between;
+  z-index: 999;
+}
+
+.main-button {
+  display: flex;
+  align-items: center;
+  padding: 1.0vw; 
+  color: white;
+  font-size: 1vw; 
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+}
+
+.main-button i {
+  margin-right: 0.5vw;
+}
+
+.sub-buttons {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  background-color: #2f0707;
+  padding: 1.4vw; 
+  width: 10vw; 
+  align-items: flex-start;
+}
+
+.main-button:hover .sub-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-buttons button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 0.6vw 1vw; 
+  margin-top: 0.5vw; 
+  cursor: pointer;
+  text-align: left;
+}
+
+.sub-buttons button i {
+  margin-right: 0.6vw; 
+}
+
+.sub-buttons button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sub-main-button {
+  display: flex;
+  align-items: center;
+  padding: 1.3vw; 
+  color: white;
+  font-size: 1vw; 
+  cursor: pointer;
+  margin-right: -2.0vw; 
+  position: relative;
+  text-decoration: none;
+}
+
+.sub-main-button i {
+  margin-right: 0.1vw; 
+}
+
+/* middle-middle style */
+.middle-middle {
+  background-color: #fdf6fb;
+  height: 74.8vh; 
+  width: 49.4vw; 
+
+}
+
+/* middle-bottom style */
+.middle-bottom {
+  background-color: #2f0707;
+  height: 7vw; 
+  width: 49.4vw; 
+ 
+}
+
+.announcement {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0.8vw; 
+  color: rgb(208, 147, 49);
+  font-size: 2vw; 
+}
+
+.announcement i {
+  margin-right: 0.5vw; 
+}
+
+/* right-bottom style */
+.right-bottom {
+  background-color: #8bc8ee;
+  width: 24vw; 
+  height: 102vh; 
+ 
+}
+
+
+.table-container {
+  height: 92vh; 
+  overflow-y: auto;
+}
+
+.earthquake-table {
+  height: 50%;
+  border-collapse: collapse;
+}
+
+.earthquake-table th,
+.earthquake-table td {
+  padding: 0.5vw; 
+  text-align: left;
+  border: 0.2vw solid #0a0b0c;
+  border-left: none;
+  font-size: 0.3vw; 
+}
+
+
+.table-header {
+  font-size: 1.3vw; 
+  font-weight: bold;
+  padding: 0.6vw;
+  text-align: center;
+}
+
+
+  .search-modal {
+  display: none;
+  position: fixed;
+  z-index: 999999999;
+  left: 12%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  max-width: 90%;
+  height: auto;
+
+  border-radius: 30px;
+  border: 7px solid #4CAF50;
+  overflow: hidden;
+
+}
+
+.search-modal-content {
+  padding: 20px;
+  box-sizing: border-box;
+
+}
+
+.search-input {
+  margin: 10px 0;
+  z-index: 9999999999999;
+}
+
+.search-input label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+  z-index: 9999999999999;
+}
+
+.search-input input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #999;
+  font-size: 16px;
+  background-color: #f7f7f7;
+  color: #333;
+  outline: none;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  z-index: 9999999999999;
+}
+
+.search-input input[type="number"]:focus {
+  background-color: #ffffff;
+  border-color: #18a0fb;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 5px rgba(0, 0, 0, 0.3);
+  z-index: 9999999999999;
+}
+
+#search-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  background-color: #4CAF50;
+  color: #080908;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  z-index: 9999999999999;
+}
+
+#search-btn:hover {
+  background-color: #0d8de1;
+  z-index: 9999999999999;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #900b2f;
+  cursor: pointer;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  z-index: 9999999999999;
+}
+
+.close:hover {
+  color: #333;
+}
+
+
+
+#chart-container {
+      position: absolute;
+      z-index: 999999;
+      top: 300px;
+      left: 40px;
+      width: 400px;
+      height: 400px;
+     
+    }
+
+
+  .form-container {
+    border: 7px solid #4CAF50;
+  padding: 40px;
+  max-width: 320px;
+  margin: 0 auto;
+  top: 400px;
+      left: 60px;
+      position: absolute;
+      z-index: 9999999;
+
+      
+}
+   
+    input[type="text"],
+select {
+  display: block;
+  margin-bottom: 10px;
+  width: 200px;
+  padding: 5px;
+}
+
+.button-style {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.button-style:hover {
+  background-color: #45a049;
+}
+
+#latitude1::placeholder,
+#longitude1::placeholder,
+#magnitude1::placeholder,
+#distance1::placeholder {
+  color: #888;
+}
+
+#region {
+  width: 214px;
+}
+  
+.close1 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #900b2f;
+  cursor: pointer;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.close1:hover {
+  color: #333;
+}
+
+
+#clearButton1 {
+  background-color: #f44336;
+  color: #1c1010;
+  border: none;
+  padding: 10px 20px;
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 9999999999;
+  position: relative;
+ margin-left: 45%;
+ border: 2px solid #131513;
+}
+
+#clearButton1:hover {
+  background-color: #d32f2f;
+}
+
+#clearButton2 {
+  background-color: #f44336;
+  color: #1c1010;
+  border: none;
+  padding: 10px 20px;
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 9999999999;
+  position: relative;
+ margin-left: 45%;
+ border: 2px solid #131513;
+}
+
+#clearButton2:hover {
+  background-color: #d32f2f;
+}
+#clearButton3 {
+  background-color: #f44336;
+  color: #1c1010;
+  border: none;
+  padding: 10px 20px;
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 9999999999;
+  position: relative;
+ margin-left: 45%;
+ border: 2px solid #131513;
+}
+
+#clearButton3:hover {
+  
+  background-color: #d32f2f;
+}
+
+
+#container4 {
+  font-size: 26px;
+  color: #4CAF50;
+  border: none;
+  top: 50%;
+  left: 12%;
+  transform: translate(-50%, -50%);
+  width: 220px;
+  height: 260px;
+  cursor: pointer;
+  z-index: 9999999999;
+  position: absolute;
+  border: 7px solid #4CAF50;
+  display: none;
+  padding: 20px;
+  text-align: center;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#container4 input[type="text"] {
+  margin-bottom: 60px;
+}
+
+#container4 button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+
+
+#container5 {
+  font-size: 26px;
+  color: #4CAF50;
+  border: none;
+  top: 50%;
+  left: 12%;
+  transform: translate(-50%, -50%);
+  width: 220px;
+  height: 260px;
+  cursor: pointer;
+  z-index: 9999999999;
+  position: absolute;
+  border: 7px solid #4CAF50;
+  display: none;
+  padding: 20px;
+  text-align: center;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#container5 input[type="text"] {
+  margin-bottom: 60px;
+}
+
+#container5 button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+#container6 {
+  font-size: 26px; /* 设置为所需的字体大小 */
+  color: #4CAF50;
+  border: none;
+  top: 50%;
+  left: 12%;
+  transform: translate(-50%, -50%);
+  width: 220px;
+  height: 260px;
+  cursor: pointer;
+  z-index: 9999999999;
+  position: absolute;
+  border: 7px solid #4CAF50;
+  display: none;
+  padding: 20px;
+  text-align: center;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px; 
+}
+
+#container6 input[type="text"] {
+  margin-bottom: 10px;
+  top: 40%;
+}
+#container6 select {
+  width: 200px;
+  height: 26px;
+  margin-bottom: 10px;
+  padding: 0;
+  border: none;
+  
+}
+
+#container6 button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+
+#container7 {
+  font-size: 26px; 
+  color: #4CAF50;
+  border: none;
+  top: 50%;
+  left: 12%;
+  transform: translate(-50%, -50%);
+  width: 220px;
+  height: 260px;
+  cursor: pointer;
+  z-index: 9999999999;
+  position: absolute;
+  border: 7px solid #4CAF50;
+  display: none;
+  padding: 20px;
+  text-align: center;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px; 
+}
+
+#container7 input[type="text"] {
+  margin-bottom: 10px; 
+  top: 40%;
+}
+#container7 select {
+  width: 200px;
+  height: 26px;
+  margin-bottom: 10px;
+  padding: 0;
+  border: none;
+  
+}
+
+#container7 button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.hospital-container {
+  border: 7px solid #096dba; 
+  
+  color: #000;
+  padding: 40px;
+  width: 310px;
+  height: 700px;
+  margin: 0 auto;
+  top: 360px;
+  left: 50px;
+  position: absolute;
+  z-index: 999999;
+  overflow-y: scroll; 
+  display: none;
+}
+
+.close2-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #900b2f;
+  cursor: pointer;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  z-index: 999999;
+}
+
+.close2-btn:hover {
+  color: #333;
+  z-index: 999999;
+}
+
+
+
+
+  </style>
+</head>
+</head>
+<body>
+  <header class="title-bar">
+    <h1>Earthquake Disaster Emergency Response System</h1>
+  </header>
+  <div class="container">
+    <div class="left-column">
+      <div class="top-section left-top">
+        <h1>Function response</h1>
+      </div>
+      <div class="middle-section left-middle">
+        <div class="left-middle"></div>
+        <div id="hospitalContainer" class="hospital-container">
+          <span class="close2-btn" onclick="closeContainer()">&times;</span>
+         
+        </div>
+        
+        
+        
+        
+  <!-- Hospital container4 -->
+        <div id="container4">
+          <p>Hospital Search</p>
+          <input type="text" id="keywordInput4" placeholder="Please enter keywords">
+          <button id="searchButton4">Confirm</button>
+         
+            <!-- Hospital container4 -->
+        </div>
+        <div id="container5">
+          <p>Government Search</p>
+          <input type="text" id="keywordInput5" placeholder="Please enter keywords">
+          <button id="searchButton5">Confirm</button>
+         
+          
+        </div>
+  <!-- Hospital container4 -->
+        <div id="container6" style="display: none;">
+          <p>School Search</p>
+          <select id="selectSchool">
+            <option value="小学">Elementary School</option>
+            <option value="中学">Middle School</option>
+            <option value="大学">College</option>
+          </select>
+          <input type="text" id="keywordInput6" placeholder="Please enter keywords">
+          <button id="searchButton6">Confirm</button>
+        </div>
+  <!-- Hospital container4 -->
+        <div id="container7" style="display: none;">
+          <p>Station Search</p>
+          <select id="stationType">
+            <option value="火车">train</option>
+            <option value="高铁">bullet train</option>
+            
+          </select>
+          <input type="text" id="keywordInput7" placeholder="Please enter keywords">
+          <button id="searchButton7">Confirm</button>
+        </div>
+        
+          <!-- Hospital container4 -->
+        <div id="search-modal" class="search-modal">
+          <div class="search-modal-content">
+            <span class="close">&times;</span>
+            <div class="search-form">
+              <div class="search-input">
+                <label for="longitude">longitude：</label>
+                <input type="number" id="longitude" min="-180" max="180"placeholder="min">
+                <input type="number" id="longitude2" min="-180" max="180"placeholder="max">
+              </div>
+              <div class="search-input">
+                <label for="latitude">latitude：</label>
+                <input type="number" id="latitude" min="-90" max="90"placeholder="min">
+                <input type="number" id="latitude2" min="-90" max="90"placeholder="max">
+              </div>
+              <div class="search-input">
+                <label for="depth">depth：</label>
+                <input type="number" id="depth"placeholder="km">
+              </div>
+              <div class="search-input">
+                <label for="magnitude">magnitude：</label>
+                <input type="number" id="magnitude"placeholder="M">
+              </div>
+              <button id="search-btn">search</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+
+  <!-- main selecte button -->
+    <div class="middle-column">
+      <div class="top-section middle-top">
+        
+        <div class="middle-top">
+          <div class="main-buttons">
+            <div class="main-button" id="button1">
+              <i class="fas fa-search"></i>
+              <span>Data query</span>
+    <div class="sub-buttons">
+        <button id="search-btn1"><i class="fas fa-house-damage"></i> Historical earthquakes</button>
+        <button id="subButton1_2"><i class="fas fa-globe"></i> Fault</button>
+        <button id="subButton1_4"><i class="fas fa-school"></i> School</button>
+        <button id="subButton1_5"><i class="fas fa-train"></i>transit station</button>
+        <button id="subButton1_3"><i class="fas fa-hospital"></i> Hospital</button>
+  
+        <button id="subButton1_6"><i class="fas fa-landmark"></i> Ancient architecture</button>
+        <button id="subButton1_7"><i class="fas fa-building"></i> Government institution</button>
+
+    
+    </div>
+  </div>
+  <div class="main-button" id="button2">
+    <i class="fas fa-chart-bar"></i>
+    <span>Data visualization</span>
+    <div class="sub-buttons">
+      <button id="subButton2_1"><i class="fas fa-fire"></i> Heatmap</button>
+      <button id="subButton2_2"><i class="fas fa-chart-bar"></i> Chart statistics</button>
+     
+    </div>
+  </div>
+  <div class="main-button" id="button3">
+    <i class="fas fa-star"></i>
+    <span>Emergency disaster simulation</span>
+    <div class="sub-buttons">
+      <button id="subButton3_1" onclick="toggleInputBox();"><i class="fas fa-chart-pie"></i> Intensity map</button>
+   
+              </div>
+            </div>
+
+            <div class="main-button" id="button4">
+              <a href="index.html" class="sub-main-button">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span>Real-time disaster reporting</span>
+              </a>
+            </div>
+            
+            <div class="main-button" id="button5">
+              <a href="html/kepu.html" class="sub-main-button">
+                <i class="fas fa-book-open"></i>
+                <span>Scientific outreach</span>
+              </a>
+            </div>
+            
+            
+            
+            
+            
+          </div>
+          
+        </div>
+      </div>
+      <div class="middle-section middle-middle" id="map-container">
+        <button id="clearButton1" style="display:none;">clean</button>
+        <button id="clearButton2" style="display:none;">clean</button>
+        <button id="clearButton3" style="display:none;">clean</button>
+        <h2></h2>
+      </div>
+        <div class="middle-bottom">
+          <div class="announcement">
+            <i class="fas fa-volume-up"></i>
+            <p class="announcement-text">Welcome to the Earthquake Disaster Emergency Response System</p>
+          </div>
+      </div>
+    </div>
+
+
+    
+
+    <div class="bottom-section right-bottom">
+      <h2 class="table-header">Global real-time earthquake data</h2>
+      <div class="table-container">
+        <table class="earthquake-table">
+          <thead>
+            <tr>
+              <th>number</th>
+              <th>Magnitude</th>
+              <th>Depth</th>
+              <th>Location</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody>
+          
+          </tbody>
+        </table>
+      </div>
+
+      
+    </div>
+
+    
+  </div>
+  <div id="chart-container">
+    <canvas id="chart"></canvas>
+    <canvas id="barChart"></canvas>
+
+  </div>
+
+
+  <div id="inputBox" style="display: none;">
+
+  <div class="form-container">
+    <span class="close1" onclick="closeForm()">&times;</span>
+    <!-- form content -->
+    <input type="text" id="latitude1" placeholder="Latitude" />
+    <input type="text" id="longitude1" placeholder="Longitude" />
+    <input type="text" id="magnitude1" placeholder="Magnitude" />
+    <input type="text" id="distance1" placeholder="Distance (km)" />
+  
+ 
+    
+    <button onclick="calculateDistanceB(); toggleLegend();" class="button-style">Display</button>
+    <button onclick="clearDistanceB()" class="button-style">clean</button>
+    <button onclick="generateReport()" class="button-style">Report</button>
+  </div>
+  
+
+  <div id="legend" style="display: none;"></div>
+
+
+
+ 
+  <script>
+//------------Draw Base Map
+var mymap = L.map('map-container').setView([30, 104], 4);
+mymap.zoomControl.setPosition('bottomright');
+
+//-----------Add API Key
+var url = "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiMjQzMTgyODcyNiIsImEiOiJjbGZ4aTF4bzcwYTRsM2hwYTZkN284bjR2In0.-e980fB7ZW1E07eJxTu1GA";
+L.tileLayer(url, {
+    maxZoom: 30,
+    minZoom: 2,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1
+}).addTo(mymap);
+
+
+
+
+
+
+//-----------------------Real-time Earthquake Display
+var url1 = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
+
+// Fetch real-time data using d3
+d3.json(url1, function(data) {
+    createMap(data.features);
+});
+
+var blinkingLayers = []; // Store earthquake event layers that need to blink
+
+function createMap(features) {
+  // Loop through the array and create a variable for coordinates and color
+  for (var i = 0; i < features.length; i++) {
+    var location = [features[i].geometry.coordinates[1], features[i].geometry.coordinates[0]];
+
+    // Set color based on earthquake depth
+    var color = "";
+    if (features[i].geometry.coordinates[2] > 90) {
+      color = "#ff5f65";
+    }
+    else if (features[i].geometry.coordinates[2] >= 70) {
+      color = "#fca35d";
+    }
+    else if (features[i].geometry.coordinates[2] >= 50) {
+      color = "#fdb72a";
+    }
+    else if (features[i].geometry.coordinates[2] >= 30) {
+      color = "#f7db11";
+    }
+    else if (features[i].geometry.coordinates[2] >= 10) {
+      color = "#dcf400";
+    }
+    else {
+      color = "#a3f600";
+    }
+
+    // Load earthquake as a circle onto the map
+    var layerData = L.circle(location, {
+      fillOpacity: 0.85,
+      color: "black",
+      weight: 0.5,
+      fillColor: color,
+      // Adjust radius based on earthquake magnitude
+      radius: features[i].properties.mag * 7500
+      // Include a popup window providing earthquake magnitude, location, and time information
+    }).bindPopup("<h3>"  + features[i].properties.mag +"</h3><hr><p>"  + features[i].properties.place + "</h3><hr><p>" + new Date(features[i].properties.time)+ "</p>").addTo(mymap);
+
+    // Check if the earthquake event is within the last 24 hours and set blinking status
+    var currentTime = new Date();
+    var earthquakeTime = new Date(features[i].properties.time);
+    var timeDifference = currentTime - earthquakeTime;
+    var isWithin24Hours = timeDifference <= 24 * 60 * 60 * 1000;
+
+    // If the earthquake event is within 24 hours, add it to the blinking layer list
+    if (isWithin24Hours) {
+      blinkingLayers.push(layerData);
+    }
+  }
+
+  // Set the blinking effect
+  setInterval(function() {
+    blinkingLayers.forEach(function(layer) {
+      layer.setStyle({fillOpacity: layer.options.fillOpacity === 0.85 ? 0.2 : 0.85});
+    });
+  }, 1000); // Blinking interval is 1 second (1000 milliseconds)
+}
+
+
+
+
+
+//-----------------------Real-time Earthquake Table Creation
+// Use the fetch function to retrieve USGS earthquake data
+fetch('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson')
+  .then(response => response.json())
+  .then(data => {
+    const earthquakeData = data.features.slice(0, 1000); // Get the latest 20 earthquake data
+
+    // Get the tbody element of the table
+    const tbody = document.querySelector('.earthquake-table tbody');
+
+    // Iterate through earthquake data, create table rows, and insert data
+    earthquakeData.forEach((earthquake, index) => {
+      const row = document.createElement('tr');
+
+      const magnitude = earthquake.properties.mag.toFixed(2); // Magnitude with two decimal places
+      const depth = earthquake.geometry.coordinates[2].toFixed(2); // Depth with two decimal places
+
+      row.innerHTML = `
+        <td>${index + 1}</td>
+        <td>${magnitude}</td>
+        <td>${depth}</td>
+        <td>${earthquake.properties.place}</td>
+        <td>${new Date(earthquake.properties.time).toLocaleString()}</td> <!-- Time of occurrence column -->
+      `;
+      tbody.appendChild(row);
+    });
+  })
+  .catch(error => {
+    console.log('An error occurred while fetching earthquake data:', error);
+  });
+
+//-----------------------Earthquake Announcement for the Last Hour
+// Get the element for displaying earthquake information
+const announcementText = document.querySelector('.announcement-text');
+
+// Play earthquake information
+function playEarthquakeAnnouncement() {
+  // Use the fetch function to retrieve USGS earthquake data for the last hour
+  fetch('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson')
+    .then(response => response.json())
+    .then(data => {
+      const earthquakeData = data.features;
+
+      if (earthquakeData.length > 0) {
+        // Get the latest earthquake data
+        const latestEarthquake = earthquakeData[0];
+        const magnitude = latestEarthquake.properties.mag;
+        const location = latestEarthquake.properties.place;
+        const timestamp = latestEarthquake.properties.time;
+
+        // Set the text for playing earthquake information
+        announcementText.textContent = `Current earthquake: ${location}, Magnitude ${magnitude.toFixed(1)}, Occurred at ${new Date(timestamp).toLocaleString()}`;
+      } else {
+        // Display default information when there is no latest earthquake data
+        announcementText.textContent = 'Welcome to the Earthquake Simulation and Disaster Situation Reporting System';
+      }
+    })
+    .catch(error => {
+      console.log('An error occurred while fetching earthquake data:', error);
+    });
+}
+
+// Play earthquake information every certain interval
+setInterval(playEarthquakeAnnouncement, 5000); // Play earthquake information every 5 seconds
+
+
+
+
+
+//----------------------------------- Loading Fault Data
+// The fault data is selected from the shp vector data of the China Earthquake Network and processed into JSON data through https://mapshaper.org/.addTo(mymap);
+
+var layerline = L.geoJson(myLines, {
+color: "black",
+weight: "2",
+opacity: "0.7",
+onEachFeature: function (feature, layer) {
+console.log(feature.properties);
+content =
+"Fault Code: " +
+feature.properties.断层编码 +
+"<br>Fault Name: " +
+feature.properties.断层名称 +
+"<br>Fault Length: " +
+feature.properties.断层长度 +
+"<br>Fault Trend: " +
+feature.properties.断层走向 +
+"<br>Fault Nature: " +
+feature.properties.断层性质 +
+"<br>Fault Identifier: " +
+feature.properties.断层标识;
+layer.bindPopup(content);
+},
+});
+
+// Get the button element
+var button = document.getElementById("subButton1_2");
+
+// Add a click event to the button
+button.addEventListener("click", toggleGeoJson);
+
+// Define the toggleGeoJson function
+function toggleGeoJson() {
+if (mymap.hasLayer(layerline)) {
+mymap.removeLayer(layerline);
+button.innerHTML = '<i class="fas fa-globe"></i> Faults';
+} else {
+layerline.addTo(mymap);
+button.innerHTML = '<i class="fas fa-globe"></i> Hide Faults';
+}
+}
+
+
+
+//------------------------------------ Intensity Map
+var polygonGroup = L.layerGroup().addTo(mymap);
+    var regions = {
+      east: { A: 5.7123, B: 1.3626, C: -4.2903, R0: 25, a: 3.6588, b: 1.3626, c: -3.5406, R0b: 13 },
+      central: { A: 5.8410, B: 1.0710, C: -3.6570, R0: 15, a: 3.9440, b: 1.0710, c: -2.8450, R0b: 7 },
+      xinjiang: { A: 5.6018, B: 1.4347, C: -4.4899, R0: 25, a: 3.6113, b: 1.4347, c: -3.8477, R0b: 14 },
+      qingzang: { A: 6.458, B: 1.2746, C: -4.4709, R0: 25, a: 3.3682, b: 1.2746, c: -3.3119, R0b: 9 }
+    };
+    var areaArray = [];// Array to store calculated areas
+    function determineRegion(latitude, longitude) {
+  if (longitude >= 100) {
+    return "east";
+  } else if (latitude >= 35 && latitude <= 49 && longitude >= 73 && longitude <= 96) {
+    return "xinjiang";
+  } else if (latitude >= 27 && latitude <= 37 && longitude >= 78 && longitude <= 99) {
+    return "qingzang";
+  } else {
+    return "central";
+  }
+}
+
+    function calculateDistanceB() {
+      // Function to calculate distanceB and draw ellipses
+      var latitude = parseFloat(document.getElementById('latitude1').value);
+      var longitude = parseFloat(document.getElementById('longitude1').value);
+      var magnitude = parseFloat(document.getElementById('magnitude1').value);
+      var distance = parseFloat(document.getElementById('distance1').value); // Distance is in kilometers
+      var region = determineRegion(latitude, longitude);
+
+      var coords = [latitude, longitude];
+      var A = regions[region].A;
+      var B = regions[region].B;
+      var C = regions[region].C;
+      var R0 = regions[region].R0;
+      var a = regions[region].a;
+      var b = regions[region].b;
+      var c = regions[region].c;
+      var R0b = regions[region].R0b;
+
+      var Ia = A + B * magnitude + C * Math.log10(distance + R0);
+      var distanceB = Math.pow(10, (Ia - a - b * magnitude) / c) - R0b;
+
+      var longAxis = distance; // Long axis length is the epicenter distance
+var shortAxis = distanceB; // Short axis length is the calculated distanceB
+
+// Clear previously drawn polygons
+polygonGroup.clearLayers();
+
+// Convert distances to degrees
+var degreePerKm = 1 / 111; // Approximately 1 degree for every 111 kilometers in latitude or longitude
+var longAxisDegree = longAxis * degreePerKm;
+var shortAxisDegree = shortAxis * degreePerKm;
+
+var numPolygons = 0; // Initialize the number of polygons to be drawn
+
+if (Ia > 10) {
+  numPolygons = 1;
+} else if (Ia >= 7 && Ia <= 10) {
+  numPolygons = 2;
+} else if (Ia >= 4 && Ia < 7) {
+  numPolygons = 3;
+} else if (Ia >= 1 && Ia < 4) {
+  numPolygons = 4;
+}
+
+var scaleFactors = [1, 3/4, 1/4, 1/8]; // Custom scale factor array
+var colors = ['lightyellow', 'yellow', 'lightcoral', 'red', 'darkred']; // Custom color array
+
+      for (var i = 0; i < numPolygons; i++) {
+        var scale = scaleFactors[i];
+        var scaledLongAxisDegree = longAxisDegree * scale;
+        var scaledShortAxisDegree = shortAxisDegree * scale;
+
+        // Create an array of vertex coordinates for the polygon
+        var latLngs = [];
+        var numPoints = 100; // Use 100 points to approximate the elliptical shape
+
+        for (var j = 0; j < numPoints; j++) {
+          var angle = (Math.PI * 2 * j) / numPoints;
+          var x = latitude + Math.cos(angle) * scaledLongAxisDegree;
+          var y = longitude + Math.sin(angle) * scaledShortAxisDegree;
+          latLngs.push([x, y]);
+        }
+
+        // Create a polygon object and set its style
+        var color = colors[i % colors.length];
+        var polygon = L.polygon(latLngs, { color: 'black', weight: 1, fillColor: color, fillOpacity: 0.5 });
+        polygon.addTo(polygonGroup);
+        
+        var area = calculateArea(latLngs); // Calculate area
+        areaArray.push(area); // Store the area in the array
+        polygon.bindPopup("Area: " + area.toFixed(2) + " Square Kilometers");
+      }
+      
+     // Create an array of adjusted areas
+      var adjustedAreaArray = [];
+      for (var i = 0; i < areaArray.length - 1; i++) {
+        var adjustedArea = areaArray[i] - areaArray[i+1];
+        adjustedAreaArray.push(adjustedArea);
+      }
+      adjustedAreaArray.push(areaArray[areaArray.length - 1]);
+
+      // Display adjusted areas in popups
+      for (var i = 0; i < adjustedAreaArray.length; i++) {
+        var adjustedArea = Math.abs(adjustedAreaArray[i]);
+        var popup = polygonGroup.getLayers()[i].getPopup();
+        popup.setContent("Area: " + adjustedArea.toFixed(2) + " Square Kilometers");
+      }
+    }
+
+    function calculateArea(latLngs) {
+       // Function to calculate the area of a polygon
+      var area = 0;
+      var numPoints = latLngs.length;
+
+      if (numPoints > 2) {
+        for (var i = 0; i < numPoints - 1; i++) {
+          var p1 = latLngs[i];
+          var p2 = latLngs[i + 1];
+          area += degreesToRadians(p2[1] - p1[1]) * (2 + Math.sin(degreesToRadians(p1[0])) + Math.sin(degreesToRadians(p2[0])));
+        }
+
+        area = Math.abs(area * 6371 * 6371 / 2.0); 
+      }
+
+      return area;
+    }
+
+    function degreesToRadians(degrees) {
+      return degrees * Math.PI / 180;
+    }
+
+    var legendVisible = false;
+    var legendContainer = null; 
+
+    function toggleLegend() {
+      // Function to toggle the visibility of the legend
+      if (legendContainer === null) {
+        createLegend(); 
+      }
+
+      if (legendVisible) {
+        legendContainer.style.display = 'none';
+        legendVisible = false;
+      } else {
+        legendContainer.style.display = 'block';
+        legendVisible = true;
+      }
+    }
+
+    function createLegend() {
+      // Function to create the legend
+      legendContainer = document.getElementById('legend'); 
+      legendContainer.style.padding = '10px';
+      legendContainer.style.backgroundColor = 'white';
+      legendContainer.style.position = 'absolute';
+      legendContainer.style.top = '380px';
+      legendContainer.style.right = '550px';
+      legendContainer.style.zIndex = '1000';
+
+      var legendTitle = document.createElement('div');
+      legendTitle.textContent = '';
+      legendTitle.style.fontWeight = 'bold';
+      legendContainer.appendChild(legendTitle);
+
+      var legendList = document.createElement('ul');
+      legendList.style.listStyleType = 'none';
+      legendList.style.padding = '0';
+      legendList.style.marginTop = '5px';
+      legendContainer.appendChild(legendList);
+
+      var legendItems = ['Slight Seismic Zone', 'Perceptible Seismic Zone', 'Moderately Perceptible Seismic Zone', 'Moderate Seismic Zone', 'Strong Seismic Zone']; // Custom array for text labels
+
+var colors = ['lightyellow', 'yellow', 'lightcoral', 'red', 'darkred']; 
+
+for (var i = 0; i < legendItems.length; i++) {
+  var legendItem = document.createElement('li');
+  legendItem.style.marginBottom = '5px';
+  legendList.appendChild(legendItem);
+
+  var legendColor = document.createElement('span');
+  legendColor.style.top = '50%';
+  legendColor.style.display = 'inline-block';
+  legendColor.style.width = '20px';
+  legendColor.style.height = '20px';
+  legendColor.style.backgroundColor = colors[i % colors.length];
+  legendItem.appendChild(legendColor);
+
+  var legendLabel = document.createElement('span');
+  legendLabel.style.marginLeft = '5px';
+  legendLabel.textContent = legendItems[i];
+  legendItem.appendChild(legendLabel);
+}
+
+    }
+
+    function toggleInputBox() {
+  var inputBox = document.getElementById("inputBox");
+  
+  if (inputBox.style.display === "none") {
+    inputBox.style.display = "block";
+  } else {
+    inputBox.style.display = "none";
+    polygonGroup.clearLayers();
+  }
+}
+
+function clearDistanceB() {
+  polygonGroup.clearLayers();
+}
+
+    
+function closeForm() {
+  var inputBox = document.getElementById("inputBox");
+  inputBox.style.display = "none";
+}
+
+//-------------- We need to display all the buildings in the region and show specific data in the feature response area
+
+function generateReport() {
+      var latitude = parseFloat(document.getElementById('latitude1').value);
+      var longitude = parseFloat(document.getElementById('longitude1').value);
+      var distance = parseFloat(document.getElementById('distance1').value);
+
+      var minLatitude = latitude - (0.7*distance / 111); 
+      var maxLatitude = latitude + (0.7*distance / 111);
+      var minLongitude = longitude - (0.7*distance / (111 * Math.cos(latitude * Math.PI / 180)));
+      var maxLongitude = longitude + (0.7*distance / (111 * Math.cos(latitude * Math.PI / 180)));
+
+    // hospital data
+var xhrHospital = new XMLHttpRequest();
+xhrHospital.onreadystatechange = function () {
+  if (xhrHospital.readyState === 4 && xhrHospital.status === 200) {
+    var response = JSON.parse(xhrHospital.responseText);
+    var hospitalData = response.map(function (item) {
+      return {
+        name: item.name,
+        latitude: item.latitude,
+        longitude: item.longitude
+      };
+    });
+    displayReport("hospital", hospitalData, "fas fa-hospital");
+  }
+};
+xhrHospital.open("GET", "yiyuan1.php?minLatitude=" + minLatitude + "&maxLatitude=" + maxLatitude + "&minLongitude=" + minLongitude + "&maxLongitude=" + maxLongitude, true);
+xhrHospital.send();
+
+
+// university data
+var xhrUniversity = new XMLHttpRequest();
+xhrUniversity.onreadystatechange = function () {
+  if (xhrUniversity.readyState === 4 && xhrUniversity.status === 200) {
+    var response = JSON.parse(xhrUniversity.responseText);
+    var universityData = response.map(function (item) {
+      return {
+        name: item.name,
+        latitude: item.latitude,
+        longitude: item.longitude
+      };
+    });
+    displayReport("university", universityData, "fas fa-university");
+  }
+};
+xhrUniversity.open("GET", "daxue1.php?minLatitude=" + minLatitude + "&maxLatitude=" + maxLatitude + "&minLongitude=" + minLongitude + "&maxLongitude=" + maxLongitude, true);
+xhrUniversity.send();
+
+// MiddleSchool data
+var xhrMiddleSchool = new XMLHttpRequest();
+xhrMiddleSchool.onreadystatechange = function () {
+  if (xhrMiddleSchool.readyState === 4 && xhrMiddleSchool.status === 200) {
+    var response = JSON.parse(xhrMiddleSchool.responseText);
+    var middleSchoolData = response.map(function (item) {
+      return {
+        name: item.name,
+        latitude: item.latitude,
+        longitude: item.longitude
+      };
+    });
+    displayReport("middleSchool", middleSchoolData, "fas fa-school");
+  }
+};
+xhrMiddleSchool.open("GET", "zhongxue1.php?minLatitude=" + minLatitude + "&maxLatitude=" + maxLatitude + "&minLongitude=" + minLongitude + "&maxLongitude=" + maxLongitude, true);
+xhrMiddleSchool.send();
+
+// PrimarySchool data
+var xhrPrimarySchool = new XMLHttpRequest();
+xhrPrimarySchool.onreadystatechange = function () {
+  if (xhrPrimarySchool.readyState === 4 && xhrPrimarySchool.status === 200) {
+    var response = JSON.parse(xhrPrimarySchool.responseText);
+    var primarySchoolData = response.map(function (item) {
+      return {
+        name: item.name,
+        latitude: item.latitude,
+        longitude: item.longitude
+      };
+    });
+    displayReport("primarySchool", primarySchoolData, "fas fa-school");
+  }
+};
+xhrPrimarySchool.open("GET", "xiaoxue1.php?minLatitude=" + minLatitude + "&maxLatitude=" + maxLatitude + "&minLongitude=" + minLongitude + "&maxLongitude=" + maxLongitude, true);
+xhrPrimarySchool.send();
+
+
+// TrainStation data
+var xhrTrainStation = new XMLHttpRequest();
+xhrTrainStation.onreadystatechange = function () {
+  if (xhrTrainStation.readyState === 4 && xhrTrainStation.status === 200) {
+    var response = JSON.parse(xhrTrainStation.responseText);
+    var trainStationData = response.map(function (item) {
+      return {
+        name: item.name,
+        latitude: item.latitude,
+        longitude: item.longitude
+      };
+    });
+    displayReport("trainStation", trainStationData, "fas fa-train");
+  }
+};
+xhrTrainStation.open("GET", "huoche1.php?minLatitude=" + minLatitude + "&maxLatitude=" + maxLatitude + "&minLongitude=" + minLongitude + "&maxLongitude=" + maxLongitude, true);
+xhrTrainStation.send();
+
+// HighSpeedRailStation data
+var xhrHighSpeedRailStation = new XMLHttpRequest();
+xhrHighSpeedRailStation.onreadystatechange = function () {
+  if (xhrHighSpeedRailStation.readyState === 4 && xhrHighSpeedRailStation.status === 200) {
+    var response = JSON.parse(xhrHighSpeedRailStation.responseText);
+    var highSpeedRailStationData = response.map(function (item) {
+      return {
+        name: item.name,
+        latitude: item.latitude,
+        longitude: item.longitude
+      };
+    });
+    displayReport("highSpeedRailStation", highSpeedRailStationData, "fas fa-train");
+  }
+};
+xhrHighSpeedRailStation.open("GET", "gaotie1.php?minLatitude=" + minLatitude + "&maxLatitude=" + maxLatitude + "&minLongitude=" + minLongitude + "&maxLongitude=" + maxLongitude, true);
+xhrHighSpeedRailStation.send();
+
+//  CulturalHeritage data
+var xhrCulturalHeritage = new XMLHttpRequest();
+xhrCulturalHeritage.onreadystatechange = function () {
+  if (xhrCulturalHeritage.readyState === 4 && xhrCulturalHeritage.status === 200) {
+    var response = JSON.parse(xhrCulturalHeritage.responseText);
+    var culturalHeritageData = response.map(function (item) {
+      return {
+        name: item.name,
+        latitude: item.latitude,
+        longitude: item.longitude
+      };
+    });
+    displayReport("culturalHeritage", culturalHeritageData, "fas fa-landmark");
+  }
+};
+xhrCulturalHeritage.open("GET", "wenwu1.php?minLatitude=" + minLatitude + "&maxLatitude=" + maxLatitude + "&minLongitude=" + minLongitude + "&maxLongitude=" + maxLongitude, true);
+xhrCulturalHeritage.send();
+
+// Government data
+var xhrGovernment = new XMLHttpRequest();
+xhrGovernment.onreadystatechange = function () {
+  if (xhrGovernment.readyState === 4 && xhrGovernment.status === 200) {
+    var response = JSON.parse(xhrGovernment.responseText);
+    var governmentData = response.map(function (item) {
+      return {
+        name: item.name,
+        latitude: item.latitude,
+        longitude: item.longitude
+      };
+    });
+    displayReport("government", governmentData, "fas fa-building");
+  }
+};
+xhrGovernment.open("GET", "zhenfu1.php?minLatitude=" + minLatitude + "&maxLatitude=" + maxLatitude + "&minLongitude=" + minLongitude + "&maxLongitude=" + maxLongitude, true);
+xhrGovernment.send();
+
+
+
+function displayReport(type, data, iconClass) {
+  var container = document.getElementById("hospitalContainer");
+
+  // Add the report title row
+  var titleDiv = document.createElement("div");
+  titleDiv.innerHTML = "<i class='" + iconClass + "'></i> Total " + data.length + " " + type + " data";
+  titleDiv.style.color = "red"; // Set font color to red
+  titleDiv.style.fontWeight = "bold";
+
+  container.appendChild(titleDiv);
+
+  // Add data points to the map
+  var markers = [];
+  data.forEach(function (item) {
+    var div = document.createElement("div");
+    div.textContent = item.name;
+    div.onclick = function () {
+      showNameOnMap(item.name);
+    };
+
+    var line = document.createElement("hr");
+
+    container.appendChild(div);
+    container.appendChild(line);
+
+    var marker = L.marker([item.latitude, item.longitude]);
+    marker.setIcon(L.divIcon({
+      className: iconClass,
+      iconSize: [24, 24],
+      iconAnchor: [12, 12],
+    }));
+    marker.bindPopup(item.name); // Set popup content
+
+    markers.push(marker);
+  });
+
+  // Create a cluster group
+  var markerClusterGroup = L.markerClusterGroup();
+
+  // Add all markers to the cluster group
+  markers.forEach(function (marker) {
+    markerClusterGroup.addLayer(marker);
+  });
+
+  // Add the cluster group to the map
+  mymap.addLayer(markerClusterGroup);
+
+  container.style.display = "block"; // Display the container
+  containerVisible = true;
+  generateButton.textContent = "Clear Report";
+}
+
+function showNameOnMap(name) {
+  alert(name);
+}
+
+}
+
+
+//----------------------------------Ancient Site Setup
+// Initialize the marker layer
+var markersLayer = L.layerGroup().addTo(mymap);
+
+// Listen for the click event on subButton1_6
+var subButton1_6 = document.getElementById('subButton1_6');
+subButton1_6.addEventListener('click', function () {
+  // Make an AJAX request to retrieve data from the database
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'wenwu.php', true);
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      var data = JSON.parse(xhr.responseText);
+      // Display markers on the map
+      displayMarkers(data);
+      // Show the clear button
+      var clearButton1 = document.getElementById('clearButton1');
+      clearButton1.style.display = 'inline-block';
+    }
+  };
+  xhr.send();
+});
+
+// Listen for the click event on clearButton
+var clearButton1 = document.getElementById('clearButton1');
+clearButton1.addEventListener('click', function () {
+  // Clear the marker layer
+  clearMarkers();
+  // Hide the clear button
+  clearButton1.style.display = 'none';
+});
+
+// Display markers on the map
+function displayMarkers(data) {
+  // Clear previous markers
+  clearMarkers();
+
+  // Font Awesome icon class
+  var iconClass = 'fas fa-home';
+
+  // Iterate through the data and add markers
+  data.forEach(function (item) {
+    var lon = item.经度;
+    var lat = item.纬度;
+    var age = item.名字;
+    var add = item.add;
+
+    // Create a marker and add it to the marker layer
+    var marker = L.marker([lat, lon], {
+      icon: L.divIcon({
+        className: iconClass,
+        iconSize: [32, 32] // Size of the icon
+      })
+    }).addTo(markersLayer);
+
+    // Bind a popup with information
+    marker.bindPopup('Longitude: ' + lon + '<br>Latitude: ' + lat + '<br>Name: ' + age + '<br>Location: ' + add);
+  });
+}
+
+// Clear the marker layer
+function clearMarkers() {
+  markersLayer.clearLayers();
+}
+
+//-----------------------------------Hospitals
+// Show or hide the search box
+var container4 = document.getElementById('container4');
+var subButton1_3 = document.getElementById('subButton1_3');
+var isContainerVisible = false;
+
+subButton1_3.addEventListener('click', function () {
+  if (!isContainerVisible) {
+    container4.style.display = 'block';
+    isContainerVisible = true;
+  } else {
+    container4.style.display = 'none';
+    isContainerVisible = false;
+    clearMapData(); // Clear data points on the map
+  }
+});
+
+// Make an AJAX request and draw data points
+var searchButton4 = document.getElementById('searchButton4');
+searchButton4.addEventListener('click', function () {
+  var keyword = document.getElementById('keywordInput4').value;
+
+  $.ajax({
+    url: 'yiyuan.php',
+    type: 'POST',
+    data: { keyword: keyword },
+    success: function (data) {
+      clearMapData(); // Clear data points on the map
+
+      var locations = JSON.parse(data);
+      for (var i = 0; i < locations.length; i++) {
+        var location = locations[i];
+        var name = location.名称;
+        var latitude = location.纬度;
+        var longitude = location.经度;
+
+        var hospitalIcon = L.divIcon({
+          className: 'hospital-icon',
+          html: '<i class="fas fa-hospital"></i>'
+        });
+
+        var marker = L.marker([latitude, longitude], { icon: hospitalIcon }).addTo(mymap);
+        marker.bindPopup('Name: ' + name);
+      }
+    }
+  });
+});
+
+// Clear data points on the map
+function clearMapData() {
+  mymap.eachLayer(function (layer) {
+    if (layer instanceof L.Marker) {
+      mymap.removeLayer(layer);
+    }
+  });
+}
+
+//-------------------------------------Government Institutions
+// Listen for the click event on subButton1_7
+var container5 = document.getElementById('container5');
+var subButton1_7 = document.getElementById('subButton1_7');
+var isContainerVisible = false;
+
+subButton1_7.addEventListener('click', function() {
+  if (!isContainerVisible) {
+    container5.style.display = 'block';
+    isContainerVisible = true;
+  } else {
+    container5.style.display = 'none';
+    isContainerVisible = false;
+    clearMapData(); // Clear data points on the map
+  }
+});
+
+// Make an AJAX request and draw data points
+var searchButton5 = document.getElementById('searchButton5');
+searchButton5.addEventListener('click', function() {
+  var keyword = document.getElementById('keywordInput5').value;
+
+  $.ajax({
+    url: 'zhenfu.php',
+    type: 'POST',
+    data: { keyword: keyword },
+    success: function(data) {
+      clearMapData();  // Clear data points on the map
+
+      var locations = JSON.parse(data);
+      for (var i = 0; i < locations.length; i++) {
+        var location = locations[i];
+        var name = location.名称;
+        var latitude = location.纬度;
+        var longitude = location.经度;
+
+        var buildingIcon = L.divIcon({
+          className: 'building-icon',
+          html: '<i class="fas fa-building"></i>'
+        });
+
+        var marker = L.marker([latitude, longitude], { icon: buildingIcon }).addTo(mymap);
+        marker.bindPopup('name: ' + name);
+      }
+    }
+  });
+});
+
+// Clear data points on the map
+function clearMapData() {
+  mymap.eachLayer(function(layer) {
+    if (layer instanceof L.Marker) {
+      mymap.removeLayer(layer);
+    }
+  });
+}
+
+//----------------------------Schools
+var container6 = document.getElementById('container6');
+var subButton1_4 = document.getElementById('subButton1_4');
+var isContainerVisible6 = false;
+
+subButton1_4.addEventListener('click', function () {
+  if (!isContainerVisible6) {
+    container6.style.display = 'block';
+    isContainerVisible6 = true;
+  } else {
+    container6.style.display = 'none';
+    isContainerVisible6 = false;
+    clearMapData(); // Clear data points on the map
+  }
+});
+
+// Make an AJAX request and draw data points
+var searchButton6 = document.getElementById('searchButton6');
+searchButton6.addEventListener('click', function () {
+  var selectedSchool = document.getElementById('selectSchool').value;
+  var keyword = document.getElementById('keywordInput6').value;
+
+  var url = '';
+  if (selectedSchool === '小学') {
+    url = 'xiaoxue.php';
+  } else if (selectedSchool === '中学') {
+    url = 'zhongxue.php';
+  } else if (selectedSchool === '大学') {
+    url = 'daxue.php';
+  }
+
+  $.ajax({
+    url: url,
+    type: 'POST',
+    data: { keyword: keyword },
+    success: function (data) {
+      clearMapData(); // Clear data points on the map
+
+      var locations = JSON.parse(data);
+      for (var i = 0; i < locations.length; i++) {
+        var location = locations[i];
+        var name = location.名称;
+        var latitude = location.纬度;
+        var longitude = location.经度;
+
+        // Define the school icon
+        var schoolIcon = L.divIcon({
+          className: 'fas fa-school',
+          iconSize: [32, 32], // Icon size
+          iconAnchor: [16, 32], // Icon anchor position
+          popupAnchor: [0, -32] // Popup anchor position
+        });
+
+        // Create a marker using the school icon
+        var marker = L.marker([latitude, longitude], { icon: schoolIcon }).addTo(mymap);
+        marker.bindPopup('Name: ' + name);
+      }
+    }
+  });
+});
+
+// Clear data points on the map
+function clearMapData() {
+  mymap.eachLayer(function (layer) {
+    if (layer instanceof L.Marker) {
+      mymap.removeLayer(layer);
+    }
+  });
+}
+
+
+//---------------------------Stations
+var container7 = document.getElementById('container7');
+var subButton1_5 = document.getElementById('subButton1_5');
+var isContainerVisible = false;
+
+subButton1_5.addEventListener('click', function () {
+  if (!isContainerVisible) {
+    container7.style.display = 'block';
+    isContainerVisible = true;
+  } else {
+    container7.style.display = 'none';
+    isContainerVisible = false;
+    clearMapData(); // Clear data points on the map
+  }
+});
+
+// Make an AJAX request and draw data points
+var searchButton7 = document.getElementById('searchButton7');
+searchButton7.addEventListener('click', function () {
+  var stationType = document.getElementById('stationType').value;
+  var keyword = document.getElementById('keywordInput7').value;
+
+  var phpFile;
+  if (stationType === '火车') {
+    phpFile = 'huoche.php';
+  } else if (stationType === '高铁') {
+    phpFile = 'gaotie.php';
+  }
+
+  $.ajax({
+    url: phpFile,
+    type: 'POST',
+    data: { keyword: keyword },
+    success: function (data) {
+      clearMapData(); // Clear data points on the map
+
+      var locations = JSON.parse(data);
+      for (var i = 0; i < locations.length; i++) {
+        var location = locations[i];
+        var name = location.名称;
+        var latitude = location.纬度;
+        var longitude = location.经度;
+
+        var markerIcon = L.divIcon({
+          className: 'station-icon',
+          iconSize: [34, 34],
+          html: '<i class="fas fa-train"></i>'
+        });
+
+        var marker = L.marker([latitude, longitude], { icon: markerIcon }).addTo(mymap);
+        marker.bindPopup('Name: ' + name + '<br>Latitude: ' + latitude + '<br>Longitude: ' + longitude);
+      }
+    }
+  });
+});
+
+// Clear data points on the map
+function clearMapData() {
+  mymap.eachLayer(function (layer) {
+    if (layer instanceof L.Marker) {
+      mymap.removeLayer(layer);
+    }
+  });
+}
+
+//-------------------------------------------- Now we start implementing the heatmap functionality
+// Get the button element
+var button = document.getElementById("subButton2_1");
+
+// Add a click event handler
+button.addEventListener("click", function() {
+    toggleHeatLayer(); // Execute the toggle heatmap function
+});
+
+// Toggle heatmap function
+var toggleHeatLayer = function() {
+    if (mymap.hasLayer(heatLayer)) {
+        removeHeatLayer(); // If the layer is already added to the map, remove it
+    } else {
+        addHeatLayer(); // If the layer is not added to the map, add it
+    }
+};
+
+// Add heatmap function
+var addHeatLayer = function() {
+    mymap.addLayer(heatLayer);
+    mymap.setView([heatpoint[0][0], heatpoint[0][1]], 3);
+};
+
+// Remove heatmap function
+var removeHeatLayer = function() {
+    mymap.removeLayer(heatLayer);
+};
+
+// Define global variable
+var heatLayer = L.heatLayer(heatpoint, {
+    radius: 15,
+    maxOpacity: 0.9,
+    minOpacity: 0.6,
+    gradient: {
+        0.1: "#0000ff",
+        0.3: "#3399ff",
+        0.5: "#00ff00",
+        0.6: "#ffff00",
+        0.7: "#ffcc00",
+        0.8: "#ff9900",
+        0.9: "#ff0000"
+    }
+});
+
+// Add heatmap function (repeated, please confirm if it's intentional)
+var addHeatLayer = function() {
+    mymap.addLayer(heatLayer);
+    mymap.setView([heatpoint[0][0], heatpoint[0][1]], 3);
+};
+
+// Remove heatmap function (repeated, please confirm if it's intentional)
+var removeHeatLayer = function() {
+    mymap.removeLayer(heatLayer);
+};
+
+
+// Now we set up the conditional search feature, allowing users to input the maximum and minimum longitude, latitude, earthquake magnitude, and depth.
+// Display these data points on the map, and clicking on a data point will also show information about that point.
+
+$(document).ready(function() {
+  $('#search-btn1').click(addshowModal);
+});
+
+var addshowModal = function() {
+  var modal = document.getElementById("search-modal");
+  var searchBtn = modal.querySelector("#search-btn");
+
+  modal.style.display = "block";
+
+  searchBtn.addEventListener("click", function() {
+    // Create a Marker layer
+    var markerLayer = L.markerClusterGroup().addTo(mymap);
+
+    // Get search criteria
+    var minLng = $('#longitude').val();
+    var maxLng = $('#longitude2').val();
+    var minLat = $('#latitude').val();
+    var maxLat = $('#latitude2').val();
+    var depth = $('#depth').val();
+    var magnitude = $('#magnitude').val();
+
+    // Send a search request to the backend
+    $.ajax({
+      url: 'get_earthquake_data.php',
+      type: 'post',
+      dataType: 'json',
+      data: {
+        minLng: minLng,
+        maxLng: maxLng,
+        minLat: minLat,
+        maxLat: maxLat,
+        depth: depth,
+        magnitude: magnitude,
+      },
+      success: function(data) {
+        var icon = L.icon({
+          iconUrl: 'house-chimney-crack-solid.svg',
+          iconSize: [25, 41],
+          iconAnchor: [12, 41],
+          popupAnchor: [0, -34]
+        });
+
+        var markers = L.geoJSON(data, {
+          pointToLayer: function(feature, latlng) {
+            var marker = L.marker(latlng, { icon: icon });
+            var popupContent = "lon：" + feature.properties.longitude + "<br>lat：" + feature.properties.latitude +
+              "<br>depth：" + feature.properties.depth +
+              "<br>magnitude：" + feature.properties.magnitude +
+              "<br>location：" + feature.properties.location;
+            marker.bindPopup(popupContent);
+            return marker;
+          }
+        });
+
+        markerLayer.clearLayers();
+        markerLayer.addLayer(markers);
+
+        // If the search result is empty, notify the user
+        if (markers.getLayers().length === 0) {
+          alert('No data matching the criteria');
+        }
+      },
+      error: function() {
+        alert('Search failed');
+      }
+    });
+
+    // Close the modal
+    modal.style.display = "none";
+  });
+
+  var closeBtn = modal.querySelector(".close");
+  closeBtn.addEventListener("click", function() {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  });
+}
+
+//-------------------------------------- Spatial Search Pie Chart Drawing
+// We need to draw rectangles by defining the maximum and minimum values of latitude and longitude for the four corners of the rectangle.
+// Then, points within the selected area in the database will be displayed on the map.
+var drawnItems1 = new L.FeatureGroup();
+mymap.addLayer(drawnItems1);
+
+var drawControl1 = new L.Control.Draw({
+  draw: {
+    rectangle: {
+      shapeOptions: {
+        clickable: false
+      }
+    },
+    polyline: false,
+    polygon: false,
+    circle: false,
+    marker: false,
+    circlemarker: false
+  },
+  edit: {
+    featureGroup: drawnItems1
+  }
+});
+
+var button1 = document.getElementById("subButton2_2");
+var chartCanvas1 = document.getElementById("chart");
+var barChartCanvas = document.getElementById("barChart");
+
+var isDrawControlVisible1 = false;
+var markers1 = L.markerClusterGroup();
+
+button1.addEventListener("click", function() {
+  if (isDrawControlVisible1) {
+    mymap.removeControl(drawControl1);
+    chartCanvas1.style.display = "none";
+    barChartCanvas.style.display = "none";
+    markers1.clearLayers();
+    drawnItems1.clearLayers();
+  } else {
+    mymap.addControl(drawControl1);
+    chartCanvas1.style.display = "block";
+    barChartCanvas.style.display = "block";
+  }
+  isDrawControlVisible1 = !isDrawControlVisible1;
+});
+
+mymap.on(L.Draw.Event.CREATED, function(event) {
+  var layer = event.layer;
+  drawnItems1.addLayer(layer);
+
+  var bounds = layer.getBounds();
+  var north = bounds.getNorth();
+  var east = bounds.getEast();
+  var south = bounds.getSouth();
+  var west = bounds.getWest();
+
+  L.Icon.Default.imagePath = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/';
+
+  $.ajax({
+    url: 'data.php',
+    data: {
+      north: north,
+      east: east,
+      south: south,
+      west: west
+    },
+    type: 'POST',
+    dataType: 'json',
+    success: function(data) {
+      var magnitudes = data.map(function(point) {
+        return point.magnitude;
+      });
+
+      drawPieChart(magnitudes, chartCanvas1);
+      drawBarChart(data, barChartCanvas);
+
+      markers1.clearLayers();
+
+      for (var i = 0; i < data.length; i++) {
+        var lat = data[i].latitude;
+        var lng = data[i].longitude;
+        var time = data[i].time;
+        var depth = data[i].depth;
+        var magnitude = data[i].magnitude;
+        var location = data[i].location;
+
+        var icon = L.icon({
+          iconUrl: 'house-chimney-crack-solid.svg',
+          iconSize: [25, 41],
+          iconAnchor: [12, 41],
+          popupAnchor: [0, -34]
+        });
+
+        var popupContent = "<div class='custom-popup'>" +
+          "<div><b>location:</b> " + location + "</div>" +
+          "<div><b>time:</b> " + time + "</div>" +
+          "<div><b>depth:</b> " + depth + "</div>" +
+          "<div><b>magnitude:</b> " + magnitude + "</div>" +
+          "<div><b>lat:</b> " + lat + "</div>" +
+          "<div><b>lon:</b> " + lng + "</div>" +
+          "</div>";
+
+        var marker = L.marker([lat, lng], { icon: icon }).bindPopup(popupContent);
+
+        markers1.addLayer(marker);
+      }
+
+      mymap.addLayer(markers1);
+    }
+  });
+});
+
+function drawPieChart(magnitudes, chartCanvas1) {
+  var ctx = chartCanvas1.getContext("2d");
+
+  var counts = {};
+  magnitudes.forEach(function(magnitude) {
+    counts[magnitude] = (counts[magnitude] || 0) + 1;
+  });
+
+  var labels = Object.keys(counts);
+  var data = Object.values(counts);
+
+  var colors = {
+    "1": "rgba(255, 0, 0, 0.7)",
+    "2": "rgba(255, 165, 0, 0.7)",
+    "3": "rgba(255, 255, 0, 0.7)",
+    "4": "rgba(0, 128, 0, 0.7)",
+    "5": "rgba(0, 0, 255, 0.7)",
+    "6": "rgba(75, 0, 130, 0.7)",
+    "7": "rgba(238, 130, 238, 0.7)"
+  };
+
+  var total = data.reduce(function(sum, value) {
+    return sum + value;
+  }, 0);
+
+  var percentages = data.map(function(value) {
+    return ((value / total) * 100).toFixed(2) + "%";
+  });
+
+  new Chart(ctx, {
+    type: 'pie',
+    data: {
+      labels: labels.map(function(label, index) {
+        return label + " (" + percentages[index] + ")";
+      }),
+      datasets: [{
+        data: data,
+        backgroundColor: labels.map(function(magnitude) {
+          return colors[magnitude];
+        })
+      }]
+    },
+    options: {
+  responsive: true,
+  maintainAspectRatio: false,
+  plugins: {
+    title: {
+      display: true,
+      text: 'Magnitude distribution',
+      font: {
+        size: 20 // Adjust the font size as needed
+      }
+      
+    }
+  }
+}
+
+  });
+}
+
+function drawBarChart(data, chartCanvas) {
+  var ctx = chartCanvas.getContext("2d");
+
+  var counts = {};
+  var legendLabels = [];
+  data.forEach(function(point) {
+    var year = point.time.split("-")[0];
+    counts[year] = (counts[year] || 0) + 1;
+    if (!legendLabels.includes(year)) {
+      legendLabels.push(year);
+    }
+  });
+
+  var labels = Object.keys(counts);
+  var values = Object.values(counts);
+
+  var datasets = [{
+    data: values,
+    backgroundColor: labels.map(function(label) {
+      var color = getRandomColor();
+      return color;
+    })
+  }];
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: labels,
+      datasets: datasets
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        y: {
+          beginAtZero: true,
+          stepSize: 1,
+          title: {
+            display: true,
+            text: 'Number of earthquakes'
+          }
+        },
+        x: {
+          title: {
+            display: true,
+            text: 'year'
+          }
+        }
+      },
+      plugins: {
+        legend: {
+          display: true,
+          labels: {
+            generateLabels: function(context) {
+              var labels = legendLabels.map(function(label, index) {
+                var color = getRandomColor();
+                return {
+                  text: label,
+                  fillStyle: color,
+                  strokeStyle: color,
+                  lineWidth: 1,
+                  hidden: false,
+                  index: index
+                };
+              });
+              return labels;
+            }
+          }
+        }
+      }
+    }
+  });
+}
+
+function getRandomColor() {
+  var letters = "0123456789ABCDEF";
+  var color = "#";
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+  </script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

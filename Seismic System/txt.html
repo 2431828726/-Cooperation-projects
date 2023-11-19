@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    li {
+      list-style: none;
+    }
+    
+    @font-face {
+      font-family: electronicFont;
+      src: url(DS-DIGIT.TTF);
+    }
+    
+    body {
+      font-family: 'Times New Roman', serif;
+      margin: 0;
+      padding: 0;
+      /* 背景图定位/背景图尺寸 cover完全铺满容器 contain完整显示在容器内 */
+      background: url(bg.jpg) no-repeat #000;
+      background-size: cover;
+      /* 行高是字体的1.15倍 */
+      line-height: 1.15;
+    }
+    
+    header {
+      position: relative;
+      height: 1.55rem;
+      background: url(head_bg.png) no-repeat top center;
+      background-size: 100% 100%;
+    }
+    
+    header h1 {
+      font-weight: bold;
+      color: #0d568d;
+      text-align: center;
+      line-height: 1rem;
+      font-family: "LiSu", cursive;
+      font-size:40px; /* 修改为您想要的字体大小 */
+      margin-top: -0.85rem; /* 调整标题的上边距 */
+    }
+    
+    header .showTime {
+      position: absolute;
+      top: 0;
+      right: 0.375rem;
+      line-height: 0.9375rem;
+      font-size: 0.30rem;
+      color: #0d568d;
+      font-family: 'Times New Roman', serif;
+      font-weight: bold;
+    }
+    
+    .buttons {
+      display: flex;
+      justify-content: flex-start;
+    }
+    
+    .button {
+      background-color: transparent;
+      font-family: 'Times New Roman', serif;
+      text-decoration: none;
+      color: #0d568d;
+      font-weight: bold;
+      border: none;
+      padding: 0.3rem 0.3rem; /* 调整按钮的内边距 */
+      font-size: 0.2rem;
+      cursor: pointer;
+      margin-right: 0.375rem; /* 调整按钮之间的右侧间距 */
+    }
+    
+    /* 最后一个按钮的右侧间距设为0，避免额外的空白间距 */
+    .button:last-child {
+      margin-right: 0;
+    }
+
+
+
+    .form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: #4ea2f7;
+  position: fixed; /* 修改为fixed */
+ 
+  height: 700px;
+  width: 500px;
+  top: 55%; /* 调整垂直居中位置 */
+  left: 50%; /* 调整水平居中位置 */
+  transform: translate(-50%, -50%); /* 通过transform实现居中 */
+  border: 6px solid #1144bb; /* 添加边框样式 */
+  border-radius: 14px; /* 调整外框的弯曲程度 */
+  font-family: 'Times New Roman', serif;
+}
+
+
+.form-field {
+      display: flex;
+      margin-bottom: 0.3rem;
+      background-color: #4ea2f7;
+      color: #000;
+    }
+
+    .form-field label {
+      margin-right: 0.05rem;
+      background-color: #4ea2f7;
+      color: #000;
+    }
+
+    .form-field select {
+      padding: 0.02rem;
+      background-color: #4ea2f7;
+      color: #000;
+    }
+
+    .form-field input[type="text"] {
+      padding: 0.02rem;
+      background-color: #4ea2f7;
+      color: #000;
+    }
+    .form-title {
+  margin-top: -80px; /* 调整与容器顶部的距离 */
+  font-family: "隶书", cursive;
+  font-size: 0.5rem;
+color: #100705;
+
+}
+/* 添加提交按钮样式 */
+.form-submit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.1rem;
+  margin-left: 0.5rem;
+}
+
+.form-submit-button button {
+  background-color: #507bbd;
+  color: #1d0b0b;
+  padding: 0.05rem 0.1rem;
+  font-size: 25px;
+  border: none;
+  border-radius: 5px;
+ 
+  cursor: pointer;
+}
+
+.form-submit-button button:hover {
+  background-color: #0a446d;
+}
+
+.form-submit-button button:focus {
+  outline: none;
+}
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="buttons">
+      <a href="index.html" class="button">Return to Reporting Main Screen</a>
+    </div>
+    <h1>Disaster Situation Reporting Form</h1>
+    <div class="showTime"></div>
+    <script>
+
+
+function getCurrentLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        function (position) {
+          const latitude = position.coords.latitude;
+          const longitude = position.coords.longitude;
+
+          console.log("Current Location:", latitude, longitude);
+
+   
+          const location = latitude + "," + longitude;
+          document.getElementById("currentLocation").value = location;
+        },
+        function (error) {
+          console.log("Failed to Retrieve Location:", error);
+        }
+      );
+    } else {
+      console.log("The browser does not support geolocation");
+    }
+  }
+
+  function enableManualInput() {
+    document.getElementById("currentLocation").readOnly = false;
+    document.getElementById("currentLocation").value = "";
+  }
+
+       function getCurrentTime() {
+        const currentTime = new Date();
+        const year = currentTime.getFullYear();
+        const month = currentTime.getMonth() + 1; 
+        const day = currentTime.getDate();
+       
+
+        console.log("Current Time:", year, month, day);
+
+    
+        const datetime = year + "-" + month + "-" + day ;
+        document.getElementById("currentDatetime").value = datetime;
+      }
+   
+  
+    </script>
+  </header>
+
+
+  
+  <div class="form-container">
+    <h2 class="form-title">Reporting Form</h2>
+    <form method="post" action="shenqing.php">
+    <form>
+      <div class="form-field">
+        <label for="性别">Gender:</label>
+        <select id="性别" name="性别">
+          <option value="男">Male</option>
+          <option value="女">Female</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="感觉">Feeling:</label>
+        <select id="感觉" name="感觉">
+            <option value="正常">Normal</option>
+            <option value="惊慌">Panicked</option>
+            <option value="站不稳">Unsteady</option>
+        </select>
+    </div>
+    <div class="form-field">
+        <label for="急需物品">Urgently Needed Items:</label>
+        <select id="急需物品" name="急需物品">
+            <option value="药物">Medicine</option>
+            <option value="食物">Food</option>
+            <option value="水">Water</option>
+            <option value="衣物">Clothing</option>
+            <option value="帐篷">Tent</option>
+            <option value="救援器械">Rescue Equipment</option>
+            <option value="都要">All</option>
+        </select>
+    </div>
+    <div class="form-field">
+        <label for="人员死亡">Fatalities:</label>
+        <select id="人员死亡" name="人员死亡">
+            <option value="1-3">1-3</option>
+            <option value="4-9">4-9</option>
+            <option value="10以上">10</option>
+        </select>
+    </div>
+    <div class="form-field">
+        <label for="人员重伤">Severe Injuries:</label>
+        <select id="人员重伤" name="人员重伤">
+            <option value="1-3">1-3</option>
+            <option value="4-9">4-9</option>
+            <option value="10以上">10</option>
+        </select>
+    </div>
+    <div class="form-field">
+        <label for="人员失踪">Missing Persons:</label>
+        <select id="人员失踪" name="人员失踪">
+            <option value="1-3">1-3</option>
+            <option value="4-9">4-9</option>
+            <option value="10以上">10</option>
+        </select>
+    </div>
+    <div class="form-field">
+        <label for="民房受损">Residential Building Damage:</label>
+        <select id="民房受损" name="民房受损">
+            <option value="1-3">1-3</option>
+            <option value="4-9">4-9</option>
+            <option value="10以上">10</option>
+        </select>
+    </div>
+    <div class="form-field">
+        <label for="学校受损">School Damage:</label>
+        <select id="学校受损" name="学校受损">
+            <option value="1-3">1-3</option>
+            <option value="4-9">4-9</option>
+            <option value="10以上">10</option>
+        </select>
+    </div>
+    <div class="form-field">
+        <label for="医院受损">Hospital Damage:</label>
+        <select id="医院受损" name="医院受损">
+            <option value="1-3">1-3</option>
+            <option value="4-9">4-9</option>
+            <option value="10以上">10以上</option>
+        </select>
+    </div>
+    <div class="form-field">
+        <label for="其他建筑受损">Other Structures Damage:</label>
+        <select id="其他建筑受损" name="其他建筑受损">
+            <option value="1-3">1-3</option>
+            <option value="4-9">4-9</option>
+            <option value="10以上">10以上</option>
+        </select>
+    </div>
+    <div class="form-field">
+        <label for="地表情况">Surface Conditions:</label>
+        <select id="地表情况" name="地表情况">
+            <option value="小裂缝">Small Crack</option>
+            <option value="中裂缝">Medium Crack</option>
+            <option value="大裂缝">Large Crack</option>
+        </select>
+    </div>
+    <div class="form-field">
+        <label for="其他灾害">Other Disasters:</label>
+        <select id="其他灾害" name="其他灾害">
+            <option value="无">None</option>
+            <option value="滑坡">Landslide</option>
+            <option value="河堤塌陷">Riverbank Collapse</option>
+        </select>
+    </div>
+    
+
+
+      <div class="form-field">
+        <label for="currentDatetime">Reporting Time:</label>
+        <input type="text" id="currentDatetime" name="currentDatetime" readonly onclick="getCurrentTime()">
+      </div>
+      
+      <div class="form-field">
+        <label for="currentLocation">Current Location:</label>
+        <input type="text" id="currentLocation" name="currentLocation" readonly onclick="getCurrentLocation()" onfocus="enableManualInput()">
+      </div>
+      <div id="submitContainer" class="form-submit-button">
+        <button type="submit">Submit</button>
+      </div>
+ 
+
+    </form>
+  </div>
+  <script src="js/flexible.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/echarts.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/china.js"></script>
+  <script src="js/myMap.js"></script>
+</body>
+</html>

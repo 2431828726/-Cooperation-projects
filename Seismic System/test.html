@@ -1,0 +1,2262 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8" />
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==" crossorigin="" />
+   <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js" integrity="sha512-WXoSHqw/t26DszhdMhOXOkI7qCiv5QWXhH9R7CgvgZMHz1ImlkVQ3uNsiQKu5wwbbxtPzFXd1hK4tzno2VqhpA==" crossorigin=""></script>
+   <link rel="stylesheet" href="css/screen.css" />
+   <link rel="stylesheet" href="css/MarkerCluster.css" />
+   <link rel="stylesheet" href="css/MarkerCluster.Default.css" />
+   <script src="js/leaflet.markercluster-src.js"></script>
+   <script src="js/realworld.388.js"></script>
+   <script src="js/realworld.388.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css" />
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.3/d3.min.js"></script>
+   <script src= "./js/leaflet-heat.js"></script>
+<!-- 热力图json -->
+<script type="text/javascript" src="./json/heatpoint.js"></script>
+<!-- 断层json -->
+ <script src="fault.js"></script>
+ <script src="sichuan.js"></script>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css" />
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+ 
+
+</head>
+  <style>
+    /* 设置全局样式 */
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      height: 100%; /* 设置具体的高度值，适合显示地图 */
+      width: 100%;
+    }
+  
+    /* 标题栏样式 */
+    .title-bar {
+      background-color: #333;
+      color: #110b0b;
+      padding: 1px;
+      text-align: center;
+      font-family: "FangSong", "仿宋", "SimSun", sans-serif;
+      font-weight: bold;
+      font-size: 20px; /* 调整字号大小 */
+      background-image: linear-gradient(to right, #138ae4 0%, #97bedf 50%, #2690e0 100%);
+      border: 7px solid #096dba; /* 添加边框样式 */
+    }
+
+    /* 左分栏样式 */
+    .left-column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .middle-column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      height: 100%; /* 添加高度设置 */
+      position: absolute;
+     left: 420px;
+
+    }
+
+    /* 右分栏样式 */
+    .right-column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      left: 760px;
+    }
+
+    /* 左上栏样式 */
+    .left-top {
+      background-color: #81bfd7;
+      width: 480px;
+      height: 40px;
+      border: 4px solid #096dba;
+      font-size: 10px;
+      text-align: center;
+     
+    }
+
+    /* 左中栏样式 */
+    .left-middle {
+      background-color: #81bfd7;
+      width: 406px;
+      height: 771px;
+      border: 7px solid #096dba;
+  
+    }
+
+    /* 中上栏样式 */
+    .middle-top {
+  background-color: #2f0707;
+  width: 1031px;
+  height: 60px;
+ 
+  border: 7px solid #096dba;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-buttons {
+  display: flex;
+  justify-content: space-between;
+  z-index: 999;
+}
+
+.main-button {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+}
+
+.main-button i {
+  margin-right: 5px;
+}
+
+.sub-buttons {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  background-color: #2f0707;
+  padding: 14px;
+  width: 100px;
+  align-items: flex-start;
+}
+
+.main-button:hover .sub-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-buttons button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  margin-top: 5px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.sub-buttons button i {
+  margin-right: 6px;
+}
+
+.sub-buttons button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sub-main-button {
+  display: flex;
+  align-items: center;
+  padding: 13px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: -22px;
+  position: relative;
+  text-decoration: none;
+}
+
+.sub-main-button i {
+  margin-right: 1px;
+}
+
+
+    /* 中中栏样式 */
+    .middle-middle {
+      background-color: #fdf6fb;
+      height: 670px; /* 设置具体的高度值，适合显示地图 */
+      width: 1031px;
+      border: 7px solid #096dba; /* 添加边框样式 */
+    }
+
+    /* 中下栏样式 */
+    .middle-bottom {
+      background-color: #2f0707;
+      height: 68px;
+      width: 1031px;
+      border: 7px solid #096dba; /* 添加边框样式 */
+      
+
+    }
+    .announcement {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 8px;
+      color: rgb(208, 147, 49);
+      font-size: 18px;
+    }
+
+    .announcement i {
+      margin-right: 5px;
+    }
+
+    /* 右下栏样式 */
+    .right-bottom {
+      background-color: #8bc8ee;
+      width: 420px;
+      height:826px;
+      border: 7px solid #096dba; /* 添加边框样式 */
+    
+    }
+/* 设置容器高度 */
+.table-container {
+    height: 762px;
+    overflow-y: auto;
+  }
+
+  .earthquake-table {
+  width: 70%;
+  border-collapse: collapse;
+}
+
+.earthquake-table th,
+.earthquake-table td {
+  padding: 14px;
+  text-align: left;
+  border: 2px solid #0a0b0c;
+  border-left: none;
+
+  font-size: 3px;
+}
+
+
+  .table-header {
+    font-size: 18px; /* 调整表头字体大小，根据需要进行修改 */
+    font-weight: bold; /* 加粗表头字体 */
+    padding: 4px; /* 调整表头内边距 */
+    text-align: center;
+    
+
+  }
+
+
+  .search-modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 12%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  max-width: 90%;
+  height: auto;
+
+  border-radius: 30px;
+  border: 7px solid #4CAF50;
+  overflow: hidden;
+
+}
+
+.search-modal-content {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.search-input {
+  margin: 10px 0;
+}
+
+.search-input label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.search-input input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #999;
+  font-size: 16px;
+  background-color: #f7f7f7;
+  color: #333;
+  outline: none;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.search-input input[type="number"]:focus {
+  background-color: #ffffff;
+  border-color: #18a0fb;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+#search-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  background-color: #4CAF50;
+  color: #080908;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+#search-btn:hover {
+  background-color: #0d8de1;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #900b2f;
+  cursor: pointer;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.close:hover {
+  color: #333;
+}
+
+
+
+#chart-container {
+      position: absolute;
+      z-index: 999999;
+      top: 200px;
+      left: 10px;
+      width: 300px;
+      height: 350px;
+    }
+
+
+  .form-container {
+    border: 7px solid #4CAF50;
+  padding: 40px;
+  max-width: 320px;
+  margin: 0 auto;
+  top: 400px;
+      left: 60px;
+      position: absolute;
+      z-index: 999999;
+      
+}
+   
+    input[type="text"],
+select {
+  display: block;
+  margin-bottom: 10px;
+  width: 200px;
+  padding: 5px;
+}
+
+.button-style {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.button-style:hover {
+  background-color: #45a049;
+}
+
+#latitude1::placeholder,
+#longitude1::placeholder,
+#magnitude1::placeholder,
+#distance1::placeholder {
+  color: #888;
+}
+
+#region {
+  width: 214px;
+}
+  
+.close1 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #900b2f;
+  cursor: pointer;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.close1:hover {
+  color: #333;
+}
+
+
+#clearButton1 {
+  background-color: #f44336;
+  color: #1c1010;
+  border: none;
+  padding: 10px 20px;
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 9999999999;
+  position: relative;
+ margin-left: 45%;
+ border: 2px solid #131513;
+}
+
+#clearButton1:hover {
+  background-color: #d32f2f;
+}
+
+#clearButton2 {
+  background-color: #f44336;
+  color: #1c1010;
+  border: none;
+  padding: 10px 20px;
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 9999999999;
+  position: relative;
+ margin-left: 45%;
+ border: 2px solid #131513;
+}
+
+#clearButton2:hover {
+  background-color: #d32f2f;
+}
+#clearButton3 {
+  background-color: #f44336;
+  color: #1c1010;
+  border: none;
+  padding: 10px 20px;
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 9999999999;
+  position: relative;
+ margin-left: 45%;
+ border: 2px solid #131513;
+}
+
+#clearButton3:hover {
+  
+  background-color: #d32f2f;
+}
+
+
+#container4 {
+  font-size: 26px; /* 设置为所需的字体大小 */
+  color: #4CAF50;
+  border: none;
+  top: 50%;
+  left: 12%;
+  transform: translate(-50%, -50%);
+  width: 220px;
+  height: 260px;
+  cursor: pointer;
+  z-index: 9999999999;
+  position: absolute;
+  border: 7px solid #4CAF50;
+  display: none;
+  padding: 20px;
+  text-align: center;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#container4 input[type="text"] {
+  margin-bottom: 60px;
+}
+
+#container4 button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+
+
+#container5 {
+  font-size: 26px; /* 设置为所需的字体大小 */
+  color: #4CAF50;
+  border: none;
+  top: 50%;
+  left: 12%;
+  transform: translate(-50%, -50%);
+  width: 220px;
+  height: 260px;
+  cursor: pointer;
+  z-index: 9999999999;
+  position: absolute;
+  border: 7px solid #4CAF50;
+  display: none;
+  padding: 20px;
+  text-align: center;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#container5 input[type="text"] {
+  margin-bottom: 60px;
+}
+
+#container5 button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+#container6 {
+  font-size: 26px; /* 设置为所需的字体大小 */
+  color: #4CAF50;
+  border: none;
+  top: 50%;
+  left: 12%;
+  transform: translate(-50%, -50%);
+  width: 220px;
+  height: 260px;
+  cursor: pointer;
+  z-index: 9999999999;
+  position: absolute;
+  border: 7px solid #4CAF50;
+  display: none;
+  padding: 20px;
+  text-align: center;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px; /* 设置为所需的间距值 */
+}
+
+#container6 input[type="text"] {
+  margin-bottom: 10px; /* 设置为所需的间距值 */
+  top: 40%;
+}
+#container6 select {
+  width: 200px;
+  height: 26px;
+  margin-bottom: 10px;
+  padding: 0;
+  border: none;
+  
+}
+
+#container6 button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+
+#container7 {
+  font-size: 26px; /* 设置为所需的字体大小 */
+  color: #4CAF50;
+  border: none;
+  top: 50%;
+  left: 12%;
+  transform: translate(-50%, -50%);
+  width: 220px;
+  height: 260px;
+  cursor: pointer;
+  z-index: 9999999999;
+  position: absolute;
+  border: 7px solid #4CAF50;
+  display: none;
+  padding: 20px;
+  text-align: center;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px; /* 设置为所需的间距值 */
+}
+
+#container7 input[type="text"] {
+  margin-bottom: 10px; /* 设置为所需的间距值 */
+  top: 40%;
+}
+#container7 select {
+  width: 200px;
+  height: 26px;
+  margin-bottom: 10px;
+  padding: 0;
+  border: none;
+  
+}
+
+#container7 button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.hospital-container {
+  border: 7px solid #096dba; 
+  
+  color: #000;
+  padding: 40px;
+  width: 250px;
+  height: 600px;
+  margin: 0 auto;
+  top: 210px;
+  left: 50px;
+  position: absolute;
+  z-index: 999999;
+  overflow-y: scroll; /* 添加垂直滚动条 */
+  display: none;
+}
+
+.close2-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #900b2f;
+  cursor: pointer;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  z-index: 999999;
+}
+
+.close2-btn:hover {
+  color: #333;
+  z-index: 999999;
+}
+
+
+
+
+  </style>
+</head>
+</head>
+<body>
+  <header class="title-bar">
+    <h1>震后模拟与灾情速报系统</h1>
+  </header>
+  <div class="container">
+    <div class="left-column">
+      <div class="top-section left-top">
+        <h1>功能响应</h1>
+      </div>
+      <div class="middle-section left-middle">
+        <div class="left-middle"></div>
+        <div id="hospitalContainer" class="hospital-container">
+          <span class="close2-btn" onclick="closeContainer()">&times;</span>
+          <!-- 医院数据的内容 -->
+        </div>
+        
+        
+        
+        
+
+        <div id="container4">
+          <p>医院搜索</p>
+          <input type="text" id="keywordInput4" placeholder="请输入医院名称关键词">
+          <button id="searchButton4">确定</button>
+         
+          
+        </div>
+        <div id="container5">
+          <p>政府机构搜索</p>
+          <input type="text" id="keywordInput5" placeholder="请输入机构名称关键词">
+          <button id="searchButton5">确定</button>
+         
+          
+        </div>
+
+        <div id="container6" style="display: none;">
+          <p>学校搜索</p>
+          <select id="selectSchool">
+            <option value="小学">小学</option>
+            <option value="中学">中学</option>
+            <option value="大学">大学</option>
+          </select>
+          <input type="text" id="keywordInput6" placeholder="请输入学校关键词">
+          <button id="searchButton6">确定</button>
+        </div>
+
+        <div id="container7" style="display: none;">
+          <p>车站搜索</p>
+          <select id="stationType">
+            <option value="火车">火车</option>
+            <option value="高铁">高铁</option>
+            
+          </select>
+          <input type="text" id="keywordInput7" placeholder="请输入站点关键词">
+          <button id="searchButton7">确定</button>
+        </div>
+        
+        
+        <div id="search-modal" class="search-modal">
+          <div class="search-modal-content">
+            <span class="close">&times;</span>
+            <div class="search-form">
+              <div class="search-input">
+                <label for="longitude">经度范围：</label>
+                <input type="number" id="longitude" min="-180" max="180"placeholder="最小经度">
+                <input type="number" id="longitude2" min="-180" max="180"placeholder="最大经度">
+              </div>
+              <div class="search-input">
+                <label for="latitude">纬度范围：</label>
+                <input type="number" id="latitude" min="-90" max="90"placeholder="最小纬度">
+                <input type="number" id="latitude2" min="-90" max="90"placeholder="最小纬度">
+              </div>
+              <div class="search-input">
+                <label for="depth">地震深度：</label>
+                <input type="number" id="depth"placeholder="km">
+              </div>
+              <div class="search-input">
+                <label for="magnitude">震级：</label>
+                <input type="number" id="magnitude"placeholder="M">
+              </div>
+              <button id="search-btn">搜索</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+
+
+    <div class="middle-column">
+      <div class="top-section middle-top">
+        
+        <div class="middle-top">
+          <div class="main-buttons">
+            <div class="main-button" id="button1">
+              <i class="fas fa-search"></i>
+              <span>数据查询</span>
+    <div class="sub-buttons">
+        <button id="search-btn1"><i class="fas fa-house-damage"></i> 历史地震</button>
+        <button id="subButton1_2"><i class="fas fa-globe"></i> 断层</button>
+        <button id="subButton1_4"><i class="fas fa-school"></i> 学校</button>
+        <button id="subButton1_5"><i class="fas fa-train"></i>站点</button>
+        <button id="subButton1_3"><i class="fas fa-hospital"></i> 医院</button>
+  
+        <button id="subButton1_6"><i class="fas fa-landmark"></i> 古址</button>
+        <button id="subButton1_7"><i class="fas fa-building"></i> 政府机构</button>
+
+    
+    </div>
+  </div>
+  <div class="main-button" id="button2">
+    <i class="fas fa-chart-bar"></i>
+    <span>数据可视化</span>
+    <div class="sub-buttons">
+      <button id="subButton2_1"><i class="fas fa-fire"></i> 热力图</button>
+      <button id="subButton2_2"><i class="fas fa-chart-bar"></i> 图表统计</button>
+     
+    </div>
+  </div>
+  <div class="main-button" id="button3">
+    <i class="fas fa-star"></i>
+    <span>应急灾害模拟</span>
+    <div class="sub-buttons">
+      <button id="subButton3_1" onclick="toggleInputBox();"><i class="fas fa-chart-pie"></i> 烈度图</button>
+   
+              </div>
+            </div>
+
+            <div class="main-button" id="button4">
+              <a href="index.html" class="sub-main-button">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span>实时灾情填报</span>
+              </a>
+            </div>
+            
+            <div class="main-button" id="button5">
+              <a href="科普.html" class="sub-main-button">
+                <i class="fas fa-book-open"></i>
+                <span>科学外展</span>
+              </a>
+            </div>
+            
+            
+            
+            
+            
+          </div>
+          
+        </div>
+      </div>
+      <div class="middle-section middle-middle" id="map-container">
+        <button id="clearButton1" style="display:none;">清除标记</button>
+        <button id="clearButton2" style="display:none;">清除标记</button>
+        <button id="clearButton3" style="display:none;">清除标记</button>
+        <h2></h2>
+      </div>
+        <div class="middle-bottom">
+          <div class="announcement">
+            <i class="fas fa-volume-up"></i>
+            <p class="announcement-text">欢迎登录四川省地震灾害应急反应系统</p>
+          </div>
+      </div>
+    </div>
+
+
+    
+
+    <div class="bottom-section right-bottom">
+      <h2 class="table-header">全球实时地震数据</h2>
+      <div class="table-container">
+        <table class="earthquake-table">
+          <thead>
+            <tr>
+              <th>序号</th>
+              <th>震级</th>
+              <th>深度</th>
+              <th>位置</th>
+              <th>时间</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 这里插入实时地震数据的行 -->
+          </tbody>
+        </table>
+      </div>
+
+      
+    </div>
+
+    
+  </div>
+  <div id="chart-container">
+    <canvas id="chart"></canvas>
+    <canvas id="barChart"></canvas>
+
+  </div>
+
+
+  <div id="inputBox" style="display: none;">
+
+  <div class="form-container">
+    <span class="close1" onclick="closeForm()">&times;</span>
+    <!-- 表单内容 -->
+    <input type="text" id="latitude1" placeholder="Latitude" />
+    <input type="text" id="longitude1" placeholder="Longitude" />
+    <input type="text" id="magnitude1" placeholder="Magnitude" />
+    <input type="text" id="distance1" placeholder="Distance (km)" />
+  
+ 
+    
+    <button onclick="calculateDistanceB(); toggleLegend();" class="button-style">显示</button>
+    <button onclick="clearDistanceB()" class="button-style">清除</button>
+    <button onclick="generateReport()" class="button-style">报告</button>
+  </div>
+  
+
+  <div id="legend" style="display: none;"></div>
+
+
+ 
+  <script>
+
+//------------绘制底图
+var mymap = L.map('map-container').setView([30, 104],4);
+mymap.zoomControl.setPosition('bottomright'); 
+
+//-----------加入秘钥
+var url = "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiMjQzMTgyODcyNiIsImEiOiJjbGZ4aTF4bzcwYTRsM2hwYTZkN284bjR2In0.-e980fB7ZW1E07eJxTu1GA"
+L.tileLayer( url , {
+maxZoom: 30,
+minZoom:2,
+id: 'mapbox/streets-v11',
+tileSize: 512,
+zoomOffset: -1
+}).addTo(mymap);
+
+
+
+
+
+//-----------------------实时地震展示
+var url1 = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
+
+// d3抓取实时数据
+d3.json(url1, function(data) {
+    createmap(data.features);
+});
+
+var blinkingLayers = []; // 存储需要闪烁的地震事件图层
+
+function createmap(features) {
+  // 循环遍历数组，并为坐标和颜色创建一个变量
+  for (var i = 0; i < features.length; i++) {
+    var location = [features[i].geometry.coordinates[1], features[i].geometry.coordinates[0]];
+
+    // 基于地震深度的颜色条件设置范围
+    var color = "";
+    if (features[i].geometry.coordinates[2] > 90) {
+      color = "#ff5f65";
+    }
+    else if (features[i].geometry.coordinates[2] >= 70) {
+      color = "#fca35d";
+    }
+    else if (features[i].geometry.coordinates[2] >= 50) {
+      color = "#fdb72a";
+    }
+    else if (features[i].geometry.coordinates[2] >= 30) {
+      color = "#f7db11";
+    }
+    else if (features[i].geometry.coordinates[2] >= 10) {
+      color = "#dcf400";
+    }
+    else {
+      color = "#a3f600";
+    }
+
+    // 将地震设置为圆形加载到地图
+    var layerdata = L.circle(location, {
+      fillOpacity: 0.85,
+      color: "black",
+      weight: 0.5,
+      fillColor: color,
+      // 根据地震震级调整半径
+      radius: features[i].properties.mag * 7500
+      // 包括提供地震时间和地点信息的弹出窗口
+    }).bindPopup("<h3>"  + features[i].properties.mag +"</h3><hr><p>"  + features[i].properties.place + "</h3><hr><p>" + new Date(features[i].properties.time)+ "</p>").addTo(mymap);
+
+    // 判断地震事件是否在一天之内，并设置闪烁状态
+    var currentTime = new Date();
+    var earthquakeTime = new Date(features[i].properties.time);
+    var timeDifference = currentTime - earthquakeTime;
+    var isWithin24Hours = timeDifference <= 24 * 60 * 60 * 1000;
+
+    // 如果地震事件在一天之内，则将其添加到闪烁图层列表中
+    if (isWithin24Hours) {
+      blinkingLayers.push(layerdata);
+    }
+  }
+
+  // 设置闪烁效果
+  setInterval(function() {
+    blinkingLayers.forEach(function(layer) {
+      layer.setStyle({fillOpacity: layer.options.fillOpacity === 0.85 ? .2 : 0.85});
+    });
+  }, 1000); // 闪烁间隔为1秒（1000毫秒）
+}
+
+
+
+
+
+//-----------------------实时地震表格建立
+// 使用fetch函数获取USGS地震数据
+fetch('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson')
+  .then(response => response.json())
+  .then(data1 => {
+    const earthquakeData = data1.features.slice(0, 1000); // 获取最近20条地震数据
+
+    // 获取表格的tbody元素
+    const tbody = document.querySelector('.earthquake-table tbody');
+
+    // 遍历地震数据，创建表格行并插入数据
+    earthquakeData.forEach((earthquake, index) => {
+      const row = document.createElement('tr');
+
+      const magnitude = earthquake.properties.mag.toFixed(2); // 保留两位小数的震级
+      const depth = earthquake.geometry.coordinates[2].toFixed(2); // 保留两位小数的深度
+
+      row.innerHTML = `
+        <td>${index + 1}</td>
+        <td>${magnitude}</td>
+        <td>${depth}</td>
+        <td>${earthquake.properties.place}</td>
+        <td>${new Date(earthquake.properties.time).toLocaleString()}</td> <!-- 发生时间列 -->
+      `;
+      tbody.appendChild(row);
+    });
+  })
+  .catch(error => {
+    console.log('An error occurred while fetching earthquake data1:', error);
+  });
+
+
+//-----------------------地震播报最近一小时内的地震预报
+// 获取播放地震信息的元素
+const announcementText = document.querySelector('.announcement-text');
+
+// 播放地震信息
+function playEarthquakeAnnouncement() {
+  // 使用fetch函数获取USGS地震数据
+  fetch('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson')
+    .then(response => response.json())
+    .then(data1 => {
+      const earthquakeData = data1.features;
+
+      if (earthquakeData.length > 0) {
+        // 获取最新一条地震数据
+        const latestEarthquake = earthquakeData[0];
+        const magnitude = latestEarthquake.properties.mag;
+        const location = latestEarthquake.properties.place;
+        const timestamp = latestEarthquake.properties.time;
+
+        // 设置播放的地震信息文本
+        announcementText.textContent = `当前发生的地震：${location}，震级${magnitude.toFixed(1)}，发生时间${new Date(timestamp).toLocaleString()}`;
+      } else {
+        // 没有最新地震数据时显示默认信息
+        announcementText.textContent = '欢迎登录震后模拟与灾情速报系统';
+      }
+    })
+    .catch(error => {
+      console.log('An error occurred while fetching earthquake data1:', error);
+    });
+}
+
+// 每隔一段时间播放地震信息
+setInterval(playEarthquakeAnnouncement, 1000); // 每隔5秒播放一次地震信息
+
+
+
+
+//-----------------------------------加载断层数据
+//断层数据选自中国地震网的shp矢量数据通过https://mapshaper.org/处理转为json数据.addTo(mymap);
+
+var layerline = L.geoJson(myLines,{ 
+  color: "black",
+  weight: "2",
+  opacity: "0.7",
+  onEachFeature: function(feature, layer){
+    console.log(feature.properties); 
+    content = "断层编码: " + feature.properties.断层编码 + "<br>断层名称: " + feature.properties.断层名称
+      + "<br>断层长度: " + feature.properties.断层长度+ "<br>断层走向: " + feature.properties.断层走向
+      + "<br>断层性质: " + feature.properties.断层性质+ "<br>断层标识: " + feature.properties.断层标识; 
+    layer.bindPopup(content); 
+  } 
+});
+
+// 获取按钮元素
+var button = document.getElementById("subButton1_2");
+
+// 为按钮添加点击事件
+button.addEventListener("click", toggleGeoJson);
+
+// 定义 toggleGeoJson 函数
+function toggleGeoJson() {
+  if (mymap.hasLayer(layerline)) {
+    mymap.removeLayer(layerline);
+    button.innerHTML = '<i class="fas fa-globe"></i> 断层';
+  } else {
+    layerline.addTo(mymap);
+    button.innerHTML = '<i class="fas fa-globe"></i> 隐藏断层';
+  }
+}
+
+
+
+// 获取按钮元素
+var button = document.getElementById("subButton2_1");
+
+// 添加点击事件处理程序
+button.addEventListener("click", function() {
+    toggleHeatLayer(); // 执行切换热力图函数
+});
+
+// 切换热力图函数
+var toggleHeatLayer = function() {
+    if (mymap.hasLayer(heatLayer)) {
+        removeHeatLayer(); // 如果图层已添加到地图上，则移除它
+    } else {
+        addHeatLayer(); // 如果图层未添加到地图上，则添加它
+    }
+};
+
+// 添加热力图函数
+var addHeatLayer = function() {
+    mymap.addLayer(heatLayer);
+    mymap.setView([heatpoint[0][0], heatpoint[0][1]], 3);
+};
+
+// 移除热力图函数
+var removeHeatLayer = function() {
+    mymap.removeLayer(heatLayer);
+};
+// 定义全局变量
+var heatLayer = L.heatLayer(heatpoint, {
+    radius: 15,
+    maxOpacity: 0.9,
+    minOpacity: 0.6,
+    gradient: {
+        0.1: "#0000ff",
+        0.3: "#3399ff",
+        0.5: "#00ff00",
+        0.6: "#ffff00",
+        0.7: "#ffcc00",
+        0.8: "#ff9900",
+        0.9: "#ff0000"
+    }
+});
+
+// 添加热力图函数
+var addHeatLayer = function() {
+    mymap.addLayer(heatLayer);
+    mymap.setView([heatpoint[0][0], heatpoint[0][1]], 3);
+};
+
+// 移除热力图函数
+var removeHeatLayer = function() {
+    mymap.removeLayer(heatLayer);
+};
+
+
+
+
+
+$(document).ready(function() {
+  $('#search-btn1').click(addshowModal);
+});
+
+var addshowModal = function() {
+  var modal = document.getElementById("search-modal");
+  var searchBtn = modal.querySelector("#search-btn");
+
+  modal.style.display = "block";
+
+  searchBtn.addEventListener("click", function() {
+    // 创建Marker layer
+    var markerLayer = L.markerClusterGroup().addTo(mymap);
+
+    // 获取搜索条件
+    var minLng = $('#longitude').val();
+    var maxLng = $('#longitude2').val();
+    var minLat = $('#latitude').val();
+    var maxLat = $('#latitude2').val();
+    var depth = $('#depth').val();
+    var magnitude = $('#magnitude').val();
+
+    // 向后台发送搜索请求
+    $.ajax({
+      url: 'get_earthquake_data.php',
+      type: 'post',
+      dataType: 'json',
+      data: {
+        minLng: minLng,
+        maxLng: maxLng,
+        minLat: minLat,
+        maxLat: maxLat,
+        depth: depth,
+        magnitude: magnitude,
+      },
+      success: function(data) {
+        var icon = L.icon({
+          iconUrl: 'house-chimney-crack-solid.svg',
+          iconSize: [25, 41],
+          iconAnchor: [12, 41],
+          popupAnchor: [0, -34]
+        });
+
+        var markers = L.geoJSON(data, {
+          pointToLayer: function(feature, latlng) {
+            var marker = L.marker(latlng, { icon: icon });
+            var popupContent = "经度：" + feature.properties.longitude + "<br>纬度：" + feature.properties.latitude +
+              "<br>深度：" + feature.properties.depth +
+              "<br>震级：" + feature.properties.magnitude +
+              "<br>位置：" + feature.properties.location;
+            marker.bindPopup(popupContent);
+            return marker;
+          }
+        });
+
+        markerLayer.clearLayers();
+        markerLayer.addLayer(markers);
+
+        // 若搜索结果为空，则提示用户
+        if (markers.getLayers().length === 0) {
+          alert('没有符合条件的数据');
+        }
+      },
+      error: function() {
+        alert('搜索失败');
+      }
+    });
+
+    // 关闭弹窗
+    modal.style.display = "none";
+  });
+
+  var closeBtn = modal.querySelector(".close");
+  closeBtn.addEventListener("click", function() {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  });
+}
+
+//--------------------------------------空间搜索绘制饼状图
+var drawnItems1 = new L.FeatureGroup();
+mymap.addLayer(drawnItems1);
+
+var drawControl1 = new L.Control.Draw({
+  draw: {
+    rectangle: {
+      shapeOptions: {
+        clickable: false
+      }
+    },
+    polyline: false,
+    polygon: false,
+    circle: false,
+    marker: false,
+    circlemarker: false
+  },
+  edit: {
+    featureGroup: drawnItems1
+  }
+});
+
+var button1 = document.getElementById("subButton2_2");
+var chartCanvas1 = document.getElementById("chart");
+var barChartCanvas = document.getElementById("barChart");
+
+var isDrawControlVisible1 = false;
+var markers1 = L.markerClusterGroup();
+
+button1.addEventListener("click", function() {
+  if (isDrawControlVisible1) {
+    mymap.removeControl(drawControl1);
+    chartCanvas1.style.display = "none";
+    barChartCanvas.style.display = "none";
+    markers1.clearLayers();
+    drawnItems1.clearLayers();
+  } else {
+    mymap.addControl(drawControl1);
+    chartCanvas1.style.display = "block";
+    barChartCanvas.style.display = "block";
+  }
+  isDrawControlVisible1 = !isDrawControlVisible1;
+});
+
+mymap.on(L.Draw.Event.CREATED, function(event) {
+  var layer = event.layer;
+  drawnItems1.addLayer(layer);
+
+  var bounds = layer.getBounds();
+  var north = bounds.getNorth();
+  var east = bounds.getEast();
+  var south = bounds.getSouth();
+  var west = bounds.getWest();
+
+  L.Icon.Default.imagePath = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/';
+
+  $.ajax({
+    url: 'data.php',
+    data: {
+      north: north,
+      east: east,
+      south: south,
+      west: west
+    },
+    type: 'POST',
+    dataType: 'json',
+    success: function(data) {
+      var magnitudes = data.map(function(point) {
+        return point.magnitude;
+      });
+
+      drawPieChart(magnitudes, chartCanvas1);
+      drawBarChart(data, barChartCanvas);
+
+      markers1.clearLayers();
+
+      for (var i = 0; i < data.length; i++) {
+        var lat = data[i].latitude;
+        var lng = data[i].longitude;
+        var time = data[i].time;
+        var depth = data[i].depth;
+        var magnitude = data[i].magnitude;
+        var location = data[i].location;
+
+        var icon = L.icon({
+          iconUrl: 'house-chimney-crack-solid.svg',
+          iconSize: [25, 41],
+          iconAnchor: [12, 41],
+          popupAnchor: [0, -34]
+        });
+
+        var popupContent = "<div class='custom-popup'>" +
+          "<div><b>地震位置:</b> " + location + "</div>" +
+          "<div><b>发生时间:</b> " + time + "</div>" +
+          "<div><b>深度:</b> " + depth + "</div>" +
+          "<div><b>震级:</b> " + magnitude + "</div>" +
+          "<div><b>经度:</b> " + lat + "</div>" +
+          "<div><b>纬度:</b> " + lng + "</div>" +
+          "</div>";
+
+        var marker = L.marker([lat, lng], { icon: icon }).bindPopup(popupContent);
+
+        markers1.addLayer(marker);
+      }
+
+      mymap.addLayer(markers1);
+    }
+  });
+});
+
+function drawPieChart(magnitudes, chartCanvas1) {
+  var ctx = chartCanvas1.getContext("2d");
+
+  var counts = {};
+  magnitudes.forEach(function(magnitude) {
+    counts[magnitude] = (counts[magnitude] || 0) + 1;
+  });
+
+  var labels = Object.keys(counts);
+  var data = Object.values(counts);
+
+  var colors = {
+    "1": "rgba(255, 0, 0, 0.7)",
+    "2": "rgba(255, 165, 0, 0.7)",
+    "3": "rgba(255, 255, 0, 0.7)",
+    "4": "rgba(0, 128, 0, 0.7)",
+    "5": "rgba(0, 0, 255, 0.7)",
+    "6": "rgba(75, 0, 130, 0.7)",
+    "7": "rgba(238, 130, 238, 0.7)"
+  };
+
+  var total = data.reduce(function(sum, value) {
+    return sum + value;
+  }, 0);
+
+  var percentages = data.map(function(value) {
+    return ((value / total) * 100).toFixed(2) + "%";
+  });
+
+  new Chart(ctx, {
+    type: 'pie',
+    data: {
+      labels: labels.map(function(label, index) {
+        return label + " (" + percentages[index] + ")";
+      }),
+      datasets: [{
+        data: data,
+        backgroundColor: labels.map(function(magnitude) {
+          return colors[magnitude];
+        })
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false
+    }
+  });
+}
+
+function drawBarChart(data, chartCanvas) {
+  var ctx = chartCanvas.getContext("2d");
+
+  var counts = {};
+  var legendLabels = [];
+  data.forEach(function(point) {
+    var year = point.time.split("-")[0];
+    counts[year] = (counts[year] || 0) + 1;
+    if (!legendLabels.includes(year)) {
+      legendLabels.push(year);
+    }
+  });
+
+  var labels = Object.keys(counts);
+  var values = Object.values(counts);
+
+  var datasets = [{
+    data: values,
+    backgroundColor: labels.map(function(label) {
+      var color = getRandomColor();
+      return color;
+    })
+  }];
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: labels,
+      datasets: datasets
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        y: {
+          beginAtZero: true,
+          stepSize: 1
+        }
+      },
+      plugins: {
+        legend: {
+          display: true,
+          labels: {
+            generateLabels: function(context) {
+              var labels = legendLabels.map(function(label, index) {
+                var color = getRandomColor();
+                return {
+                  text: label,
+                  fillStyle: color,
+                  strokeStyle: color,
+                  lineWidth: 1,
+                  hidden: false,
+                  index: index
+                };
+              });
+              return labels;
+            }
+          }
+        }
+      }
+    }
+  });
+}
+
+function getRandomColor() {
+  var letters = "0123456789ABCDEF";
+  var color = "#";
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+//------------------------------------烈度图
+//------------------------------------烈度图
+var polygonGroup = L.layerGroup().addTo(mymap);
+    var regions = {
+      east: { A: 5.7123, B: 1.3626, C: -4.2903, R0: 25, a: 3.6588, b: 1.3626, c: -3.5406, R0b: 13 },
+      central: { A: 5.8410, B: 1.0710, C: -3.6570, R0: 15, a: 3.9440, b: 1.0710, c: -2.8450, R0b: 7 },
+      xinjiang: { A: 5.6018, B: 1.4347, C: -4.4899, R0: 25, a: 3.6113, b: 1.4347, c: -3.8477, R0b: 14 },
+      qingzang: { A: 6.458, B: 1.2746, C: -4.4709, R0: 25, a: 3.3682, b: 1.2746, c: -3.3119, R0b: 9 }
+    };
+    var areaArray = []; // 存储计算好的面积数组
+    function determineRegion(latitude, longitude) {
+  if (longitude >= 100) {
+    return "east";
+  } else if (latitude >= 35 && latitude <= 49 && longitude >= 73 && longitude <= 96) {
+    return "xinjiang";
+  } else if (latitude >= 27 && latitude <= 37 && longitude >= 78 && longitude <= 99) {
+    return "qingzang";
+  } else {
+    return "west";
+  }
+}
+
+    function calculateDistanceB() {
+      var latitude = parseFloat(document.getElementById('latitude1').value);
+      var longitude = parseFloat(document.getElementById('longitude1').value);
+      var magnitude = parseFloat(document.getElementById('magnitude1').value);
+      var distance = parseFloat(document.getElementById('distance1').value); // 距离以公里为单位
+      var region = determineRegion(latitude, longitude);
+
+      var coords = [latitude, longitude];
+      var A = regions[region].A;
+      var B = regions[region].B;
+      var C = regions[region].C;
+      var R0 = regions[region].R0;
+      var a = regions[region].a;
+      var b = regions[region].b;
+      var c = regions[region].c;
+      var R0b = regions[region].R0b;
+
+      var Ia = A + B * magnitude + C * Math.log10(distance + R0);
+      var distanceB = Math.pow(10, (Ia - a - b * magnitude) / c) - R0b;
+
+      var longAxis = distance; // 长轴长度为震中距离
+      var shortAxis = distanceB; // 短轴长度为计算得出的 distanceB
+
+      // 清除之前绘制的多边形
+      polygonGroup.clearLayers();
+
+      // 将距离转换为度数
+      var degreePerKm = 1 / 111; // 每经纬度1度大约相当于111公里
+      var longAxisDegree = longAxis * degreePerKm;
+      var shortAxisDegree = shortAxis * degreePerKm;
+
+      var numPolygons = 0; // 初始化绘制多边形的数量
+
+      if (Ia > 10) {
+        numPolygons = 1;
+      } else if (Ia >= 7 && Ia <= 10) {
+        numPolygons = 2;
+      } else if (Ia >= 4 && Ia < 7) {
+        numPolygons = 3;
+      } else if (Ia >= 1 && Ia < 4) {
+        numPolygons = 4;
+      }
+
+      var scaleFactors = [1, 3/4, 1/4, 1/8]; // 自定义缩放比例数组
+      var colors = ['lightyellow', 'yellow', 'lightcoral', 'red', 'darkred']; // 自定义颜色数组
+
+      for (var i = 0; i < numPolygons; i++) {
+        var scale = scaleFactors[i];
+        var scaledLongAxisDegree = longAxisDegree * scale;
+        var scaledShortAxisDegree = shortAxisDegree * scale;
+
+        // 创建多边形的顶点坐标数组
+        var latLngs = [];
+        var numPoints = 100; // 使用100个点来逼近椭圆形状
+
+        for (var j = 0; j < numPoints; j++) {
+          var angle = (Math.PI * 2 * j) / numPoints;
+          var x = latitude + Math.cos(angle) * scaledLongAxisDegree;
+          var y = longitude + Math.sin(angle) * scaledShortAxisDegree;
+          latLngs.push([x, y]);
+        }
+
+        // 创建多边形对象并设置样式
+        var color = colors[i % colors.length];
+        var polygon = L.polygon(latLngs, { color: 'black', weight: 1, fillColor: color, fillOpacity: 0.5 });
+        polygon.addTo(polygonGroup);
+        
+        var area = calculateArea(latLngs); // 计算面积
+        areaArray.push(area); // 将面积存入数组
+        polygon.bindPopup("面积: " + area.toFixed(2) + " 平方公里");
+      }
+      
+      // 创建调整后的新面积数组
+      var adjustedAreaArray = [];
+      for (var i = 0; i < areaArray.length - 1; i++) {
+        var adjustedArea = areaArray[i] - areaArray[i+1];
+        adjustedAreaArray.push(adjustedArea);
+      }
+      adjustedAreaArray.push(areaArray[areaArray.length - 1]);
+
+      // 弹窗显示调整后的新面积数组
+      for (var i = 0; i < adjustedAreaArray.length; i++) {
+        var adjustedArea = Math.abs(adjustedAreaArray[i]);
+        var popup = polygonGroup.getLayers()[i].getPopup();
+        popup.setContent("面积: " + adjustedArea.toFixed(2) + " 平方公里");
+      }
+    }
+
+    function calculateArea(latLngs) {
+      var area = 0;
+      var numPoints = latLngs.length;
+
+      if (numPoints > 2) {
+        for (var i = 0; i < numPoints - 1; i++) {
+          var p1 = latLngs[i];
+          var p2 = latLngs[i + 1];
+          area += degreesToRadians(p2[1] - p1[1]) * (2 + Math.sin(degreesToRadians(p1[0])) + Math.sin(degreesToRadians(p2[0])));
+        }
+
+        area = Math.abs(area * 6371 * 6371 / 2.0); // 转换为平方公里
+      }
+
+      return area;
+    }
+
+    function degreesToRadians(degrees) {
+      return degrees * Math.PI / 180;
+    }
+
+    var legendVisible = false;
+    var legendContainer = null; // 声明图例容器变量
+
+    function toggleLegend() {
+      if (legendContainer === null) {
+        createLegend(); // 创建图例
+      }
+
+      if (legendVisible) {
+        legendContainer.style.display = 'none';
+        legendVisible = false;
+      } else {
+        legendContainer.style.display = 'block';
+        legendVisible = true;
+      }
+    }
+
+    function createLegend() {
+      legendContainer = document.getElementById('legend'); // 获取图例容器
+      legendContainer.style.padding = '10px';
+      legendContainer.style.backgroundColor = 'white';
+      legendContainer.style.position = 'absolute';
+      legendContainer.style.top = '220px';
+      legendContainer.style.right = '440px';
+      legendContainer.style.zIndex = '1000';
+
+      var legendTitle = document.createElement('div');
+      legendTitle.textContent = '';
+      legendTitle.style.fontWeight = 'bold';
+      legendContainer.appendChild(legendTitle);
+
+      var legendList = document.createElement('ul');
+      legendList.style.listStyleType = 'none';
+      legendList.style.padding = '0';
+      legendList.style.marginTop = '5px';
+      legendContainer.appendChild(legendList);
+
+      var legendItems = ['微有感区', '有感区', '多有感区', '中强震区', '强震区']; // 自定义文本标签数组
+var colors = ['lightyellow', 'yellow', 'lightcoral', 'red', 'darkred']; // 自定义颜色数组
+
+for (var i = 0; i < legendItems.length; i++) {
+  var legendItem = document.createElement('li');
+  legendItem.style.marginBottom = '5px';
+  legendList.appendChild(legendItem);
+
+  var legendColor = document.createElement('span');
+  legendColor.style.display = 'inline-block';
+  legendColor.style.width = '20px';
+  legendColor.style.height = '20px';
+  legendColor.style.backgroundColor = colors[i % colors.length];
+  legendItem.appendChild(legendColor);
+
+  var legendLabel = document.createElement('span');
+  legendLabel.style.marginLeft = '5px';
+  legendLabel.textContent = legendItems[i];
+  legendItem.appendChild(legendLabel);
+}
+
+    }
+
+    function toggleInputBox() {
+  var inputBox = document.getElementById("inputBox");
+  
+  if (inputBox.style.display === "none") {
+    inputBox.style.display = "block";
+  } else {
+    inputBox.style.display = "none";
+    polygonGroup.clearLayers();
+  }
+}
+
+function clearDistanceB() {
+  polygonGroup.clearLayers();
+}
+
+    
+function closeForm() {
+  var inputBox = document.getElementById("inputBox");
+  inputBox.style.display = "none";
+}
+
+
+function generateReport() {
+      var latitude = parseFloat(document.getElementById('latitude1').value);
+      var longitude = parseFloat(document.getElementById('longitude1').value);
+      var distance = parseFloat(document.getElementById('distance1').value);
+
+      var minLatitude = latitude - (0.7*distance / 111); // 1度纬度约等于111公里
+      var maxLatitude = latitude + (0.7*distance / 111);
+      var minLongitude = longitude - (0.7*distance / (111 * Math.cos(latitude * Math.PI / 180)));
+      var maxLongitude = longitude + (0.7*distance / (111 * Math.cos(latitude * Math.PI / 180)));
+
+    // 发送请求获取医院数据
+var xhrHospital = new XMLHttpRequest();
+xhrHospital.onreadystatechange = function () {
+  if (xhrHospital.readyState === 4 && xhrHospital.status === 200) {
+    var response = JSON.parse(xhrHospital.responseText);
+    var hospitalData = response.map(function (item) {
+      return {
+        name: item.name,
+        latitude: item.latitude,
+        longitude: item.longitude
+      };
+    });
+    displayReport("医院", hospitalData, "fas fa-hospital");
+  }
+};
+xhrHospital.open("GET", "医院1.php?minLatitude=" + minLatitude + "&maxLatitude=" + maxLatitude + "&minLongitude=" + minLongitude + "&maxLongitude=" + maxLongitude, true);
+xhrHospital.send();
+
+// 发送请求获取学校数据
+// 发送请求获取大学数据
+var xhrUniversity = new XMLHttpRequest();
+xhrUniversity.onreadystatechange = function () {
+  if (xhrUniversity.readyState === 4 && xhrUniversity.status === 200) {
+    var response = JSON.parse(xhrUniversity.responseText);
+    var universityData = response.map(function (item) {
+      return {
+        name: item.name,
+        latitude: item.latitude,
+        longitude: item.longitude
+      };
+    });
+    displayReport("大学", universityData, "fas fa-university");
+  }
+};
+xhrUniversity.open("GET", "大学1.php?minLatitude=" + minLatitude + "&maxLatitude=" + maxLatitude + "&minLongitude=" + minLongitude + "&maxLongitude=" + maxLongitude, true);
+xhrUniversity.send();
+
+// 发送请求获取中学数据
+var xhrMiddleSchool = new XMLHttpRequest();
+xhrMiddleSchool.onreadystatechange = function () {
+  if (xhrMiddleSchool.readyState === 4 && xhrMiddleSchool.status === 200) {
+    var response = JSON.parse(xhrMiddleSchool.responseText);
+    var middleSchoolData = response.map(function (item) {
+      return {
+        name: item.name,
+        latitude: item.latitude,
+        longitude: item.longitude
+      };
+    });
+    displayReport("中学", middleSchoolData, "fas fa-school");
+  }
+};
+xhrMiddleSchool.open("GET", "中学1.php?minLatitude=" + minLatitude + "&maxLatitude=" + maxLatitude + "&minLongitude=" + minLongitude + "&maxLongitude=" + maxLongitude, true);
+xhrMiddleSchool.send();
+
+// 发送请求获取小学数据
+var xhrPrimarySchool = new XMLHttpRequest();
+xhrPrimarySchool.onreadystatechange = function () {
+  if (xhrPrimarySchool.readyState === 4 && xhrPrimarySchool.status === 200) {
+    var response = JSON.parse(xhrPrimarySchool.responseText);
+    var primarySchoolData = response.map(function (item) {
+      return {
+        name: item.name,
+        latitude: item.latitude,
+        longitude: item.longitude
+      };
+    });
+    displayReport("小学", primarySchoolData, "fas fa-school");
+  }
+};
+xhrPrimarySchool.open("GET", "小学1.php?minLatitude=" + minLatitude + "&maxLatitude=" + maxLatitude + "&minLongitude=" + minLongitude + "&maxLongitude=" + maxLongitude, true);
+xhrPrimarySchool.send();
+
+
+// 发送请求获取火车高铁数据
+var xhrTrainStation = new XMLHttpRequest();
+xhrTrainStation.onreadystatechange = function () {
+  if (xhrTrainStation.readyState === 4 && xhrTrainStation.status === 200) {
+    var response = JSON.parse(xhrTrainStation.responseText);
+    var trainStationData = response.map(function (item) {
+      return {
+        name: item.name,
+        latitude: item.latitude,
+        longitude: item.longitude
+      };
+    });
+    displayReport("火车", trainStationData, "fas fa-train");
+  }
+};
+xhrTrainStation.open("GET", "火车1.php?minLatitude=" + minLatitude + "&maxLatitude=" + maxLatitude + "&minLongitude=" + minLongitude + "&maxLongitude=" + maxLongitude, true);
+xhrTrainStation.send();
+
+// 发送请求获取高铁站数据
+var xhrHighSpeedRailStation = new XMLHttpRequest();
+xhrHighSpeedRailStation.onreadystatechange = function () {
+  if (xhrHighSpeedRailStation.readyState === 4 && xhrHighSpeedRailStation.status === 200) {
+    var response = JSON.parse(xhrHighSpeedRailStation.responseText);
+    var highSpeedRailStationData = response.map(function (item) {
+      return {
+        name: item.name,
+        latitude: item.latitude,
+        longitude: item.longitude
+      };
+    });
+    displayReport("高铁", highSpeedRailStationData, "fas fa-train");
+  }
+};
+xhrHighSpeedRailStation.open("GET", "高铁1.php?minLatitude=" + minLatitude + "&maxLatitude=" + maxLatitude + "&minLongitude=" + minLongitude + "&maxLongitude=" + maxLongitude, true);
+xhrHighSpeedRailStation.send();
+
+// 发送请求获取文物数据
+var xhrCulturalHeritage = new XMLHttpRequest();
+xhrCulturalHeritage.onreadystatechange = function () {
+  if (xhrCulturalHeritage.readyState === 4 && xhrCulturalHeritage.status === 200) {
+    var response = JSON.parse(xhrCulturalHeritage.responseText);
+    var culturalHeritageData = response.map(function (item) {
+      return {
+        name: item.name,
+        latitude: item.latitude,
+        longitude: item.longitude
+      };
+    });
+    displayReport("文物", culturalHeritageData, "fas fa-landmark");
+  }
+};
+xhrCulturalHeritage.open("GET", "文物1.php?minLatitude=" + minLatitude + "&maxLatitude=" + maxLatitude + "&minLongitude=" + minLongitude + "&maxLongitude=" + maxLongitude, true);
+xhrCulturalHeritage.send();
+
+// 发送请求获取政府机构数据
+var xhrGovernment = new XMLHttpRequest();
+xhrGovernment.onreadystatechange = function () {
+  if (xhrGovernment.readyState === 4 && xhrGovernment.status === 200) {
+    var response = JSON.parse(xhrGovernment.responseText);
+    var governmentData = response.map(function (item) {
+      return {
+        name: item.name,
+        latitude: item.latitude,
+        longitude: item.longitude
+      };
+    });
+    displayReport("政府机构", governmentData, "fas fa-building");
+  }
+};
+xhrGovernment.open("GET", "政府机构1.php?minLatitude=" + minLatitude + "&maxLatitude=" + maxLatitude + "&minLongitude=" + minLongitude + "&maxLongitude=" + maxLongitude, true);
+xhrGovernment.send();
+
+// 同样的方式发送其他请求获取数据
+
+// ...
+
+function displayReport(type, data, iconClass) {
+  var container = document.getElementById("hospitalContainer");
+
+  // 添加报告标题行
+  var titleDiv = document.createElement("div");
+  titleDiv.innerHTML = "<i class='" + iconClass + "'></i> 共 " + data.length + " 条" + type + "数据";
+  titleDiv.style.color = "red"; // 将字体颜色设为红色
+  titleDiv.style.fontWeight = "bold";
+
+  container.appendChild(titleDiv);
+
+  // 添加数据点到地图
+  var markers = [];
+  data.forEach(function (item) {
+    var div = document.createElement("div");
+    div.textContent = item.name;
+    div.onclick = function () {
+      showNameOnMap(item.name);
+    };
+
+    var line = document.createElement("hr");
+
+    container.appendChild(div);
+    container.appendChild(line);
+
+    var marker = L.marker([item.latitude, item.longitude]);
+marker.setIcon(L.divIcon({
+  className: iconClass,
+  iconSize: [24, 24],
+  iconAnchor: [12, 12],
+ 
+}));
+marker.bindPopup(item.name); // 设置弹窗内容
+
+markers.push(marker);
+
+
+ 
+  });
+
+  // 创建聚合组
+  var markerClusterGroup = L.markerClusterGroup();
+
+  // 将所有标记添加到聚合组
+  markers.forEach(function (marker) {
+    markerClusterGroup.addLayer(marker);
+  });
+
+  // 将聚合组添加到地图
+  mymap.addLayer(markerClusterGroup);
+
+  container.style.display = "block"; // 显示容器
+  containerVisible = true;
+  generateButton.textContent = "清除报告";
+}
+
+function showNameOnMap(name) {
+  alert(name);
+}
+}
+
+
+
+//-------------------------------古址设置
+// 初始化标记图层
+var markersLayer = L.layerGroup().addTo(mymap);
+
+// 监听 subButton1_6 点击事件
+var subButton1_6 = document.getElementById('subButton1_6');
+subButton1_6.addEventListener('click', function() {
+    // 发起 AJAX 请求获取数据库数据
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', '文物.php', true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            var data = JSON.parse(xhr.responseText);
+            // 在地图上显示标记
+            displayMarkers(data);
+            // 显示清除按钮
+            var clearButton1 = document.getElementById('clearButton1');
+            clearButton1.style.display = 'inline-block';
+        }
+    };
+    xhr.send();
+});
+
+// 监听 clearButton 点击事件
+var clearButton1 = document.getElementById('clearButton1');
+clearButton1.addEventListener('click', function() {
+    // 清除标记图层
+    clearMarkers();
+    // 隐藏清除按钮
+    clearButton1.style.display = 'none';
+});
+
+// 在地图上显示标记
+function displayMarkers(data) {
+    // 清除之前的标记
+    clearMarkers();
+
+    // Font Awesome 图标类名
+    var iconClass = 'fas fa-home';
+
+    // 遍历数据并添加标记
+    data.forEach(function(item) {
+        var lon = item.经度;
+        var lat = item.纬度;
+        var age = item.名字;
+        var add = item.add;
+
+        // 创建标记并添加到标记图层
+        var marker = L.marker([lat, lon], {
+            icon: L.divIcon({
+                className: iconClass,
+                iconSize: [32, 32]  // 图标的大小
+            })
+        }).addTo(markersLayer);
+
+        // 绑定弹出信息框
+        marker.bindPopup('经度：' + lon + '<br>纬度：' + lat + '<br>古址名称：' + age + '<br>地址：' + add);
+    });
+}
+
+// 清除标记图层
+function clearMarkers() {
+    markersLayer.clearLayers();
+}
+
+
+
+
+
+//-----------------------------------医院
+// 显示或隐藏搜索框
+// 发起AJAX请求获取数据并绘制数据点
+
+
+// 显示或隐藏搜索框
+var container4 = document.getElementById('container4');
+var subButton1_3 = document.getElementById('subButton1_3');
+var isContainerVisible = false;
+
+subButton1_3.addEventListener('click', function() {
+  if (!isContainerVisible) {
+    container4.style.display = 'block';
+    isContainerVisible = true;
+  } else {
+    container4.style.display = 'none';
+    isContainerVisible = false;
+    clearMapData(); // 清除地图上的数据点
+  }
+});
+
+// 发起AJAX请求并绘制数据点
+var searchButton4 = document.getElementById('searchButton4');
+searchButton4.addEventListener('click', function() {
+  var keyword = document.getElementById('keywordInput4').value;
+
+  $.ajax({
+    url: '医院.php',
+    type: 'POST',
+    data: { keyword: keyword },
+    success: function(data) {
+      clearMapData(); // 清除地图上的数据点
+
+      var locations = JSON.parse(data);
+      for (var i = 0; i < locations.length; i++) {
+        var location = locations[i];
+        var name = location.名称;
+        var latitude = location.纬度;
+        var longitude = location.经度;
+
+        var hospitalIcon = L.divIcon({
+          className: 'hospital-icon',
+          html: '<i class="fas fa-hospital"></i>'
+        });
+
+        var marker = L.marker([latitude, longitude], { icon: hospitalIcon }).addTo(mymap);
+        marker.bindPopup('名称: ' + name);
+      }
+    }
+  });
+});
+
+// 清除地图上的数据点
+function clearMapData() {
+  mymap.eachLayer(function(layer) {
+    if (layer instanceof L.Marker) {
+      mymap.removeLayer(layer);
+    }
+  });
+}
+
+
+//-------------------------------------政府机构
+// 监听 subButton1_7 点击事件
+var container5 = document.getElementById('container5');
+var subButton1_7 = document.getElementById('subButton1_7');
+var isContainerVisible = false;
+
+subButton1_7.addEventListener('click', function() {
+  if (!isContainerVisible) {
+    container5.style.display = 'block';
+    isContainerVisible = true;
+  } else {
+    container5.style.display = 'none';
+    isContainerVisible = false;
+    clearMapData(); // 清除地图上的数据点
+  }
+});
+
+// 发起AJAX请求并绘制数据点
+var searchButton5 = document.getElementById('searchButton5');
+searchButton5.addEventListener('click', function() {
+  var keyword = document.getElementById('keywordInput5').value;
+
+  $.ajax({
+    url: '政府机构.php',
+    type: 'POST',
+    data: { keyword: keyword },
+    success: function(data) {
+      clearMapData(); // 清除地图上的数据点
+
+      var locations = JSON.parse(data);
+      for (var i = 0; i < locations.length; i++) {
+        var location = locations[i];
+        var name = location.名称;
+        var latitude = location.纬度;
+        var longitude = location.经度;
+
+        var buildingIcon = L.divIcon({
+          className: 'building-icon',
+          html: '<i class="fas fa-building"></i>'
+        });
+
+        var marker = L.marker([latitude, longitude], { icon: buildingIcon }).addTo(mymap);
+        marker.bindPopup('名称: ' + name);
+      }
+    }
+  });
+});
+
+// 清除地图上的数据点
+function clearMapData() {
+  mymap.eachLayer(function(layer) {
+    if (layer instanceof L.Marker) {
+      mymap.removeLayer(layer);
+    }
+  });
+}
+
+
+
+//----------------------------学校
+var container6 = document.getElementById('container6');
+var subButton1_4 = document.getElementById('subButton1_4');
+var isContainerVisible6 = false;
+
+subButton1_4.addEventListener('click', function() {
+  if (!isContainerVisible6) {
+    container6.style.display = 'block';
+    isContainerVisible6 = true;
+  } else {
+    container6.style.display = 'none';
+    isContainerVisible6 = false;
+    clearMapData(); // 清除地图上的数据点
+  }
+});
+
+// 发起AJAX请求并绘制数据点
+var searchButton6 = document.getElementById('searchButton6');
+searchButton6.addEventListener('click', function() {
+  var selectedSchool = document.getElementById('selectSchool').value;
+  var keyword = document.getElementById('keywordInput6').value;
+
+  var url = '';
+  if (selectedSchool === '小学') {
+    url = '小学.php';
+  } else if (selectedSchool === '中学') {
+    url = '中学.php';
+  } else if (selectedSchool === '大学') {
+    url = '大学.php';
+  }
+
+  $.ajax({
+    url: url,
+    type: 'POST',
+    data: { keyword: keyword },
+    success: function(data) {
+      clearMapData(); // 清除地图上的数据点
+
+      var locations = JSON.parse(data);
+      for (var i = 0; i < locations.length; i++) {
+        var location = locations[i];
+        var name = location.名称;
+        var latitude = location.纬度;
+        var longitude = location.经度;
+
+       // 定义学校图标
+var schoolIcon = L.divIcon({
+  className: 'fas fa-school',
+  iconSize: [32, 32], // 图标大小
+  iconAnchor: [16, 32], // 图标锚点位置
+  popupAnchor: [0, -32] // 弹窗锚点位置
+});
+
+// 使用学校图标创建标记
+var marker = L.marker([latitude, longitude], { icon: schoolIcon }).addTo(mymap);
+marker.bindPopup('名称: ' + name);
+
+      }
+    }
+  });
+});
+
+// 清除地图上的数据点
+function clearMapData() {
+  mymap.eachLayer(function(layer) {
+    if (layer instanceof L.Marker) {
+      mymap.removeLayer(layer);
+    }
+  });
+}
+
+
+
+
+
+//---------------------------站点
+var container7 = document.getElementById('container7');
+var subButton1_5 = document.getElementById('subButton1_5');
+var isContainerVisible = false;
+
+subButton1_5.addEventListener('click', function() {
+  if (!isContainerVisible) {
+    container7.style.display = 'block';
+    isContainerVisible = true;
+  } else {
+    container7.style.display = 'none';
+    isContainerVisible = false;
+    clearMapData(); // 清除地图上的数据点
+  }
+});
+
+// 发起AJAX请求并绘制数据点
+var searchButton7 = document.getElementById('searchButton7');
+searchButton7.addEventListener('click', function() {
+  var stationType = document.getElementById('stationType').value;
+  var keyword = document.getElementById('keywordInput7').value;
+
+  var phpFile;
+  if (stationType === '火车') {
+    phpFile = '火车.php';
+  } else if (stationType === '高铁') {
+    phpFile = '高铁.php';
+  }
+
+  $.ajax({
+    url: phpFile,
+    type: 'POST',
+    data: { keyword: keyword },
+    success: function(data) {
+      clearMapData(); // 清除地图上的数据点
+
+      var locations = JSON.parse(data);
+      for (var i = 0; i < locations.length; i++) {
+        var location = locations[i];
+        var name = location.名称;
+        var latitude = location.纬度;
+        var longitude = location.经度;
+
+        var markerIcon = L.divIcon({
+          className: 'station-icon',
+          iconSize: [34, 34],
+          html: '<i class="fas fa-train"></i>'
+        });
+
+        var marker = L.marker([latitude, longitude], { icon: markerIcon }).addTo(mymap);
+        marker.bindPopup('名称: ' + name + '<br>经度: ' + latitude + '<br>纬度: ' + longitude);
+      }
+    }
+  });
+});
+
+// 清除地图上的数据点
+function clearMapData() {
+  mymap.eachLayer(function(layer) {
+    if (layer instanceof L.Marker) {
+      mymap.removeLayer(layer);
+    }
+  });
+}
+
+
+
+
+  </script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
